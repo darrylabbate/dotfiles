@@ -17,6 +17,7 @@ alias f="open ."
 alias show="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
 alias fkill="killall Finder"
+alias empty="sudo rm -rf ~/.Trash/*"
 
 # Quick-edit dotfiles
 
