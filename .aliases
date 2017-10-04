@@ -1,30 +1,41 @@
-# Terminal navigation
-
+# Shell Navigation
 alias t="cd /"
 alias h="cd ~"
 alias p="cd ~/Projects"
+alias dotfiles="cd ~/Projects/dotfiles"
 alias a="cd ~/Applications"
 alias v="cd /Volumes"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias c="clear"
+
+# .bash_profile
 alias rebash="source ~/.bash_profile"
 
 # Finder
-
 alias f="open ."
 alias show="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
 alias fkill="killall Finder"
+
+# Cleanup
+alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
 
-# Quick-edit dotfiles
+# App Aliases
+alias calc="open -a Calcbot"
+alias vlc="open -a VLC"
+alias prefs="open -a 'System Preferences'"
+alias auth="open -a 'Authy Desktop'"
 
-alias ealias="open -e ~/Projects/dotfiles/.aliases"
+# Volume Control (useful for SSH just in case)
+alias mute="osascript -e 'set volume output muted true'"
+alias volume50="osascript -e 'set volume output volume 50'"
+alias volume100="osascript -e 'set volume output volume 100'"
+alias volumemax="osascript -e 'set volume output volume 100'"
 
-# Monitoring
-
+# CPU Monitoring
 alias cpu="top -F -R -o cpu"
 alias pigs="ps -acrx -o pid,%cpu,command | awk 'NR<=4'"
 alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=11'"
@@ -33,43 +44,27 @@ alias pkill="pkill -i"
 alias cmdkill="pkill -i"
 alias kill="kill -9"
 alias pidkill="kill -9"
-alias temp="osx-cpu-temp -F"
+alias temp="~/Applications/osx-cpu-temp/osx-cpu-temp -F"
 
 # Networking
-
 alias netusers="arp -a | awk '/192.168.1/{print \$1, \$2}' | column -t"
 alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io.ip | pbcopy"
 
-# Open apps
-
-alias calc="open -a Calcbot"
-alias vlc="open -a VLC"
-alias prefs="open -a 'System Preferences'"
-alias auth="open -a 'Authy Desktop'"
-
 # Misc
-
-alias mute="osascript -e 'set volume output muted true'"
-alias volume50="osascript -e 'set volume output volume 50'"
-alias volume100="osascript -e 'set volume output volume 100'"
-alias volumemax="osascript -e 'set volume output volume 100'"
-alias colors="bash ~/Libraries/iTerm2-Color-Schemes/tools/screenshotTable.sh"
+alias colors="bash ~/Resources/iTerm2-Color-Schemes/tools/screenshotTable.sh"
 alias spd="speedtest-cli"
 alias about="screenfetch -E"
 alias dl="youtube-dl"
-alias wthr="python ~/Projects/wthr-cli/wthr.py"
+alias wthr="python3 ~/Projects/wthr-cli/wthr.py"
 
 # Bitcoin
-
-alias b="python ~/Projects/btc-ticker/ticker.py"
+alias b="python3 ~/Projects/btc-ticker/ticker.py"
 alias elec="electrum -w ~/.electrum/wallets/default_watch"
 alias btc="electrum -w ~/.electrum/wallets/default_watch getbalance | awk 'NR==2 {print \$2}' | cut -c 2-11"
 alias btcaddr="electrum -w ~/.electrum/wallets/default_watch getunusedaddress"
 alias vanity="vanitygen -v -t 1 -o ~/Documents/.btc/vanity.txt"
 alias vanityx2="vanitygen -v -t 2 -o ~/Documents/.btc/vanity.txt"
 alias lotto="vanitygen -v -t 2 -o ~/Documents/.btc/lotto.txt 167ZWTT8n6s4ya8cGjqNNQjDwDG"
-alias lend="python ~/Applications/poloniexlendingbot/lendingbot.py"
+alias lend="python3 ~/Applications/poloniexlendingbot/lendingbot.py"
 alias lendconfig="nano ~/Applications/poloniexlendingbot/default.cfg"
-alias minebcn="~/Applications/minergate/minergate-cli -user rootbeersoup@gmail.com -bcn 2"
-alias minexmr="~/Applications/minergate/minergate-cli -user rootbeersoup@gmail.com -xmr 2"

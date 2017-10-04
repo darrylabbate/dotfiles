@@ -1,1 +1,1 @@
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin"
+export PATH="$PATH:/usr/local/Cellar/python3/3.6.2/bin:/usr/local/Cellar/python/2.7.14/bin"
