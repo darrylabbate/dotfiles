@@ -130,6 +130,11 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
+### Sublime Text ###
+
+# Set Sublime Text as default editor
+defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+
 ### Activity Monitor ###
 
 # Show the main window when launching Activity Monitor
