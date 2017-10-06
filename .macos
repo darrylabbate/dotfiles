@@ -133,7 +133,8 @@ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 ### Sublime Text ###
 
 # Set Sublime Text as default editor
-defaults write com.apple.LaunchServices LSHandlers -array-add '{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
 ### Activity Monitor ###
 
