@@ -2,7 +2,7 @@
 alias t="cd /"
 alias h="cd ~"
 alias p="cd ~/Projects"
-alias d="cd ~/Projects/dotfiles"
+alias d="cd ~/dotfiles"
 alias a="cd ~/Applications"
 alias v="cd /Volumes"
 alias ..="cd .."
