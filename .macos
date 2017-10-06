@@ -5,7 +5,7 @@ sudo -v
 sudo nvram SystemAudioVolume=" "
 
 # Set dark theme
-defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
+sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
 # Position dock on right-hand side
 defaults write com.apple.Dock orientation -string right
@@ -49,8 +49,9 @@ chflags nohidden ~/Library
 sudo chflags nohidden /Volumes
 
 # Remove Dropbox's green checkmarks in Finder
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns
+file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns 
 [ -e "${file}" ] && mv -f "${file}" "${file}.bak"
+unset file
 
 # Disable Dock magnification
 defaults write com.apple.dock magnification -bool false
@@ -80,10 +81,10 @@ defaults write com.apple.dashboard mcx-disabled -bool true
 defaults write com.apple.dock wvous-bl-corner -int 10
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
-# Disable VLC viewing history in Dock
-defaults write org.videolan.vlc NSRecentDocumentsLimit 0
-defaults delete org.videolan.vlc.LSSharedFileList RecentDocuments
-defaults write org.videolan.vlc.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+# Disable VLC viewing history in Dock (breaks Finder in 10.13)
+# defaults write org.videolan.vlc NSRecentDocumentsLimit 0
+# defaults delete org.videolan.vlc.LSSharedFileList RecentDocuments
+# defaults write org.videolan.vlc.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
 
 ### Safari ###
 
