@@ -26,6 +26,10 @@ alias fkill="killall Finder"
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
 
+# SSH
+alias sshimac="ssh darryl@imac"
+alias sshair="ssh darryl@air"
+
 # App Aliases
 alias calc="open -a Calcbot"
 alias vlc="open -a VLC"
