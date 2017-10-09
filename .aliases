@@ -12,6 +12,7 @@ alias c="clear"
 
 # ls
 alias lsa="ls -A"
+alias lsl="ls -Al"
 
 # .bash_profile
 alias rebash="source ~/.bash_profile"
