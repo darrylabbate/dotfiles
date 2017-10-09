@@ -1,8 +1,37 @@
+#!/usr/bin/env bash
+
 # sudo it up
 sudo -v
 
+# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
 # Disable startup noise
 sudo nvram SystemAudioVolume=" "
+
+# Scrollbars visible when scrolling
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Save to disk (not to iCloud) by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Reveal IP address, hostname, OS version, etc. when clicking the clock
+# in the login window
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Set dark theme
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
@@ -16,6 +45,15 @@ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 # Disable autocorrect
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Disable auto-capitalization
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
+
+# Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Diable automatic period substitution
+defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
+
 # Enable tap-to-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -26,32 +64,6 @@ defaults write com.apple.screencapture type -string "png"
 
 # Set plain text as default format in TextEdit
 defaults write com.apple.TextEdit RichText -int 0
-
-# Show Finder status bar
-defaults write com.apple.finder ShowStatusBar -bool true
-
-# Show Finder path bar
-defaults write com.apple.finder ShowPathbar -bool true
-
-# Display file extensions in Finder
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Disable Quick Look animation
-defaults write -g QLPanelAnimationDuration -float 0
-
-# Disable Get Info animation (cmd + i)
-defaults write com.apple.finder DisableAllAnimations -bool true
-
-# Show ~/Library
-chflags nohidden ~/Library
-
-# Show /Volumes
-sudo chflags nohidden /Volumes
-
-# Remove Dropbox's green checkmarks in Finder
-file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns 
-[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
-unset file
 
 # Disable Dock magnification
 defaults write com.apple.dock magnification -bool false
@@ -85,6 +97,47 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # defaults write org.videolan.vlc NSRecentDocumentsLimit 0
 # defaults delete org.videolan.vlc.LSSharedFileList RecentDocuments
 # defaults write org.videolan.vlc.LSSharedFileList RecentDocuments -dict-add MaxAmount 0
+
+### Finder ###
+
+# Show Finder status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show Finder path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Display file extensions in Finder
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Disable Quick Look animation
+defaults write -g QLPanelAnimationDuration -float 0
+
+# Disable Get Info animation (cmd + i)
+defaults write com.apple.finder DisableAllAnimations -bool true
+
+# Show ~/Library
+chflags nohidden ~/Library
+
+# Show /Volumes
+sudo chflags nohidden /Volumes
+
+# Use icon view in Finder by default
+defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+
+# New Finder window opens in home directory
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
+# Keep folders on top when sorting by name
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Disable warning when emptying trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+# Remove Dropbox's green checkmarks in Finder
+file=/Applications/Dropbox.app/Contents/Resources/emblem-dropbox-uptodate.icns 
+[ -e "${file}" ] && mv -f "${file}" "${file}.bak"
+unset file
 
 ### Safari ###
 
