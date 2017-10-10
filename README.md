@@ -1,3 +1,7 @@
+# ~/.dotfiles
+
+## Setup
+
 Delete .bash_profile from the home directory:
 ```bash
 rm ~/.bash_profile
