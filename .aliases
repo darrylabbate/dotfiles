@@ -13,10 +13,10 @@ alias a="cd ~/Applications"
 alias v="cd /Volumes"
 
 # ls
-alias lsa="ls -A"
-alias lsl="ls -AFlo"
+alias la="ls -A"
+alias ll="ls -AFlo"
 
-# .bash_profile
+# Reload .bash_profile
 alias rebash="source ~/.bash_profile"
 
 # Finder
