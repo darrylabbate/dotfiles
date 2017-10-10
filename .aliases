@@ -1,14 +1,16 @@
-# Shell Navigation
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias c="clear"
+
+# Shortcuts
 alias t="cd /"
 alias h="cd ~"
 alias p="cd ~/Projects"
 alias d="cd ~/.dotfiles"
 alias a="cd ~/Applications"
 alias v="cd /Volumes"
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias c="clear"
 
 # ls
 alias lsa="ls -A"
@@ -31,7 +33,7 @@ alias empty="sudo rm -rf ~/.Trash/*"
 alias sshimac="ssh darryl@imac"
 alias sshair="ssh darryl@air"
 
-# App Aliases
+# App shortcuts
 alias calc="open -a Calcbot"
 alias vlc="open -a VLC"
 alias prefs="open -a 'System Preferences'"
@@ -52,7 +54,7 @@ alias pkill="pkill -i"
 alias cmdkill="pkill -i"
 alias kill="kill -9"
 alias pidkill="kill -9"
-alias temp="~/Applications/osx-cpu-temp/osx-cpu-temp -F"
+alias temp="osx-cpu-temp -F"
 
 # Networking
 alias netusers="arp -a | awk '/192.168.1/{print \$1, \$2}' | column -t"
