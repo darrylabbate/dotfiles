@@ -1,1 +1,25 @@
 #!/usr/bin/env bash
+
+# Super quick note script
+function n () {
+    title=$(date -u +'%Y-%m-%d')
+    note=$1
+    echo $note >> ~/Notes/${title}.txt
+    }
+
+# Another quick note script that allows me to set a title first
+# function note () {
+
+# }
+
+function gpush () {
+    message=$1
+
+    if [[ $message ]]; then   
+        git add --all
+        git commit -m "${message}"
+        git push -u origin master
+    else
+        echo ERROR: No commit message specified
+    fi
+}
