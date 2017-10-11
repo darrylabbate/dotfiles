@@ -6,3 +6,4 @@ source ~/.dotfiles/.path
 source ~/.dotfiles/.env
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.functions
+source ~/.dotfiles/.btc

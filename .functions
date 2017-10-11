@@ -3,15 +3,16 @@
 # Super quick note script
 function n () {
     title=$(date -u +'%Y-%m-%d')
-    note=$1
+    note=$*
     echo $note >> ~/Notes/${title}.txt
-    }
+}
 
 # Another quick note script that allows me to set a title first
 # function note () {
 
 # }
 
+# Quick push to git repository. Any text after gpush becomes the commit message.
 function gpush () {
     message=$*
 

@@ -33,6 +33,9 @@ alias empty="sudo rm -rf ~/.Trash/*"
 alias sshimac="ssh darryl@imac"
 alias sshair="ssh darryl@air"
 
+# Git
+alias gpull="git pull origin master"
+
 # App shortcuts
 alias calc="open -a Calcbot"
 alias vlc="open -a VLC"
@@ -67,14 +70,3 @@ alias spd="speedtest-cli"
 alias about="screenfetch -E"
 alias dl="youtube-dl"
 alias wthr="python3 ~/Projects/wthr-cli/wthr.py"
-
-# Bitcoin
-alias b="python3 ~/Projects/btc-ticker/ticker.py"
-alias elec="electrum -w ~/.electrum/wallets/default_watch"
-alias btc="electrum -w ~/.electrum/wallets/default_watch getbalance | awk 'NR==2 {print \$2}' | cut -c 2-11"
-alias btcaddr="electrum -w ~/.electrum/wallets/default_watch getunusedaddress"
-alias vanity="vanitygen -v -t 1 -o ~/Documents/.btc/vanity.txt"
-alias vanityx2="vanitygen -v -t 2 -o ~/Documents/.btc/vanity.txt"
-alias lotto="vanitygen -v -t 2 -o ~/Documents/.btc/lotto.txt 167ZWTT8n6s4ya8cGjqNNQjDwDG"
-alias lend="python3 ~/Applications/poloniexlendingbot/lendingbot.py"
-alias lendconfig="nano ~/Applications/poloniexlendingbot/default.cfg"
