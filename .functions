@@ -2,9 +2,9 @@
 
 # Super quick note script
 function n () {
-    title=$(date -u +'%Y-%m-%d')
+    title=$(date +%Y-%m-%d)
     note=$*
-    echo $note >> ~/Notes/${title}.txt
+    echo $(date): $note >> ~/Notes/${title}.txt
 }
 
 # Another quick note script that allows me to set a title first
