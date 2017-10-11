@@ -1,9 +1,16 @@
+# My ticker
 alias b="python3 ~/Projects/btc-ticker/ticker.py"
+
+# Electrum
 alias elec="electrum -w ~/.electrum/wallets/default_watch"
 alias btc="electrum -w ~/.electrum/wallets/default_watch getbalance | awk 'NR==2 {print \$2}' | cut -c 2-11"
 alias btcaddr="electrum -w ~/.electrum/wallets/default_watch getunusedaddress"
+
+# Vanitygen
 alias vanity="vanitygen -v -t 1 -o ~/Documents/.btc/vanity.txt"
 alias vanityx2="vanitygen -v -t 2 -o ~/Documents/.btc/vanity.txt"
 alias lotto="vanitygen -v -t 2 -o ~/Documents/.btc/lotto.txt 167ZWTT8n6s4ya8cGjqNNQjDwDG"
+
+# Poloniex lending
 alias lend="python3 ~/Applications/poloniexlendingbot/lendingbot.py"
 alias lendconfig="nano ~/Applications/poloniexlendingbot/default.cfg"
