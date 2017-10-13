@@ -1,5 +1,5 @@
 # My ticker
-alias b="python3 ~/Projects/btc-ticker/ticker.py"
+alias gdax="python3 ~/Projects/gdax-ticker/ticker.py"
 
 # Electrum
 alias elec="electrum -w ~/.electrum/wallets/default_watch"
