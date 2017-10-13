@@ -1,5 +1,6 @@
-# My ticker
-alias gdax="python3 ~/Projects/gdax-ticker/ticker.py"
+# My GDAX CLI app
+alias b ="python3 ~/Projects/gdax-cli/price.py"
+alias gdax="python3 ~/Projects/gdax-cli/ticker.py"
 
 # Electrum
 alias elec="electrum -w ~/.electrum/wallets/default_watch"
