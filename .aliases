@@ -7,10 +7,10 @@ alias c="clear"
 # Shortcuts
 alias t="cd /"
 alias h="cd ~"
-alias p="cd ~/Projects"
+alias p="cd ~/projects"
 alias d="cd ~/.dotfiles"
-alias a="cd ~/Applications"
-alias v="cd /Volumes"
+alias a="cd ~/applications"
+alias v="cd /volumes"
 
 # ls
 alias la="ls -A"
