@@ -1,0 +1,3 @@
+### This file holds configs/aliases for hue-cli (Philips Hue) ###
+
+alias l="hue 1"

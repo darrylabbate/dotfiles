@@ -7,3 +7,4 @@ source ~/.dotfiles/.env
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.functions
 source ~/.dotfiles/.btc
+source ~/.dotfiles/.hue
