@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# This file contains functions which allow me to quick-search a variety of websites
+# via the command-line
+
+# Baseball-Reference
+function mlb () {
+    term=$*
+
+    if [[ $term ]]; then
+        open -a Safari "https://www.baseball-reference.com/search/search.fcgi?search=the+${term}"
+    else
+        echo ERROR: Invalid search parameters
+    fi   
+}
+
+# Blockchair / Bitcoin blockchain explorer
+function btc () {
+    term=$*
+
+    if [[ $term ]]; then
+        open -a Safari "https://blockchair.com/search?q=${term}"
+    else
+        echo ERROR: Invalid search parameters
+    fi   
+}
+
+# Pro-Football-Reference
+function nfl () {
+    term=$*
+
+    if [[ $term ]]; then
+        open -a Safari "https://www.pro-football-reference.com/search/search.fcgi?search=the+${term}"
+    else
+        echo ERROR: Invalid search parameters
+    fi
+}

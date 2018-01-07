@@ -11,6 +11,7 @@ alias p="cd ~/projects"
 alias d="cd ~/.dotfiles"
 alias a="cd ~/applications"
 alias v="cd /volumes"
+alias s="subl"
 
 # ls
 alias la="ls -A"

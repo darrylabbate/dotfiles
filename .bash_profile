@@ -8,3 +8,4 @@ source ~/.dotfiles/.aliases
 source ~/.dotfiles/.functions
 source ~/.dotfiles/.btc
 source ~/.dotfiles/.hue
+source ~/.dotfiles/.search
