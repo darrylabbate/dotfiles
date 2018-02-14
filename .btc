@@ -1,5 +1,5 @@
 # My GDAX CLI app
-alias b="python3 ~/Projects/gdax-cli/price.py"
+alias btc="python3 ~/Projects/gdax-cli/price.py"
 alias gdax="python3 ~/Projects/gdax-cli/ticker.py"
 
 # Electrum

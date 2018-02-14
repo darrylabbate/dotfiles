@@ -7,6 +7,7 @@ alias c="clear"
 # Shortcuts
 alias t="cd /"
 alias h="cd ~"
+alias b="cd -"
 alias p="cd ~/projects"
 alias d="cd ~/.dotfiles"
 alias a="cd ~/applications"
