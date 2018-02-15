@@ -36,7 +36,7 @@ alias gpull="git pull origin master"
 
 # App shortcuts
 alias calc="open -a Calcbot"
-alias vlc="open -a VLC"
+alias iina="open -a IINA"
 alias prefs="open -a 'System Preferences'"
 alias auth="open -a 'Authy Desktop'"
 
