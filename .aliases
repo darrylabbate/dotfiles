@@ -62,10 +62,6 @@ alias netusers="arp -a | awk '/10.0.1/{print \$1, \$2}' | column -t"
 alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io.ip | pbcopy"
 
-# SSH
-alias sshimac="ssh darryl@imac.local"
-alias sshair="ssh darryl@air.local"
-
 # Misc
 alias colors="bash ~/Resources/iTerm2-Color-Schemes/tools/screenshotTable.sh"
 alias spd="speedtest-cli"
