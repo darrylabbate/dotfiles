@@ -178,7 +178,7 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 ### iTerm ###
 
-# Don’t display the annoying prompt when quitting iTerm
+# Don’t display prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ### Sublime Text ###
