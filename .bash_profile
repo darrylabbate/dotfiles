@@ -1,11 +1,7 @@
 # Create a symlink to this file in the home directory
 # ln -s ~/.dotfiles/.bash_profile ~
 
-source ~/.dotfiles/.prompt
-source ~/.dotfiles/.path
-source ~/.dotfiles/.env
-source ~/.dotfiles/.aliases
-source ~/.dotfiles/.functions
-source ~/.dotfiles/.btc
-source ~/.dotfiles/.hue
-source ~/.dotfiles/.search
+for file in ~/.dotfiles/.{aliases,prompt,path,env,functions,btc,hue,search,gitcreds}; do
+		[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
