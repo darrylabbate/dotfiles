@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -20,6 +22,9 @@ alias ll="ls -AFlo"
 
 # Reload .bash_profile
 alias rebash="source ~/.bash_profile"
+
+# Update macOS and Homebrew
+alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
 
 # Finder
 alias f="open ."
