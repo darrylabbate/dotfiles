@@ -447,11 +447,11 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>880 160 228 280 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>832 70 445 77 0 0 1366 746 </string>
+	<string>832 33 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>349 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 223 796 473 0 0 1366 746 </string>
+	<string>273 184 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>425 330 465 94 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1216,6 +1216,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>Ambiguous Double Width</key>
 			<false/>
 			<key>Ansi 0 Color</key>
@@ -1560,7 +1562,7 @@
 			<key>HotKey Alternate Shortcuts</key>
 			<array/>
 			<key>HotKey Characters</key>
-			<string> </string>
+			<string> </string>
 			<key>HotKey Characters Ignoring Modifiers</key>
 			<string> </string>
 			<key>HotKey Key Code</key>
@@ -1568,7 +1570,7 @@
 			<key>HotKey Modifier Activation</key>
 			<integer>3</integer>
 			<key>HotKey Modifier Flags</key>
-			<integer>1048576</integer>
+			<integer>1572864</integer>
 			<key>HotKey Window Animates</key>
 			<true/>
 			<key>HotKey Window AutoHides</key>
