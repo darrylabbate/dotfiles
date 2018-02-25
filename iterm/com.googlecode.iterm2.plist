@@ -453,7 +453,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>273 184 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>425 330 465 94 0 0 1366 746 </string>
+	<string>0 0 500 746 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 43 570 452 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -1484,7 +1484,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>65</integer>
+			<integer>68</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
