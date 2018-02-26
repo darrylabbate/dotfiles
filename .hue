@@ -1,3 +1,18 @@
-### This file holds configs/aliases for hue-cli (Philips Hue) ###
+# This file holds configs/funcitons/aliases 
+# for hue-cli (Philips Hue)
+# Install hue-cli with "sudo gem install hue-cli"
 
-alias l="hue 1"
+alias strip="hue 1"
+alias lamp="hue 2"
+
+function office () {
+	cmd=$*
+	# Commands are on, off, flash, blink, solid
+
+	if  [[ $cmd ]]; then
+		hue 1 "${cmd}"
+		hue 2 "${cmd}"
+	else
+		echo ERROR: No command given
+	fi
+}
