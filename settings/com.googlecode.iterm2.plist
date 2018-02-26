@@ -102,9 +102,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>349 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 56 796 473 0 0 1366 746 </string>
+	<string>420 234 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>414 34 568 123 0 0 1366 746 </string>
+	<string>165 383 568 101 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 43 570 452 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -836,7 +836,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.44166600571065989</real>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -862,7 +862,7 @@
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/darryl</string>
 		</dict>
@@ -1562,7 +1562,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>5</integer>
+			<integer>12</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -1623,7 +1623,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.38714704949238582</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1643,7 +1643,7 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/darryl</string>
 		</dict>
@@ -1714,7 +1714,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-02-21T09:23:04Z</date>
+	<date>2018-02-26T22:27:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1740,7 +1740,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.1</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>2</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
