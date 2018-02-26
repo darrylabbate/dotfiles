@@ -70,6 +70,6 @@ alias copyip="curl ipinfo.io.ip | pbcopy"
 # Misc
 alias colors="bash ~/Resources/iTerm2-Color-Schemes/tools/screenshotTable.sh"
 alias spd="speedtest-cli"
-alias about="screenfetch -E"
+alias about="neofetch"
 alias dl="youtube-dl"
 alias wthr="python3 ~/Projects/wthr-cli/wthr.py"
