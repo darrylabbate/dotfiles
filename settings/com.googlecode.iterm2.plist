@@ -31,7 +31,7 @@
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>HideFromDockAndAppSwitcher</key>
-	<true/>
+	<false/>
 	<key>HideTab</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -102,9 +102,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>349 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>458 262 796 473 0 0 1366 746 </string>
+	<string>273 56 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>424 56 574 105 0 0 1366 746 </string>
+	<string>414 34 568 123 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 43 570 452 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
