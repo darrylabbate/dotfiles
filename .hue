@@ -5,6 +5,9 @@
 alias strip="hue 1"
 alias lamp="hue 2"
 
+alias outrun="office on && hue 1 brightness 165 && hue 1 color 0.2017 0.3274 && hue 2 brightness 165 && hue 2 color 0.3235 0.1758"
+alias night="office on && hue lights brightness 125 && hue lights color 0.47 0.41"
+
 function office () {
 	cmd=$*
 	# Commands are on, off, flash, blink, solid
