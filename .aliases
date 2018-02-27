@@ -78,7 +78,7 @@ alias about="neofetch \
 --speed_shorthand on \
 --cpu_temp F \
 --ip_host ipinfo.io/ip \
---colors 6 4 5 2 4 0 \
+--colors 6 4 5 2 4 7 \
 --bold off \
 --underline off \
 --block_range 1 6 \
