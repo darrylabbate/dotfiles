@@ -102,7 +102,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>349 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>420 234 796 473 0 0 1366 746 </string>
+	<string>16 260 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>165 383 568 101 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -846,7 +846,7 @@
 			<key>Use Bold Font</key>
 			<false/>
 			<key>Use Bright Bold</key>
-			<true/>
+			<false/>
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -1629,7 +1629,7 @@
 			<key>Use Bold Font</key>
 			<false/>
 			<key>Use Bright Bold</key>
-			<true/>
+			<false/>
 			<key>Use Cursor Guide</key>
 			<false/>
 			<key>Use Italic Font</key>
@@ -1700,7 +1700,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/darryl/.dotfiles/settings</string>
+	<string>/Users/darryl/dotfiles/settings</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUAutomaticallyUpdate</key>
