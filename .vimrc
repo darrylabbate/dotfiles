@@ -1,6 +1,5 @@
 syntax on
 set t_Co=8
-set background=dark
 set nocompatible
 set backupdir=~/.vim/backups
 set tabstop=4
@@ -9,7 +8,6 @@ set nolist
 set ignorecase
 set smartcase
 set title
-set clipboard=unnamed
 set modeline
 set hlsearch
 set showmode
