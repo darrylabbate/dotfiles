@@ -8,9 +8,8 @@ set nolist
 set ignorecase
 set smartcase
 set title
-set modeline
 set hlsearch
-set showmode
+set noshowmode
 set showcmd
 set autoindent
 set incsearch
@@ -24,11 +23,7 @@ hi CursorLine cterm=None ctermbg=Black ctermfg=None
 hi CursorLineNr ctermbg=Black ctermfg=Cyan
 
 set laststatus=2
-hi StatusColor2 cterm=None ctermfg=Cyan
-set statusline=
-set statusline+=%#StatusColor2#
-set statusline+=%=
-set statusline+=%F
+hi statusline  cterm=None ctermfg=Cyan
 
 let mapleader = " "
 let g:mapleader = " "
