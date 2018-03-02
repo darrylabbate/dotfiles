@@ -13,6 +13,7 @@ set autoindent
 set incsearch
 
 set number
+set relativenumber
 set numberwidth=3
 hi LineNr cterm=None ctermfg=Black
 

@@ -42,6 +42,10 @@ sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme 
 # Position dock on right-hand side
 defaults write com.apple.Dock orientation -string right
 
+# Set minimal autohide/show delay for hidden dock
+defaults write com.apple.dock autohide-delay -float 0
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
