@@ -1,4 +1,5 @@
 syntax on
+set t_Co=256
 set t_Co=8
 set nocompatible
 set backupdir=~/.vim/backups
@@ -7,9 +8,7 @@ set mouse=a
 set nolist
 set ignorecase
 set smartcase
-set title
 set hlsearch
-set noshowmode
 set showcmd
 set autoindent
 set incsearch
