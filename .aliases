@@ -14,9 +14,11 @@ alias p="cd ~/projects"
 alias d="cd ~/dotfiles"
 alias a="cd ~/applications"
 alias v="cd /volumes"
+alias e="vim"
 alias s="subl"
 
 # ls
+alias l="ls"
 alias la="ls -A"
 alias ll="ls -AFlo"
 
