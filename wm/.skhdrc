@@ -1,0 +1,23 @@
+# enter fullscreen mode for the focused container
+alt - f : chunkc tiling::window --toggle fullscreen
+
+# change focus between tiling / floating windows
+shift + alt - space : chunkc tiling::window --toggle float
+
+# change layout of desktop
+alt - e : chunkc tiling::desktop --layout bsp
+alt - s : chunkc tiling::desktop --layout float
+
+# warp windows
+alt - h : chunkc tiling::window --warp west
+alt - j : chunkc tiling::window --warp south
+alt - k : chunkc tiling::window --warp north
+alt - l : chunkc tiling::window --warp east
+
+# make focused window fill screen
+alt - m : chunkc tiling::window --grid-layout 1:1:0:0:1:1
+
+alt - p : chunkc tiling::window --focus prev
+alt - n : chunkc tiling::window --focus next
+
+alt - r : chunkc tiling::desktop --rotate 90
