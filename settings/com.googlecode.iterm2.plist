@@ -389,18 +389,30 @@
 	<false/>
 	<key>HideTab</key>
 	<true/>
+	<key>HotKeyDoubleTapMinDelay</key>
+	<real>0.05000000074505806</real>
+	<key>Hotkey</key>
+	<false/>
+	<key>HotkeyChar</key>
+	<integer>32</integer>
+	<key>HotkeyCode</key>
+	<integer>49</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
+	<key>HotkeyModifiers</key>
+	<integer>524288</integer>
+	<key>HotkeyTermAnimationDuration</key>
+	<real>0.15000000596046448</real>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles/lib/themes</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -457,9 +469,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>349 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>266 169 796 473 0 0 1366 746 </string>
+	<string>266 261 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>165 383 568 101 0 0 1366 746 </string>
+	<string>7 380 672 356 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 43 570 452 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -745,13 +757,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.9846838116645813</real>
+				<real>0.98431372549019602</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.98005956411361694</real>
+				<real>0.98039215686274506</real>
 				<key>Red Component</key>
-				<real>0.54131877422332764</real>
+				<real>0.54117647058823526</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
