@@ -25,6 +25,10 @@ alias ll="ls -AFlo"
 # Reload .bash_profile
 alias rebash="source ~/.bash_profile"
 
+# Restart chunkwm or skhd
+alias rechunk="brew services restart chunkwm"
+alias rekey="brew services restart skhd"
+
 # Update macOS and Homebrew
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
 
