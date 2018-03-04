@@ -6,13 +6,13 @@
 
 Clone repo into home directory.
 
-The `bootstrap.sh` script:
+The [`bootstrap.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bootstrap.sh) script:
 
 * Updates macOS if necessary
-* Installs Homebrew
-* Installs all packages and applications specified in the `Brewfile`
+* Installs [Homebrew](https://brew.sh)
+* Installs all packages and applications specified in the [`Brewfile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/Brewfile)
 * Creates necessary symlinks to the home directory via GNU Stow
-* Installs preferred macOS system defaults (`defaults.sh`)
+* Installs preferred macOS system defaults via [`defaults.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/defaults.sh)
 
 
 Now you doin it
@@ -33,4 +33,4 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ##How it Works
 
-`.bash_profile` automatically sources configurations defined in the files contained in the main /dotfiles folder. Any filebeginning with `.` will automatically be sourced, so be mindful.
+[`.bash_profile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bash/.bash_profile) automatically sources configurations defined in the files contained in the main /dotfiles folder. Any filebeginning with `.` will automatically be sourced, so be mindful.
