@@ -2067,7 +2067,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/darryl/dotfiles/settings</string>
+	<string>/Users/darryl/dotfiles/config</string>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SUAutomaticallyUpdate</key>
