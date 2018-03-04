@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-for file in ~/dotfiles/.{*}; do
+for file in ~/dotfiles/.*; do
 		[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
