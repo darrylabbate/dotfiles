@@ -59,8 +59,7 @@ alias volumemax="osascript -e 'set volume output volume 100'"
 
 # CPU Monitoring
 alias cpu="top -F -R -o cpu"
-alias pigs="ps -acrx -o pid,%cpu,command | awk 'NR<=4'"
-alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=11'"
+alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"
 alias pgrep="pgrep -i"
 alias k="pkill -i"
 alias cmdkill="pkill -i"
@@ -69,7 +68,7 @@ alias pidkill="kill -9"
 alias temp="osx-cpu-temp -F"
 
 # Networking
-alias netusers="arp -a | awk '/10.0.1/{print \$1, \$2}' | column -t"
+alias netusers="arp -a | awk '/10.0.1/{print \$1, \$2}' | column -t" # Deprecated, needs tweaking to work with current router
 alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io.ip | pbcopy"
 
