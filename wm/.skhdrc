@@ -8,28 +8,40 @@ shift + alt - space : chunkc tiling::window --toggle float
 alt - b : chunkc tiling::desktop --layout bsp
 alt - n : chunkc tiling::desktop --layout float
 
+# equalize size of windows
+alt - e : chunkc tiling::desktop --equalize
+
+# toggle split
+alt - x : chunkc tiling::window --toggle split
+
 # increase/decrease window size
-alt - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
-alt - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
-alt - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
-alt - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+shift + alt - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
+shift + alt - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
+shift + alt - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+shift + alt - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+
+# warp focused container
+alt - h : chunkc tiling::window --warp west
+alt - j : chunkc tiling::window --warp south
+alt - k : chunkc tiling::window --warp north
+alt - l : chunkc tiling::window --warp east
 
 # increase/decrease padding
 alt - p : chunkc tiling::desktop --padding inc
 alt - o : chunkc tiling::desktop --padding dec
 
 # increase/decrease gap between windows
-alt - s : chunkc tiling::desktop --gap inc
+alt - v : chunkc tiling::desktop --gap inc
 alt - c : chunkc tiling::desktop --gap dec
 
 # make focused window fill screen
 alt - m : chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
-# make focused window the parent window
-shift + alt - k : chunkc tiling::window --toggle parent
+# make focused window the biggest window
+alt - s : chunkc tiling::window --swap biggest
 
-# move focused window to top left (mainly to set iTerm hotkey window)
-alt - y : chunkc tiling::window --grid-layout 3:3:0:0:1:1
+# move focused window to center (mainly to set iTerm hotkey window)
+alt - g : chunkc tiling::window --grid-layout 3:3:1:1:1:1
 
 # change focused window
 shift + alt - tab : chunkc tiling::window --focus prev
