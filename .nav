@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+function cs() {
+	dir=$*
+	cd $dir && ls
+}
