@@ -3,10 +3,10 @@
 
 if [ $(id -u) -eq 0 ];
 then
-	PS1="\[\e[0;31m\][\h:\u]\[\e[m\] \w \$ "
+ 	PS1="\[\e[0;31m\][\h:\u]\[\e[m\] \w \$ "
 elif [ -n "$SSH_CLIENT" ];
 then
-	PS1="\[\e[0;34m\][\h:\u]\[\e[m\] \w \$ " 
+ 	PS1="\[\e[0;34m\][\h:\u]\[\e[m\] \w \$ " 
 else
-	PS1="\w \$ "
+ 	PS1="\w \$ "
 fi

@@ -60,6 +60,8 @@ alias volumemax="osascript -e 'set volume output volume 100'"
 # CPU Monitoring
 alias cpu="top -F -R -o cpu"
 alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"
+
+# k [app name] or kill [process id]
 alias pgrep="pgrep -i"
 alias k="pkill -i"
 alias cmdkill="pkill -i"
