@@ -1,5 +1,5 @@
 # enter fullscreen mode for the focused container
-alt - f : chunkc tiling::window --toggle fullscreen
+# alt - f : chunkc tiling::window --toggle fullscreen
 
 # change focus between tiling / floating windows
 shift + alt - space : chunkc tiling::window --toggle float
@@ -41,11 +41,14 @@ alt - m : chunkc tiling::window --grid-layout 1:1:0:0:1:1
 alt - s : chunkc tiling::window --swap biggest
 
 # move focused window to center (mainly to set iTerm hotkey window)
-alt - g : chunkc tiling::window --grid-layout 3:4:1:1:2:1
+alt - g : chunkc tiling::window --grid-layout 5:6:2:2:2:1
 
 # change focused window
 shift + alt - tab : chunkc tiling::window --focus prev
 alt - tab : chunkc tiling::window --focus next
 
-# rotate window arrangement
+# rotate window arrangement 90 degrees
 alt - r : chunkc tiling::desktop --rotate 90
+
+# rotate window arrangement 180 degrees (flip)
+alt - f : chunkc tiling::desktop --rotate 180
