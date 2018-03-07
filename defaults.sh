@@ -40,7 +40,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
 # Position dock on right-hand side
-defaults write com.apple.Dock orientation -string right
+# defaults write com.apple.Dock orientation -string right
 
 # Set minimal autohide/show delay for hidden dock
 defaults write com.apple.dock autohide-delay -float 0
