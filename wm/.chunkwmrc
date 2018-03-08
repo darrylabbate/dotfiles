@@ -47,3 +47,7 @@ chunkc set focused_border_skip_floating  1
 
 # always float iTerm hotkey window
 chunkc tiling::rule --owner iTerm --name Hotkey Window --state float
+
+# always float these as well
+chunkc tiling::rule --owner Messages --state float
+chunkc tiling::rule --owner Spotify --state float

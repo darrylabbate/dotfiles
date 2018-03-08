@@ -1,3 +1,6 @@
+set path+=**
+set wildmenu
+
 syntax on
 set t_Co=8
 set nocompatible

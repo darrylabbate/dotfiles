@@ -374,7 +374,7 @@
 		</dict>
 	</dict>
 	<key>DarkThemeHasBlackTitlebar</key>
-	<false/>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>F6E118DF-EB66-4211-9643-CDAE1B4AE712</string>
 	<key>DimBackgroundWindows</key>
@@ -385,6 +385,8 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DisablePotentiallyInsecureEscapeSequences</key>
+	<true/>
 	<key>DisableWindowSizeSnap</key>
 	<true/>
 	<key>EnableDivisionView</key>
@@ -392,6 +394,8 @@
 	<key>EnableProxyIcon</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
+	<false/>
+	<key>FocusNewSplitPaneWithFocusFollowsMouse</key>
 	<false/>
 	<key>FocusReportingEnabled</key>
 	<false/>
@@ -428,7 +432,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>1</string>
+	<string>7</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
@@ -451,8 +455,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 315.000000, NO, NO</string>
-		<string>0.000000, 316.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
+		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -483,7 +487,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>456 217 228 296 0 0 1366 746 </string>
+	<string>456 197 228 280 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>791 98 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -491,9 +495,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 599 404 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>407 234 796 473 0 0 1366 746 </string>
+	<string>318 203 918 512 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>889 5 472 736 0 0 1366 746 </string>
+	<string>5 5 675 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -501,6 +505,18 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>AWDS Pane Directory</key>
+			<string></string>
+			<key>AWDS Pane Option</key>
+			<string>No</string>
+			<key>AWDS Tab Directory</key>
+			<string></string>
+			<key>AWDS Tab Option</key>
+			<string>No</string>
+			<key>AWDS Window Directory</key>
+			<string></string>
+			<key>AWDS Window Option</key>
+			<string>No</string>
 			<key>Allow Title Reporting</key>
 			<false/>
 			<key>Allow Title Setting</key>
@@ -722,13 +738,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.062731854617595673</real>
+				<real>0.12984395030000001</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.062751330435276031</real>
+				<real>0.12984612579999999</real>
 				<key>Red Component</key>
-				<real>0.062735341489315033</real>
+				<real>0.12984204290000001</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1182,13 +1198,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.12546992301940918</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.12549972534179688</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.12547522783279419</real>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
@@ -1211,20 +1227,22 @@
 			<false/>
 			<key>Silence Bell</key>
 			<false/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
-			<false/>
+			<true/>
 			<key>Tab Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15683889389038086</real>
+				<real>0.57046490907669067</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.1568739116191864</real>
+				<real>0.5704723596572876</real>
 				<key>Red Component</key>
-				<real>0.15684521198272705</real>
+				<real>0.57045853137969971</real>
 			</dict>
 			<key>Tags</key>
 			<array>
@@ -1235,7 +1253,9 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.0</real>
+			<real>0.039814006979695428</real>
+			<key>Triggers</key>
+			<array/>
 			<key>Unicode Normalization</key>
 			<integer>0</integer>
 			<key>Unicode Version</key>
@@ -1261,7 +1281,7 @@
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/darryl</string>
 		</dict>
@@ -2009,20 +2029,20 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.57046490910000003</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.57047235969999999</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.57045853140000002</real>
 			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.37683217005076142</real>
+			<real>0.085320828045685276</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -2036,7 +2056,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Use Tab Color</key>
-			<false/>
+			<true/>
 			<key>Vertical Spacing</key>
 			<real>0.90801487198795172</real>
 			<key>Visual Bell</key>
@@ -2148,8 +2168,10 @@
 	<false/>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseColorfgbgFallback</key>
+	<false/>
 	<key>UseLayers</key>
-	<true/>
+	<false/>
 	<key>WindowNumber</key>
 	<false/>
 	<key>WordCharacters</key>
@@ -2159,7 +2181,7 @@
 	<key>iTerm Version</key>
 	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
-	<integer>2</integer>
+	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
 	<false/>
 	<key>kCPKUseSystemColorPicker</key>
