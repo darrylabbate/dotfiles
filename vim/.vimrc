@@ -1,4 +1,4 @@
-set directory=~/.vim/swapfiles
+set noswapfile
 set backupdir=~/.vim/backups
 
 set path+=**
