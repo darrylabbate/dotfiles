@@ -1,10 +1,12 @@
+set directory=~/.vim/swapfiles
+set backupdir=~/.vim/backups
+
 set path+=**
 set wildmenu
 
 syntax on
 set t_Co=8
 set nocompatible
-set backupdir=~/.vim/backups
 set tabstop=4
 set mouse=a
 set nolist

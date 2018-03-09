@@ -19,7 +19,7 @@ Now you doin it
 
 ###Maintaining macOS setup
 
-Symlinks are managed with GNU Stow (installed with Homebrew). Files you wish to be sylined to the home directory need to be placed in a folder within `~/dotfiles`. Using the `stow` command from the `~/dotfiles` directory will symlink the contents of the folder you choose (`/bash`, `/vim`, etc) to the grandparent directory, which is wherever the `/dotfiles` folder is contained.
+Symlinks are managed with GNU Stow (installed with Homebrew). Files you wish to be symlinked to the home directory need to be placed in a folder within `~/dotfiles`. Using the `stow` command from the `~/dotfiles` directory will symlink the contents of the folder you choose (`/bash`, `/vim`, etc) to the grandparent directory, which is wherever the `/dotfiles` folder is contained.
 
 Assuming you clone the dotfiles repository in your home directory, executing the commands:
 ```bash
