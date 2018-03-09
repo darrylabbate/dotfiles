@@ -1,3 +1,5 @@
+set nocompatible
+
 set noswapfile
 set backupdir=~/.vim/backups
 
@@ -6,7 +8,6 @@ set wildmenu
 
 syntax on
 set t_Co=8
-set nocompatible
 set tabstop=4
 set mouse=a
 set nolist
