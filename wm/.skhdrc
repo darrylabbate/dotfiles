@@ -41,7 +41,10 @@ alt - m : chunkc tiling::window --grid-layout 1:1:0:0:1:1
 alt - s : chunkc tiling::window --swap biggest
 
 # move focused window to center (mainly to set iTerm hotkey window)
-alt - g : chunkc tiling::window --grid-layout 5:6:2:2:2:1
+shift + alt - g : chunkc tiling::window --grid-layout 5:6:2:2:2:1
+
+# move focused window to middle (better readability)
+shift + alt - t : chunkc tiling::window --grid-layout 4:4:1:0:2:4
 
 # change focused window
 shift + alt - tab : chunkc tiling::window --focus prev
