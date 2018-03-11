@@ -5,8 +5,8 @@
 shift + alt - space : chunkc tiling::window --toggle float
 
 # change layout of desktop
-alt - b : chunkc tiling::desktop --layout bsp
-alt - n : chunkc tiling::desktop --layout float
+alt + cmd - b : chunkc tiling::desktop --layout bsp
+alt + cmd - n : chunkc tiling::desktop --layout float
 
 # equalize size of windows
 alt - e : chunkc tiling::desktop --equalize
@@ -15,10 +15,10 @@ alt - e : chunkc tiling::desktop --equalize
 alt - x : chunkc tiling::window --toggle split
 
 # increase/decrease window size
-shift + alt - h : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
-shift + alt - j : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
-shift + alt - k : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
-shift + alt - l : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+cmd + alt - h : chunkc tiling::window --use-temporary-ratio 0.01 --adjust-window-edge west; chunkc tiling::window --use-temporary-ratio -0.01 --adjust-window-edge east
+cmd + alt - j : chunkc tiling::window --use-temporary-ratio 0.01 --adjust-window-edge south; chunkc tiling::window --use-temporary-ratio -0.01 --adjust-window-edge north
+cmd + alt - k : chunkc tiling::window --use-temporary-ratio 0.01 --adjust-window-edge north; chunkc tiling::window --use-temporary-ratio -0.01 --adjust-window-edge south
+cmd + alt - l : chunkc tiling::window --use-temporary-ratio 0.01 --adjust-window-edge east; chunkc tiling::window --use-temporary-ratio -0.01 --adjust-window-edge west
 
 # warp focused container
 alt - h : chunkc tiling::window --warp west
@@ -43,7 +43,7 @@ alt - s : chunkc tiling::window --swap biggest
 # move focused window to center (mainly to set iTerm hotkey window)
 shift + alt - g : chunkc tiling::window --grid-layout 5:6:2:2:2:1
 
-# move focused window to middle (better readability)
+# move focused window to middle (ideal readability)
 shift + alt - t : chunkc tiling::window --grid-layout 4:4:1:0:2:4
 
 # change focused window
