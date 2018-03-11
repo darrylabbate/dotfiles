@@ -10,5 +10,6 @@ brew bundle
 
 stow bash
 stow vim
+stow wm
 
 source ${HOME}/dotfiles/defaults.sh
