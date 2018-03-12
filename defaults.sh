@@ -12,6 +12,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Disable startup noise
 sudo nvram SystemAudioVolume=%80
 
+# Enable full keyboard access for all controls
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
 # Scrollbars visible when scrolling
 defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 
