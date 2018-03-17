@@ -432,7 +432,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>7</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
@@ -487,7 +487,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>266 162 228 280 0 0 1366 746 </string>
+	<string>266 126 228 280 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>791 98 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -495,9 +495,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 599 404 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>66 238 918 381 0 0 1366 746 </string>
+	<string>109 273 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>247 318 586 327 0 0 1366 746 </string>
+	<string>889 263 472 254 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -2137,7 +2137,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-03-09T19:09:47Z</date>
+	<date>2018-03-14T20:55:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2171,7 +2171,7 @@
 	<key>UseColorfgbgFallback</key>
 	<false/>
 	<key>UseLayers</key>
-	<false/>
+	<true/>
 	<key>WindowNumber</key>
 	<false/>
 	<key>WordCharacters</key>
@@ -2179,7 +2179,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.20180305-nightly</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>7</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
