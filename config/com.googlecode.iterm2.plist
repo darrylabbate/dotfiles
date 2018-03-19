@@ -16,6 +16,8 @@
 	<integer>1</integer>
 	<key>AppleWindowTabbingMode</key>
 	<string>manual</string>
+	<key>BadgeTopMargin</key>
+	<integer>0</integer>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Neutron</key>
@@ -1125,9 +1127,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 599 404 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>118 293 918 381 0 0 1366 746 </string>
+	<string>225 98 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>341 0 683 746 0 0 1366 746 </string>
+	<string>788 15 563 716 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -1823,6 +1825,8 @@
 			<integer>1000</integer>
 			<key>Scrollback With Status Bar</key>
 			<false/>
+			<key>Scrollback in Alternate Screen</key>
+			<false/>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1883,7 +1887,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.13785889911167512</real>
+			<real>0.0</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
@@ -2713,6 +2717,8 @@
 	<false/>
 	<key>OpenArrangementAtStartup</key>
 	<false/>
+	<key>OpenBookmark</key>
+	<false/>
 	<key>OpenFileInNewWindows</key>
 	<true/>
 	<key>OpenNoWindowsAtStartup</key>
@@ -2753,6 +2759,8 @@
 	<key>PrefsCustomFolder</key>
 	<string>/Users/darryl/dotfiles/config</string>
 	<key>PromptOnQuit</key>
+	<false/>
+	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
 	<key>RememberWindowPositions</key>
 	<false/>
