@@ -33,4 +33,4 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ##How it Works
 
-[`.bash_profile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bash/.bash_profile) automatically sources configurations defined in the files contained in the main /dotfiles folder. Any filebeginning with `.` will automatically be sourced, so be mindful.
+[`.bash_profile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bash/.bash_profile) automatically sources configurations defined in the files contained in the main /dotfiles folder. Any file beginning with `.` will automatically be sourced.
