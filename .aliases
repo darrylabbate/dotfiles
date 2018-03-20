@@ -1,27 +1,5 @@
 #!/usr/bin/env bash
 
-# Navigation
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias c="clear"
-
-# Shortcuts
-alias t="cd /"
-alias h="cd ~"
-alias b="cd -"
-alias p="cd ~/projects"
-alias d="cd ~/dotfiles"
-alias a="cd ~/applications"
-alias v="cd /volumes"
-alias e="vim"
-alias s="subl"
-
-# ls
-alias l="ls"
-alias la="ls -A"
-alias ll="ls -AFlo"
-
 # Reload .bash_profile
 alias rebash="source ~/.bash_profile"
 
@@ -46,10 +24,8 @@ alias empty="sudo rm -rf ~/.Trash/*"
 alias gpull="git pull origin master"
 
 # App shortcuts
-alias calc="open -a Calcbot"
 alias iina="open -a IINA"
 alias prefs="open -a 'System Preferences'"
-alias auth="open -a 'Authy Desktop'"
 
 # Volume Control (useful for SSH just in case)
 alias mute="osascript -e 'set volume output muted true'"
