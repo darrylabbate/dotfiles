@@ -17,6 +17,7 @@ set hlsearch
 set showcmd
 set autoindent
 set incsearch
+set showmatch
 
 set number
 set relativenumber
