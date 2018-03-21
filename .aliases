@@ -7,13 +7,11 @@ alias rebash="source ~/.bash_profile"
 alias rechunk="brew services restart chunkwm"
 alias rekey="brew services restart skhd"
 
-# Update macOS and Homebrew
+# Update macOS and Homebrew. Also clean up Homebrew.
 alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
 
 # Finder
 alias f="open ."
-alias show="defaults write com.apple.finder AppleShowAllFiles true && killall Finder"
-alias hide="defaults write com.apple.finder AppleShowAllFiles false && killall Finder"
 alias fkill="killall Finder"
 
 # Cleanup
@@ -25,12 +23,15 @@ alias gpull="git pull origin master"
 
 # Volume Control (useful for SSH just in case)
 alias mute="osascript -e 'set volume output muted true'"
+alias volume25="osascript -e 'set volume output volume 25'"
 alias volume50="osascript -e 'set volume output volume 50'"
 alias volume100="osascript -e 'set volume output volume 100'"
 alias volumemax="osascript -e 'set volume output volume 100'"
 
 # CPU Monitoring
 alias cpu="top -F -R -o cpu"
+
+# Lists the top 4 processes by CPU usage
 alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"
 
 # k [app name] or kill [process id]

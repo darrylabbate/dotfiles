@@ -1,3 +1,6 @@
+# This sources every file beginning with a dot in the main
+# dotfiles repo
+
 for file in ~/dotfiles/.*; do
 		[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;

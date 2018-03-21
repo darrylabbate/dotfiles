@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -22,6 +20,7 @@ alias l="ls"
 alias la="ls -A"
 alias ll="ls -AFlo"
 
+# Changes directory and lists contents in one command wow
 function cs() {
 	dir=$*
 	cd $dir && ls
