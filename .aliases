@@ -53,7 +53,7 @@ alias copyip="curl ipinfo.io.ip | pbcopy"
 # Colorscripts
 alias bars=". ~/dotfiles/docs/scripts/bars"
 alias colors=". ~/dotfiles/docs/scripts/colors"
-alias ghosts=". ~/dotfiles/docs/scripts/ghosts"
+alias spooky=". ~/dotfiles/docs/scripts/ghosts"
 alias pipes=". ~/dotfiles/docs/scripts/pipes"
 alias slim=". ~/dotfiles/docs/scripts/slimcolors"
 alias tanks=". ~/dotfiles/docs/scripts/tanks"
