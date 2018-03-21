@@ -43,15 +43,22 @@ alias k="pkill -i"
 alias cmdkill="pkill -i"
 alias kill="kill -9"
 alias pidkill="kill -9"
-alias temp="osx-cpu-temp -F"
+alias temp="osx-cpu-temp"
 
 # Networking
 alias netusers="arp -a | awk '/10.0.1/{print \$1, \$2}' | column -t" # Deprecated, needs tweaking to work with current router
 alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io.ip | pbcopy"
 
+# Colorscripts
+alias bars=". ~/dotfiles/docs/scripts/bars"
+alias colors=". ~/dotfiles/docs/scripts/colors"
+alias ghosts=". ~/dotfiles/docs/scripts/ghosts"
+alias pipes=". ~/dotfiles/docs/scripts/pipes"
+alias slim=". ~/dotfiles/docs/scripts/slimcolors"
+alias tanks=". ~/dotfiles/docs/scripts/tanks"
+
 # Misc
-alias colors="bash ~/Resources/iTerm2-Color-Schemes/tools/screenshotTable.sh"
 alias spd="speedtest-cli"
 alias dl="youtube-dl"
 alias wthr="python3 ~/Projects/wthr-cli/wthr.py"
