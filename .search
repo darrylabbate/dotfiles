@@ -11,18 +11,7 @@ function mlb () {
         open -a Safari "https://www.baseball-reference.com/search/search.fcgi?search=the+${term}"
     else
         echo ERROR: Invalid search parameters
-    fi   
-}
-
-# Blockchair / Bitcoin blockchain explorer
-function btc () {
-    term=$*
-
-    if [[ $term ]]; then
-        open -a Safari "https://blockchair.com/search?q=${term}"
-    else
-        echo ERROR: Invalid search parameters
-    fi   
+    fi
 }
 
 # Pro-Football-Reference
