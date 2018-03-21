@@ -1,5 +1,7 @@
 set nocompatible
 
+autocmd BufWritePre * %s/\s\+$//e
+
 set noswapfile
 set backupdir=~/.vim/backups
 
