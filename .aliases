@@ -23,10 +23,6 @@ alias empty="sudo rm -rf ~/.Trash/*"
 # Git
 alias gpull="git pull origin master"
 
-# App shortcuts
-alias iina="open -a IINA"
-alias prefs="open -a 'System Preferences'"
-
 # Volume Control (useful for SSH just in case)
 alias mute="osascript -e 'set volume output muted true'"
 alias volume50="osascript -e 'set volume output volume 50'"
@@ -61,7 +57,6 @@ alias tanks=". ~/dotfiles/docs/scripts/tanks"
 # Misc
 alias spd="speedtest-cli"
 alias dl="youtube-dl"
-alias wthr="python3 ~/Projects/wthr-cli/wthr.py"
 alias about="neofetch \
 --config off \
 --uptime_shorthand tiny \
