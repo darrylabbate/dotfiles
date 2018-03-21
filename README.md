@@ -4,7 +4,18 @@
 
 ###Setup new macOS machine
 
-Clone repo into home directory.
+This repository is only accessible via SSH key verification (for no reason honestly). You'll need to create an SSH key on the new machine and add it to your [Bitbucket Settings](https://bitbucket.org/account/user/rootbeersoup/ssh-keys/)
+
+```bash
+ssh-keygen
+cat ~/.ssh/id_rsa.pub | pbcopy
+```
+
+Once that's all done:
+
+```bash
+git clone git@bitbucket.org:rootbeersoup/dotfiles.git && cd dotfiles && source bootstrap.sh
+```
 
 The [`bootstrap.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bootstrap.sh) script:
 
