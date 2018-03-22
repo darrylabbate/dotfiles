@@ -1,3 +1,15 @@
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugs')
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+call plug#end()
+
 set nocompatible
 
 set noswapfile
@@ -5,6 +17,8 @@ set backupdir=~/.vim/backups
 
 set path+=**
 set wildmenu
+
+set clipboard=unnamed
 
 syntax on
 set t_Co=8
