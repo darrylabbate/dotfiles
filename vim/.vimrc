@@ -18,8 +18,6 @@ set backupdir=~/.vim/backups
 set path+=**
 set wildmenu
 
-set clipboard=unnamed
-
 syntax on
 set t_Co=8
 set tabstop=4
@@ -46,12 +44,18 @@ hi CursorLineNr ctermbg=Black ctermfg=Cyan
 set laststatus=2
 hi statusline  cterm=None ctermfg=Cyan
 
+noremap <space> :
+
 let mapleader = " "
 let g:mapleader = " "
 
-nmap <leader>w :w!<cr>
+nmap <leader>b :b<space>
+nmap <leader>e :edit<space>
+nmap <leader>f :find<space>
 nmap <leader>q :q<cr>
 nmap <leader>s :%s/
+nmap <leader>v :vs<cr>
+nmap <leader>w :w!<cr>
 
 inoremap jk <Esc>
 inoremap kj <Esc>
