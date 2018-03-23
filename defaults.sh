@@ -10,7 +10,7 @@ sudo -v
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Disable startup noise
-sudo nvram SystemAudioVolume=%80
+sudo nvram SystemAudioVolume=%01
 
 # Enable full keyboard access for all controls
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
@@ -126,8 +126,8 @@ chflags nohidden ~/Library
 # Show /Volumes
 sudo chflags nohidden /Volumes
 
-# Use icon view in Finder by default
-defaults write com.apple.finder FXPreferredViewStyle -string "icnv"
+# Use column view in Finder by default
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
 # New Finder window opens in home directory
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
@@ -187,12 +187,6 @@ defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 # Don’t display prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
-### Sublime Text ###
-
-# Set Sublime Text as default editor
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
 ### Activity Monitor ###
 
