@@ -7,14 +7,14 @@
 This repository is only accessible via SSH key verification (for no reason honestly). You'll need to create an SSH key on the new machine and add it to your [Bitbucket Settings](https://bitbucket.org/account/user/rootbeersoup/ssh-keys/)
 
 ```bash
-	ssh-keygen
-	cat ~/.ssh/id_rsa.pub | pbcopy
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub | pbcopy
 ```
 
 Once that's all done:
 
 ```bash
-	git clone git@bitbucket.org:rootbeersoup/dotfiles.git && cd dotfiles && source bootstrap.sh
+$ git clone git@bitbucket.org:rootbeersoup/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 The [`bootstrap.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bootstrap.sh) script:
@@ -35,8 +35,8 @@ Symlinks are managed with GNU Stow (installed with Homebrew). Files you wish to 
 Assuming you clone the dotfiles repository in your home directory, executing the commands:
 
 ```bash
-	cd ~/dotfiles
-	stow bash
+$ cd ~/dotfiles
+$ stow bash
 ```
 will symlink the contents of `dotfiles/bash` to the home directory, which is currently `.bash_profile` and `.bashrc`
 
