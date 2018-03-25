@@ -10,8 +10,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 call plug#end()
 
-set nocompatible
-
 set noswapfile
 set backupdir=~/.vim/backups
 
