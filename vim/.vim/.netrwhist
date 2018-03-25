@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/darryl/Library/Logs/Homebrew/chunkwm'
-let g:netrw_dirhist_2='/Users/darryl/Library/Logs/Homebrew'
-let g:netrw_dirhist_3='/Users/darryl/Library/Logs'
