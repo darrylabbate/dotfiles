@@ -12,7 +12,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # Disable startup noise
 sudo nvram SystemAudioVolume=%01
 
-# Enable full keyboard access for all controls
+# Enable SSH
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
+
+# Enable tab in modal dialogs
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Scrollbars visible when scrolling
@@ -48,6 +51,12 @@ sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme 
 # Set minimal autohide/show delay for hidden dock
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# Enable scroll gestures for Dock icons
+defaults write com.apple.dock scroll-to-open -bool true
+
+# Show only active apps in Dock
+defaults write com.apple.dock static-only -bool true
 
 # Disable smart quotes
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
