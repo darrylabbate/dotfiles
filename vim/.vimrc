@@ -6,8 +6,9 @@ set backupdir=~/.vim/backups
 set path+=**
 set wildmenu
 
+set t_Co=16
 syntax on
-set t_Co=8
+
 set tabstop=4
 set shiftwidth=4
 set mouse=a
@@ -26,7 +27,7 @@ set noeol
 set number
 set relativenumber
 set numberwidth=3
-hi LineNr cterm=None ctermfg=Black
+hi LineNr cterm=None ctermfg=DarkGray
 
 set cursorline
 hi CursorLine cterm=None ctermbg=Black ctermfg=None

@@ -7,3 +7,9 @@
 [submodule "vim/.vim/bundle/vim-commentary"]
 	path = vim/.vim/bundle/vim-commentary
 	url = git://github.com/tpope/vim-commentary.git
+[submodule "vim/.vim/bundle/vim-polyglot"]
+	path = vim/.vim/bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/.vim/bundle/minimalist"]
+	path = vim/.vim/bundle/minimalist
+	url = https://github.com/dikiaap/minimalist
