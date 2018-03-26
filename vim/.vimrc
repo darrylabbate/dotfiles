@@ -20,6 +20,9 @@ set autoindent
 set incsearch
 set showmatch
 
+set binary
+set noeol
+
 set number
 set relativenumber
 set numberwidth=3
