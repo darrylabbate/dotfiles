@@ -16,9 +16,9 @@ alias e="vim"
 alias s="subl"
 
 # ls
-alias l="ls"
-alias la="ls -A"
-alias ll="ls -AFlo"
+alias l="ls -F --color -h --group-directories-first"
+alias la="ls -AF --color -h --group-directories-first"
+alias ll="ls -AFlo --color -h --group-directories-first"
 
 # Changes directory and lists contents in one command wow
 function cs() {
