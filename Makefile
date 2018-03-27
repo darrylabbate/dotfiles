@@ -20,6 +20,7 @@ stow: brew
 	stow bash
 	stow vim
 	stow wm
+	source ~/.bash_profile
 
 update:
 	softwareupdate -i -a
