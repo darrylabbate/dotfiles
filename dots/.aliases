@@ -48,12 +48,12 @@ alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io.ip | pbcopy"
 
 # Colorscripts
-alias bars=". ~/dotfiles/doc/scripts/bars"
-alias colors=". ~/dotfiles/doc/scripts/colors"
-alias spooky=". ~/dotfiles/doc/scripts/ghosts"
-alias pipes=". ~/dotfiles/doc/scripts/pipes"
-alias slim=". ~/dotfiles/doc/scripts/slimcolors"
-alias tanks=". ~/dotfiles/doc/scripts/tanks"
+alias bars=". ~/dotfiles/code/colors/bars"
+alias colors=". ~/dotfiles/code/colors/colors"
+alias spooky=". ~/dotfiles/code/colors/ghosts"
+alias pipes=". ~/dotfiles/code/colors/pipes"
+alias slim=". ~/dotfiles/code/colors/slimcolors"
+alias tanks=". ~/dotfiles/code/colors/tanks"
 
 # Misc
 alias spd="speedtest-cli"
