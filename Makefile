@@ -14,6 +14,7 @@ git-init:
 	git sobmodule update
 
 macos:
+	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	source ./macos/defaults.sh
 
 stow: brew
