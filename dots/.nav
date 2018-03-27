@@ -23,5 +23,5 @@ alias ll="ls -AFlo --color -h --group-directories-first"
 # Changes directory and lists contents in one command wow
 function cs() {
 	dir=$*
-	cd $dir && ls
+	cd $dir && ls -F --color -h --group-directories-first
 }
