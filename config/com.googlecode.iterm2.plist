@@ -930,13 +930,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.10194315761327744</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.10196910053491592</real>
 				<key>Red Component</key>
-				<real>0.99999600648880005</real>
+				<real>0.10194777697324753</real>
 			</dict>
 			<key>Foreground Color</key>
 			<dict>
@@ -1127,9 +1127,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 599 404 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>419 150 918 401 0 0 1366 746 </string>
+	<string>419 170 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>273 0 820 746 0 0 1366 746 </string>
+	<string>688 20 658 706 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -1455,13 +1455,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.10194315761327744</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.10196910053491592</real>
 				<key>Red Component</key>
-				<real>0.99999600648880005</real>
+				<real>0.10194777697324753</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
@@ -2226,13 +2226,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.10194315761327744</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.10196910053491592</real>
 				<key>Red Component</key>
-				<real>0.99999600648880005</real>
+				<real>0.10194777697324753</real>
 			</dict>
 			<key>Custom Command</key>
 			<string>No</string>
