@@ -1,4 +1,4 @@
-install: bash brew git-init macos stow update
+install: bash brew git-init macos ruby stow update
 
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells
@@ -13,9 +13,15 @@ git-init:
 	git submodule init
 	git sobmodule update
 
-macos:
+macos: brew
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	source ./macos/defaults.sh
+	brew services start chunkwm
+	brew services start skhd
+
+ruby: brew
+	rbenv install 2.5.0
+	rbenv global 2.5.0
 
 stow: brew
 	stow bash
