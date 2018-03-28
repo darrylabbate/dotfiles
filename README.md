@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" >
 	<img src="header.png" alt="dotfiles" title="dotfiles" width="600">
 </p>
 
