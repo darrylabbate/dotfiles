@@ -1,34 +1,10 @@
-# ~/dotfiles
+<p align="center">
+	<img src="header.png" alt="dotfiles" title="dotfiles" width="600">
+</p>
 
-## macOS
+This repository contains files for configuring my Terminal environment and other various macOS settings.
 
-### Setup new macOS machine
-
-This repository is only accessible via SSH key verification (for no reason honestly). You'll need to create an SSH key on the new machine and add it to your [Bitbucket Settings](https://bitbucket.org/account/user/rootbeersoup/ssh-keys/)
-
-```bash
-$ ssh-keygen
-$ cat ~/.ssh/id_rsa.pub | pbcopy
-```
-
-Once that's all done:
-
-```bash
-$ git clone git@bitbucket.org:rootbeersoup/dotfiles.git && cd dotfiles && source bootstrap.sh
-```
-
-The [`bootstrap.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bootstrap.sh) script:
-
-* Updates macOS if necessary
-* Installs [Homebrew](https://brew.sh)
-* Installs all packages and applications specified in the [`Brewfile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/Brewfile)
-* Creates necessary symlinks to the home directory via GNU Stow
-* Installs preferred macOS system defaults via [`defaults.sh`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/defaults.sh)
-
-
-Now you doin it
-
-### Maintaining macOS setup
+## Maintaining macOS setup
 
 Symlinks are managed with GNU Stow (installed with Homebrew). Files you wish to be symlinked to the home directory need to be placed in a folder within `~/dotfiles`. Using the `stow` command from the `~/dotfiles` directory will symlink the contents of the folder you choose (`/bash`, `/vim`, etc) to the grandparent directory, which is wherever the `/dotfiles` folder is contained.
 
@@ -45,4 +21,4 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ## How it Works
 
-[`.bash_profile`](https://bitbucket.org/rootbeersoup/dotfiles/src/master/bash/.bash_profile) automatically sources configurations defined in the files contained in the main /dotfiles folder. Any file beginning with `.` will automatically be sourced.
+`.bash_profile` automatically sources configurations defined in the files contained in the main /dotfiles folder. Any file beginning with `.` will automatically be sourced.
