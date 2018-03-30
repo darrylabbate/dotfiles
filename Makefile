@@ -25,6 +25,7 @@ ruby: brew
 
 stow: brew
 	stow bash
+	stow git
 	stow vim
 	stow wm
 	source ~/.bash_profile
