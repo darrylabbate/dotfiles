@@ -54,10 +54,10 @@ All necessary symlinks ( [`.bash_profile`](https://github.com/rootbeersoup/dotfi
 Assuming you clone the dotfiles repository in your home directory, executing the commands:
 
 ```bash
-$ cd ~/dotfiles
+$ cd dotfiles
 $ stow bash
 ```
-will symlink the contents of [dotfiles/bash](https://github.com/rootbeersoup/dotfiles/blob/master/bash/) to the home directory, which is currently `.bash_profile`, `.bashrc` and `.hushlogin`
+will symlink the contents of [`/bash`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/) to the home directory, which is currently `.bash_profile`, `.bashrc` and `.hushlogin`
 
 You can use the `stow` command anytime you add a new file to a folder you wish to symlink directly to the home directory. This can all be done without Stow using the `ln -s` command, but I find GNU Stow with folder management to be cleaner and easier to maintain.
 
