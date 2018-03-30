@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 chunkc core::plugin_dir /usr/local/opt/chunkwm/share/chunkwm/plugins
 
