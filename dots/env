@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Uses vi/vim keybindings in the terminal
 set -o vi
 

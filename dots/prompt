@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Displays red prompt if root
 # Displays blue prompt during SSH session
 

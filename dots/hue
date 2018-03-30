@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # This file holds configs/funcitons/aliases 
 # for hue-cli (Philips Hue)
 # Install hue-cli with "sudo gem install hue-cli"
