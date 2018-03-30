@@ -12,10 +12,9 @@ This repository contains files for configuring my Terminal environment and other
 * [Installation](#installation)
 * [How it Works](#how-it-works)
 	* [Makefile](#makefile)
-	* [Shell Environment](#shell-environment)
-		* [Symlinks with GNU Stow](#symlinks)
-		* [Bash](#bash)
-		* [Vim](#vim)
+	* [Symlinks with GNU Stow](#symlinks)
+	* [Bash](#bash)
+	* [Vim](#vim)
 	* [Window Management](#window-management)
 * [Ongoing Development](#ongoing-development)
 
@@ -45,9 +44,7 @@ The `Makefile` does the following:
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/) 
 
-### Shell Environment
-
-#### Symlinks
+### Symlinks
 
 All necessary symlinks ( [`.bash_profile`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/.bash_profile), [`.vimrc`](https://github.com/rootbeersoup/dotfiles/blob/master/vim/.vimrc), among others) are managed with GNU Stow (installed with Homebrew). Files you wish to be symlinked to the home directory need to be placed in a folder within `~/dotfiles`. Using the `stow` command from the `~/dotfiles` directory will symlink the contents of the folder you choose (`/bash`, `/vim`, etc) to the grandparent directory, which is wherever the `/dotfiles` folder is contained.
 
@@ -61,11 +58,11 @@ will symlink the contents of [`/bash`](https://github.com/rootbeersoup/dotfiles/
 
 You can use the `stow` command anytime you add a new file to a folder you wish to symlink directly to the home directory. This can all be done without Stow using the `ln -s` command, but I find GNU Stow with folder management to be cleaner and easier to maintain.
 
-#### Bash
+### Bash
 
 `.bash_profile` automatically sources configurations defined in the files contained in the [`/dots`](https://github.com/rootbeersoup/dotfiles/blob/master/dots/) folder. Any changes to any existing file, as well as any new files in the `/dots` folder will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
 
-#### Vim
+### Vim
 
 My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is auoloaded and invokes the plugins in the `/bundle` folder via a single line in my `.vimrc`:
 
