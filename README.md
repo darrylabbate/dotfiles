@@ -30,6 +30,8 @@ $ cd dotfiles
 $ make install
 ```
 
+The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
+
 In the future, I will set up a `curl` command that clones the repository and installs the dotfiles automatically.
 
 ## How it Works
