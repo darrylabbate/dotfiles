@@ -1,5 +1,14 @@
 [user]
-	name = Darryl Abbate
 	email = rootbeersoup@gmail.com
+	signingkey = 83F327E9B28EA173
 [color]
 	ui = true
+[commit]
+	gpgsign = true
+[alias]
+	c = clone --recursive
+	l = log --pretty=oneline -n 10 --graph --abbrev-commit
+	s = status -sb
+
+[gpg]
+	program = gpg

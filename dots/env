@@ -15,3 +15,4 @@ export HISTIGNORE=?:??
 export CLICOLOR=1
 export EDITOR='vim'
 export MANWIDTH=65
+export GPG_TTY=$(tty)
