@@ -9,6 +9,3 @@
 	c = clone --recursive
 	l = log --pretty=oneline -n 10 --graph --abbrev-commit
 	s = status -sb
-
-[gpg]
-	program = gpg
