@@ -5,6 +5,8 @@
 	ui = true
 [commit]
 	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
 [alias]
 	c = clone --recursive
 	l = log --pretty=oneline -n 10 --graph --abbrev-commit
