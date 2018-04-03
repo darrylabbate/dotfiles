@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This file houses all the git aliases and functions
+
+alias ga="git add"
+alias gc="git clone --recursive"
+alias gl="git log --pretty=oneline -n 10 --graph --abbrev-commit"
+alias gp=" git push -u origin master"
+alias gpl="git pull origin master"
+alias gs="git status -sb"
+
+# Git commit with message without using quotes
+function gcm () {
+    message=$*
+
+    if [[ $message ]]; then   
+        git commit -m "${message}"
+    else
+        echo ERROR: Commit message required
+    fi
+}
