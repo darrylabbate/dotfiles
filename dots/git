@@ -4,6 +4,7 @@
 alias ga="git add"
 alias gall="git add --all"
 alias gc="git clone --recursive"
+alias gf="git fetch --dry-run --verbose"
 alias gl="git log --pretty=oneline -n 10 --graph --abbrev-commit"
 alias gp=" git push -u origin master"
 alias gpl="git pull origin master"
