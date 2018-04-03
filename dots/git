@@ -2,6 +2,7 @@
 # This file houses all the git aliases and functions
 
 alias ga="git add"
+alias gall="git add --all"
 alias gc="git clone --recursive"
 alias gl="git log --pretty=oneline -n 10 --graph --abbrev-commit"
 alias gp=" git push -u origin master"
