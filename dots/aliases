@@ -18,9 +18,6 @@ alias fkill="killall Finder"
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
 
-# Git
-alias gpull="git pull origin master"
-
 # Volume Control (useful for SSH just in case)
 alias mute="osascript -e 'set volume output muted true'"
 alias volume25="osascript -e 'set volume output volume 25'"
