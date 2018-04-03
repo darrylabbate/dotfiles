@@ -15,6 +15,7 @@ git-init:
 
 macos: brew
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+	chmod +x ~/dotfiles/wm/.chunkwmrc
 	source ./macos/defaults.sh
 	brew services start chunkwm
 	brew services start skhd
