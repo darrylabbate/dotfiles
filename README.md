@@ -60,7 +60,7 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Bash
 
-`.bash_profile` automatically sources configurations defined in the files contained in the [`/dots`](https://github.com/rootbeersoup/dotfiles/blob/master/dots/) folder. Any changes to any existing file, as well as any new files in the `/dots` folder will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
+`.bash_profile` automatically sources configurations defined in the files contained in the [`/bash/dots`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/dots/) folder. Any changes to any existing file, as well as any new files in the `/bash/dots` folder will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
 
 ### Vim
 
