@@ -27,8 +27,8 @@ stow: brew
 	stow bash
 	stow git
 	stow gpg
+	stow macos
 	stow vim
-	stow wm
 	source ~/.bash_profile
 
 update:
