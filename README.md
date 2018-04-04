@@ -38,7 +38,7 @@ In the future, I will set up a `curl` command that clones the repository and ins
 
 The `Makefile` does the following:
 
-* Installs [Homebrew](https://brew.sh) and all packages defined in the [`Brewfile`](https://github.com/rootbeersoup/dotfiles/blob/master/Brewfile)
+* Runs [`brew.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
 * Sets Homebrew-installed Bash (4.4+) as the default shell
 * Updates macOS and configures preferred system defaults defined in [`defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
