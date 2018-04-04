@@ -45,7 +45,7 @@ alt - k : chunkc tiling::window --warp north
 alt - l : chunkc tiling::window --warp east
 
 # Make focused window the largest
-alt - b : chunkc tiling::window --warp biggest
+alt - m : chunkc tiling::window --warp biggest
 
 # increase/decrease padding
 alt + cmd - p : chunkc tiling::desktop --padding inc
