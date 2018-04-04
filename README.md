@@ -2,8 +2,6 @@
 	<img src="header.png" alt="dotfiles" title="dotfiles" width="600">
 </p>
 
----
-
 ## About
 
 This repository contains files for configuring my Terminal environment and other various macOS settings. See [Github does dotfiles](https://dotfiles.github.io) for more info
