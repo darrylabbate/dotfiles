@@ -7,7 +7,7 @@ alias ....="cd ../../.."
 alias c="clear"
 
 # Shortcuts
-alias t="cd /"
+alias tl="cd /"
 alias h="cd ~"
 alias b="cd -"
 alias p="cd ~/projects"
@@ -16,6 +16,9 @@ alias a="cd ~/applications"
 alias v="cd /volumes"
 alias e="vim"
 alias s="subl"
+
+#tree
+alias t="tree -C"
 
 # ls
 alias l="ls -F --color -h --group-directories-first"
