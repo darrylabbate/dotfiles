@@ -74,7 +74,7 @@ Vim plugins are currently contained as git submodules, to keep the remote reposi
 
 ### Window Management
 
-chunkwm and skhd are configured vis `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/wm` folder and symlinked to the home directory with `stow wm`.
+chunkwm and skhd are configured vis `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
 
 ## Ongoing Development
 
