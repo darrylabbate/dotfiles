@@ -5,8 +5,7 @@ bash: brew
 	chsh -s /usr/local/bin/bash
 
 brew:
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew bundle
+	source ~/dotfiles/macos/brew.sh
 
 git-init:
 	xcode-select --install

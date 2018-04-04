@@ -53,8 +53,17 @@ brew cask install iterm2
 brew cask install openemu
 brew cask install font-source-code-pro
 
+# mas
+brew install mas
+mas install 443987910	# 1Password
+mas install 918858936	# Airmail 3
+mas install 931657367	# Calcbot
+mas install 873245660	# Spillo
+mas install 497799835	# Xcode
+
 # Misc tools
 brew install tldr
+brew install youtube-dl
 
 # Terminal fun
 brew install cmatrix
