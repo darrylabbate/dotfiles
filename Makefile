@@ -1,3 +1,5 @@
+.PHONY: install install-home home bash brew git-init macos ruby stow update
+
 install: bash brew git-init macos ruby stow update
 
 install-home: install home
