@@ -1,11 +1,16 @@
 install: bash brew git-init macos ruby stow update
 
+install-home: install home
+
+home: brew
+	source ./macos/home.sh
+
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells
 	chsh -s /usr/local/bin/bash
 
 brew:
-	source ~/dotfiles/macos/brew.sh
+	source ./macos/brew.sh
 
 git-init:
 	xcode-select --install

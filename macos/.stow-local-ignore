@@ -6,4 +6,5 @@
 /iterm
 brew.sh
 defaults.sh
+home.sh
 .DS_Store

@@ -9,9 +9,6 @@
 brew update
 brew upgrade
 
-# Install cask before tapping
-brew install cask
-
 # Taps
 brew tap homebrew/core
 brew tap homebrew/bundle
@@ -47,10 +44,8 @@ brew install rbenv
 brew install ruby-build
 
 # Casks
-brew cask install etcher
-brew cask install iina
+brew install cask
 brew cask install iterm2
-brew cask install openemu
 brew cask install font-source-code-pro
 
 # mas
@@ -63,7 +58,6 @@ mas install 497799835	# Xcode
 
 # Misc tools
 brew install tldr
-brew install youtube-dl
 
 # Terminal fun
 brew install cmatrix
