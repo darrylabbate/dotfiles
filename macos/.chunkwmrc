@@ -8,20 +8,26 @@ chunkc core::hotload 0
 
 # chunkc core::load border.so
 chunkc core::load tiling.so
-# chunkc core::load ffm.so
+# chunkc core:: load ffm.so
 
+# Default mode is float
 chunkc set global_desktop_mode           float
 
+# This sets default padding/gaps between windows
 chunkc set global_desktop_offset_top     5
 chunkc set global_desktop_offset_bottom  5
 chunkc set global_desktop_offset_left    5
 chunkc set global_desktop_offset_right   5
 chunkc set global_desktop_offset_gap     5
 
+# This defines the increment in which the padding/gap is adjusted
+# when we invoke the toggle hotkeys
 chunkc set desktop_padding_step_size     5.0
 chunkc set desktop_gap_step_size         5.0
 
+# Make new windows spawn to the right by default
 chunkc set bsp_spawn_left                0
+
 chunkc set bsp_optimal_ratio             1.618
 chunkc set bsp_split_mode                optimal
 chunkc set bsp_split_ratio               0.5
@@ -42,13 +48,14 @@ chunkc set preselect_border_radius       0
 
 chunkc set focused_border_color          0xff8AFAFB
 chunkc set focused_border_width          5
-chunkc set focused_border_radius         5
+chunkc set focused_border_radius         0
 chunkc set focused_border_skip_floating  1
 
 # always float iTerm hotkey window
 chunkc tiling::rule --owner iTerm --name Hotkey Window --state float
 
 # always float these as well
+chunkc tiling::rule --owner Finder --state float
+chunkc tiling::rule --owner iTunes --state float
 chunkc tiling::rule --owner Messages --state float
 chunkc tiling::rule --owner Spotify --state float
-chunkc tiling::rule --owner Finder --state float
