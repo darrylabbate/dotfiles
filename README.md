@@ -25,7 +25,7 @@ Clone the repository and invoke the `Makefile`
 ```bash
 $ git clone --recursive https://github.com/rootbeersoup/dotfiles.git
 $ cd dotfiles
-$ make install
+$ make
 ```
 
 The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
