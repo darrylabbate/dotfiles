@@ -1,0 +1,7 @@
+--recurse=yes
+--tag-relative=yes
+
+--exclude=.build
+--exclude-.DS_Store
+--exclude=.git
+--exclude=build
