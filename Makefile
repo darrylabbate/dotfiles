@@ -1,42 +1,36 @@
-.PHONY: install install-home home bash brew git-init macos ruby stow update
+.PHONY: install install-home home git-init macos ruby stow
 
-install: bash brew git-init macos ruby stow update
+install: git-init macos ruby stow
 
 install-home: install home
 
-home: brew
+home: macos
 	source ./macos/home.sh
 
-bash: brew
-	echo /usr/local/bin/bash >> /etc/shells
-	chsh -s /usr/local/bin/bash
-
-brew:
-	source ./macos/brew.sh
-
 git-init:
-	xcode-select --install
 	git submodule init
 	git sobmodule update
 
-macos: brew
-	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-	chmod +x ~/dotfiles/wm/.chunkwmrc
+macos:
+	xcode-select --install
+	source ./macos/brew.sh
+	echo /usr/local/bin/bash >> /etc/shells
+	chsh -s /usr/local/bin/bash
+	chmod +x ~/dotfiles/macos/.chunkwmrc
 	source ./macos/defaults.sh
 	brew services start chunkwm
 	brew services start skhd
+	stow macos
+	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+	softwareupdate -i -a
 
-ruby: brew
+ruby:
 	rbenv install 2.5.0
 	rbenv global 2.5.0
 
-stow: brew
+stow:
 	stow bash
 	stow git
 	stow gpg
-	stow macos
 	stow vim
 	source ~/.bash_profile
-
-update:
-	softwareupdate -i -a
