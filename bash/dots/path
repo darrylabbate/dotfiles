@@ -2,4 +2,9 @@
 # Brew-installed GNU coreutils precede the $PATH so we can use them by their default names 
 # e.g. ls (as well as gls) uses the GNU coreutils version over the default that is shipped with macOS
 
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/usr/local/Cellar/python3/3.6.2/bin:/usr/local/Cellar/python/2.7.14/bin:/Users/darryl/.rbenv/shims"
+# Check if we're using Linux or macOS
+if [ "$(uname -s)" == "Darwin" ]; then
+	export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/usr/local/Cellar/python3/3.6.2/bin:/usr/local/Cellar/python/2.7.14/bin:/Users/darryl/.rbenv/shims"
+elif [ "$(uname -s)" == "Linux" ]; then
+	export PATH=$PATH
+fi
