@@ -25,6 +25,7 @@ brew install bash
 
 # Unix tools
 brew install coreutils
+brew install ctags
 brew install stow
 brew install watch
 
