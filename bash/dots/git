@@ -1,13 +1,27 @@
 #!/usr/bin/env bash
 # This file houses all the git aliases and functions
 
+# Add
 alias ga="git add"
 alias gall="git add --all"
+
+# Clone
 alias gc="git clone --recursive"
+
+# Fetch
 alias gf="git fetch --dry-run --verbose"
+
+# Log
 alias gl="git log --pretty=oneline -n 10 --graph --abbrev-commit"
-alias gp=" git push -u origin master"
+
+# Pull
 alias gpl="git pull origin master"
+
+# Push
+alias gp="git push -u origin master"
+alias gps="git push server"
+
+# Status
 alias gs="git status -sb"
 
 # Git commit with message without using quotes
