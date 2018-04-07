@@ -12,7 +12,10 @@ bind '"kj":"\e"'
 # bash history searching
 export HISTIGNORE=?:??
 
+# ls colors
 export CLICOLOR=1
+export LSCOLORS=exgxbxbxCxfxfxCaCaeaea
+
 export EDITOR='vim'
 export MANWIDTH=65
 export GPG_TTY=$(tty)
