@@ -9,6 +9,7 @@ sudo apt-get dist-upgrade -f
 apt-get curl
 apt-get git
 apt-get stow
+apt-get tree
 
 # Install Apache web server
 apt-get apache2
