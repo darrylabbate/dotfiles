@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # This file houses all the git aliases and functions
 
+# Alias GitHub's `hub` cli to work alongside `git`
+alias git="hub"
+
 # Add
 alias ga="git add"
 alias gall="git add --all"

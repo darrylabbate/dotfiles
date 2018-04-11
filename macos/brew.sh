@@ -29,6 +29,9 @@ brew install ctags
 brew install stow
 brew install watch
 
+# hub-cli for GitHub
+brew install hub
+
 # Install GnuPG
 brew install gnupg
 brew install pth
