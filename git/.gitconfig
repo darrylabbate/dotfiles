@@ -1,3 +1,5 @@
+[core]
+	ignorecase = true
 [user]
 	name = Darryl Abbate
 	email = rootbeersoup@gmail.com
