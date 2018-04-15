@@ -20,7 +20,13 @@ This repository contains files for configuring my Terminal environment and other
 
 ## Installation
 
-Clone the repository and invoke the `Makefile`
+```bash
+curl get.darryl.sh | sh
+```
+
+The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. See the [repository](https://github.com/rootbeersoup/get.darryl.sh) for more detailed information on what the script does.
+
+You can also manually clone the repository and invoke the `Makefile`
 
 ```bash
 $ git clone --recursive https://github.com/rootbeersoup/dotfiles.git
@@ -29,8 +35,6 @@ $ make
 ```
 
 The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
-
-In the future, I will set up a `curl` command that clones the repository and installs the dotfiles automatically.
 
 ## How it Works
 
