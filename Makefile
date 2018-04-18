@@ -2,11 +2,18 @@ UNAME        := $(shell uname -s)
 DOTFILES_DIR := $(shell pwd)
 
 ifeq ($(UNAME), Darwin)
-	OS       := 'macos'
+	OS       := macos
 endif
 ifeq ($(UNAME), Linux)
-	OS       := 'linux'
+	OS       := linux
 endif
+
+.PHONY: all home
+
+all: $(OS) git-init stow
+
+home: all
+	source $(DOTFILES_DIR)/macos/home.sh
 
 .PHONY: help usage
 help: usage
@@ -23,13 +30,6 @@ usage:
 	@echo "- Install all configs (suitable for personal computers):"
 	@echo "    make home"
 	@echo ""
-
-.PHONY: all home
-
-all: $(OS) git-init stow
-
-home: all
-	source $(DOTFILES_DIR)/macos/home.sh
 
 .PHONY: linux macos
 
