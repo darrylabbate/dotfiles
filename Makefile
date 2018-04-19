@@ -2,10 +2,10 @@ UNAME        := $(shell uname -s)
 DOTFILES_DIR := $(shell pwd)
 
 ifeq ($(UNAME), Darwin)
-	OS       := macos
+	OS := macos
 endif
 ifeq ($(UNAME), Linux)
-	OS       := linux
+	OS := linux
 endif
 
 .PHONY: all home
@@ -16,6 +16,7 @@ home: all
 	source $(DOTFILES_DIR)/macos/home.sh
 
 .PHONY: help usage
+
 help: usage
 
 usage:
@@ -33,10 +34,9 @@ usage:
 
 .PHONY: linux macos
 
-linux:
-	source $(DOTFILES_DIR)/linux/apt.sh
+linux: apt ruby-linux
 
-macos: bash brew ruby
+macos: bash brew ruby-macos
 	xcode-select --install
 	chmod +x $(DOTFILES_DIR)/macos/.chunkwmrc
 	source $(DOTFILES_DIR)/macos/defaults.sh
@@ -46,7 +46,10 @@ macos: bash brew ruby
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	softwareupdate -i -a
 
-.PHONY: bash brew git-init ruby stow
+.PHONY: apt bash brew git-init ruby-linux ruby-macos stow
+
+apt:
+	source $(DOTFILES_DIR)/linux/apt.sh
 
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells
@@ -59,7 +62,13 @@ git-init: $(OS)
 	git submodule init
 	git sobmodule update
 
-ruby: brew
+ruby-linux: apt
+	git clone git://github.com/sstephenson/rbenv.git .rbenv
+	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+	rbenv install 2.5.0
+	rbenv global 2.5.0
+
+ruby-macos: brew
 	rbenv install 2.5.0
 	rbenv global 2.5.0
 
