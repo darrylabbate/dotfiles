@@ -53,7 +53,7 @@ font:
 
   # The bold font face
   bold:
-    family: Menlo
+    family: Source Code Pro
     # Style can be specified to pick a specific face.
     # style: Bold
 
@@ -82,7 +82,7 @@ font:
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
   # false.
-  use_thin_strokes: true
+  use_thin_strokes: false
 
 # Should display the render timer
 render_timer: false
@@ -95,8 +95,8 @@ custom_cursor_colors: false
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+    background: '0x212121'
+    foreground: '0xe6e6e6'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -105,13 +105,13 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
+    black:   '0x1a1a1a'
+    red:     '0xe65077'
+    green:   '0x88f5bf'
+    yellow:  '0xC9F687'
+    blue:    '0x6eb2f7'
+    magenta: '0xe78fef'
+    cyan:    '0x7de3f9'
     white:   '0xffffff'
 
   # Bright colors
@@ -226,10 +226,10 @@ live_config_reload: true
 # You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
 # Entries in shell.args are passed unmodified as arguments to the shell.
 #
-# shell:
-#   program: /bin/bash
-#   args:
-#     - --login
+shell:
+  program: /usr/local/bin/bash
+  args:
+    - --login
 
 # Key bindings
 #
