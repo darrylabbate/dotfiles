@@ -49,8 +49,9 @@ brew install ruby-build
 
 # Casks
 brew install cask
-brew cask install iterm2
+brew cask install adobe-creative-cloud
 brew cask install font-source-code-pro
+brew cask install iterm2
 
 # mas
 brew install mas
