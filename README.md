@@ -24,6 +24,12 @@ This repository contains files for configuring my Terminal environment and other
 curl get.darryl.sh | sh
 ```
 
+The SHA-256 of the script is `7afbd67d8e59d7bd90c13f672d3072afacdb9a0275cde7113ec7a9466e9facc5`. You can verify this before downloading by running:
+
+```bash
+curl get.darryl.sh | shasum -a 256
+```
+
 The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. See the [repository](https://github.com/rootbeersoup/get.darryl.sh) for more detailed information on what the script does.
 
 You can also manually clone the repository and invoke the `Makefile`
