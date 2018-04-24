@@ -120,9 +120,6 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show Finder path bar
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Display file extensions in Finder
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
 # Disable Quick Look animation
 defaults write -g QLPanelAnimationDuration -float 0
 
