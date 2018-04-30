@@ -1,5 +1,4 @@
-# The only purpose of this file is in case the shell
-# doesn't load .bash_profile. In which case, we will
-# force it to because I say so
+# Source ~/.bash_profile in the event of a shell
+# looking for a .bashrc
 
 source ~/.bash_profile
