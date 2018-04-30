@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Super quick note script
+# Super quick note
 function n () {
     title=$(date +%Y-%m-%d)
     note=$*
-    echo $(date): $note >> ~/Notes/${title}.txt
+    echo $(date): $note >> ~/Desktop/Note_${title}.txt
 }
