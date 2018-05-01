@@ -15,6 +15,9 @@ alias upbrew="brew update; brew upgrade; brew cleanup"
 alias f="open ."
 alias fkill="killall Finder"
 
+# Open file in mark-text
+alias md="open -a 'Mark Text'"
+
 # Cleanup
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
