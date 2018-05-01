@@ -29,6 +29,9 @@ brew install ctags
 brew install stow
 brew install watch
 
+# Brew-installed git
+brew install git
+
 # hub-cli for GitHub
 brew install hub
 
