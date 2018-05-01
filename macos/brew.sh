@@ -54,6 +54,9 @@ brew cask install font-source-sans-pro
 brew cask install font-oswald
 brew cask install iterm2
 
+# Quick Look plugins
+brew cask install qlcolorcode qlstephen qlmarkdown
+
 # mas
 brew install mas
 mas install 443987910	# 1Password
