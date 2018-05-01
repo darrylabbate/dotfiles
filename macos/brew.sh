@@ -53,7 +53,7 @@ brew cask install font-source-code-pro
 brew cask install font-source-sans-pro
 brew cask install font-oswald
 brew cask install iterm2
-brew cask install sublime-text
+brew cask install mark-text
 
 # Quick Look plugins
 brew cask install qlcolorcode qlstephen
