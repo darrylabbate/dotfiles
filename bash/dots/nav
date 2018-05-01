@@ -15,7 +15,6 @@ alias d="cd ~/dotfiles"
 alias a="cd ~/applications"
 alias v="cd /volumes"
 alias e="vim"
-alias s="subl"
 
 #tree
 alias t="tree -C"
