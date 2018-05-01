@@ -42,10 +42,9 @@ brew install skhd
 
 # Language-specific tools
 brew install ghc cabal-install
-brew install python
-brew install pip3
-brew install rbenv
-brew install ruby-build
+brew install python pipenv
+brew install ruby-build rbenv
+brew install rust
 
 # Casks
 brew install cask
