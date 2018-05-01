@@ -10,7 +10,7 @@ endif
 
 .PHONY: all home
 
-all: $(OS) git-init stow
+all: $(OS)
 
 home: all
 	source $(DOTFILES_DIR)/macos/home.sh
@@ -34,17 +34,18 @@ usage:
 
 .PHONY: linux macos
 
-linux: apt ruby-linux
+linux: apt git-init ruby-linux stow
+	source ~/.bash_profile
 
-macos: bash brew ruby-macos
-	xcode-select --install
+macos: bash brew git-init ruby-macos stow
 	chmod +x $(DOTFILES_DIR)/macos/.chunkwmrc
 	source $(DOTFILES_DIR)/macos/defaults.sh
+	stow macos
 	brew services start chunkwm
 	brew services start skhd
-	stow macos
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-	softwareupdate -i -a
+	source ~/.bash_profile
+	softwareupdate -aiR
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 
@@ -58,7 +59,7 @@ bash: brew
 brew:
 	source $(DOTFILES_DIR)/macos/brew.sh
 
-git-init: $(OS)
+git-init:
 	git submodule init
 	git sobmodule update
 
@@ -72,9 +73,8 @@ ruby-macos: brew
 	rbenv install 2.5.0
 	rbenv global 2.5.0
 
-stow: $(OS)
+stow:
 	stow bash
 	stow git
 	stow gpg
 	stow vim
-	source ~/.bash_profile
