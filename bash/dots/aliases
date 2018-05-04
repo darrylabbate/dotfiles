@@ -53,7 +53,7 @@ alias bars=". ~/dotfiles/code/colors/bars"
 alias colors=". ~/dotfiles/code/colors/colors"
 alias spooky=". ~/dotfiles/code/colors/ghosts"
 alias pipes=". ~/dotfiles/code/colors/pipes"
-alias slim=". ~/dotfiles/code/colors/slimcolors"
+alias slimcolors=". ~/dotfiles/code/colors/slimcolors"
 alias tanks=". ~/dotfiles/code/colors/tanks"
 
 # Misc
