@@ -41,7 +41,7 @@ brew install chunkwm
 brew install skhd
 
 # Language-specific tools
-brew install ghc cabal-install
+brew install ghc cabal-install stack
 brew install python pipenv
 brew install ruby-build rbenv
 brew install rust
