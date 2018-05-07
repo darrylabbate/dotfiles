@@ -29,7 +29,8 @@ brew install ctags
 brew install stow
 brew install watch
 
-# hub-cli for GitHub
+# Git
+brew install git
 brew install hub
 
 # Install GnuPG
@@ -45,6 +46,7 @@ brew install ghc cabal-install stack
 brew install python pipenv
 brew install ruby-build rbenv
 brew install rust
+brew install --devel sass/sass/sass
 
 # Casks
 brew install cask
