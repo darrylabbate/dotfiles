@@ -1,5 +1,3 @@
-[core]
-	ignorecase = true
 [user]
 	name = Darryl Abbate
 	email = rootbeersoup@gmail.com
@@ -8,3 +6,7 @@
 	ui = true
 [commit]
 	gpgsign = true
+[core]
+	ignorecase = true
+[credential]
+	helper = osxkeychain
