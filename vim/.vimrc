@@ -11,13 +11,13 @@ syntax on
 
 set tabstop=4
 set shiftwidth=4
+set autoindent
 set mouse=a
 set nolist
 set ignorecase
 set smartcase
 set hlsearch
 set showcmd
-set autoindent
 set incsearch
 set showmatch
 
@@ -49,7 +49,12 @@ nmap <leader>w :w!<cr>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+" Keep it slim and sassy
+autocmd FileType sass setlocal shiftwidth=2 tabstop=2 expandtab
+autocmd FileType slim setlocal shiftwidth=2 tabstop=2 expandtab
+
 " Haskell
+autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 expandtab
 let g:haskell_indent_if = 3
 let g:haskell_indent_case = 2
 let g:haskell_indent_let = 4
