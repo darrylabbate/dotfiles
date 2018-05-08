@@ -1,12 +1,13 @@
 execute pathogen#infect()
 filetype indent plugin on
+
 set noswapfile
 set backupdir=~/.vim/backups
 
 set path+=**
 set wildmenu
 
-set t_Co=16
+set t_Co=256
 syntax on
 
 set tabstop=4
@@ -20,6 +21,7 @@ set hlsearch
 set showcmd
 set incsearch
 set showmatch
+set noshowmode
 
 set number
 set relativenumber
@@ -49,6 +51,23 @@ nmap <leader>w :w!<cr>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ }
+
+let g:limelight_conceal_ctermfg = 'gray'
+
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+
+
 " Keep it slim and sassy
 autocmd FileType sass setlocal shiftwidth=2 tabstop=2 expandtab
 autocmd FileType slim setlocal shiftwidth=2 tabstop=2 expandtab
@@ -64,3 +83,10 @@ let g:haskell_indent_after_bare_where = 2
 let g:haskell_indent_do = 3
 let g:haskell_indent_in = 1
 let g:haskell_indent_guard = 2
+
+" gitgutter
+let g:gitgutter_sign_added = '·'
+let g:gitgutter_sign_modified = '·'
+let g:gitgutter_sign_removed = '·'
+let g:gitgutter_sign_removed_first_line = '·'
+let g:gitgutter_sign_modified_removed = '·'
