@@ -436,11 +436,11 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>3</string>
+	<string>1</string>
 	<key>NSFontPanelSizeList</key>
 	<array>
 		<string>9</string>
@@ -480,8 +480,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 251.000000, NO, NO</string>
-		<string>0.000000, 252.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
+		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -512,7 +512,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>1053 216 228 232 0 0 1920 1058 </string>
+	<string>1053 132 228 280 0 0 1920 1058 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>706 230 445 77 0 0 1920 1058 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -520,9 +520,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 207 606 469 0 0 1920 1058 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>40 321 928 394 0 0 1920 1058 </string>
+	<string>547 257 918 452 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1282 5 633 1048 0 0 1920 1058 </string>
+	<string>1201 5 714 1048 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 962 220 96 0 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -767,13 +767,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12546983361244202</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12550082802772522</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12547165155410767</real>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -1271,13 +1271,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.57046490907669067</real>
+				<real>0.57046490910000003</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.5704723596572876</real>
+				<real>0.57047235969999999</real>
 				<key>Red Component</key>
-				<real>0.57045853137969971</real>
+				<real>0.57045853140000002</real>
 			</dict>
 			<key>Tags</key>
 			<array>
@@ -1308,7 +1308,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Use Tab Color</key>
-			<false/>
+			<true/>
 			<key>Use Underline Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
@@ -2200,7 +2200,7 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>TerminalMargin</key>
-	<integer>24</integer>
+	<integer>16</integer>
 	<key>TerminalVMargin</key>
 	<integer>16</integer>
 	<key>TrackingRunloopForLiveResize</key>
