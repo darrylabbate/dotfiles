@@ -19,3 +19,9 @@
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/.vim/bundle/limelight.vim"]
+	path = vim/.vim/bundle/limelight.vim
+	url = https://github.com/junegunn/limelight.vim.git
+[submodule "vim/.vim/bundle/goyo.vim"]
+	path = vim/.vim/bundle/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
