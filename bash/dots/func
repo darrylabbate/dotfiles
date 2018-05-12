@@ -6,3 +6,21 @@ function n () {
     note=$*
     echo $(date): $note >> ~/Desktop/Note_${title}.txt
 }
+
+# Check price of individual cryptocurrency
+#
+# Only works reliably with USD since CoinCap's API 
+# is super broken, but is the most well-suited for
+# easily building the request URL from a command-line argument.
+#
+#	Dependency: jq (brew install jq)
+#
+#	Usage: 'check btc' (use ticker symbol; case-insensitive)
+#	Output: Bitcoin: $8,999.99
+
+function check () {
+	url=$(curl -s http://coincap.io/page/${1^^}) 
+	name=$(echo $url | jq -cr '.display_name')
+	price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
+	echo $name": \$"$price
+}
