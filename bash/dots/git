@@ -2,14 +2,30 @@
 # This file houses all the git aliases and functions
 
 # Alias GitHub's `hub` cli to work alongside `git`
+# as recommended by GitHub
 alias git="hub"
 
 # Add
 alias ga="git add"
 alias gall="git add --all"
 
-# Clone
-alias gc="git clone --recursive"
+# Clone with recursive flag
+alias gcl="git clone --recursive"
+
+# Commit
+alias gc="git commit"
+alias gca="git commit --amend"
+
+# Quick commit with message without quotes
+function qc () {
+    message=$*
+
+    if [[ $message ]]; then   
+        git commit -m "${message}"
+    else
+        echo ERROR: Commit message required
+    fi
+}
 
 # Fetch
 alias gf="git fetch --dry-run --verbose"
@@ -22,18 +38,9 @@ alias gpl="git pull origin master"
 
 # Push
 alias gp="git push -u origin master"
+
+# Push to webhost
 alias gps="git push server"
 
 # Status
 alias gs="git status -sb"
-
-# Git commit with message without using quotes
-function gcm () {
-    message=$*
-
-    if [[ $message ]]; then   
-        git commit -m "${message}"
-    else
-        echo ERROR: Commit message required
-    fi
-}
