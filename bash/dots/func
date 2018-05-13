@@ -15,10 +15,10 @@ function n () {
 #
 #	Dependency: jq (brew install jq)
 #
-#	Usage: 'check btc' (use ticker symbol; case-insensitive)
+#	Usage: 'coin btc' (use ticker symbol; case-insensitive)
 #	Output: Bitcoin: $8,999.99
 
-function check () {
+function coin () {
 	url=$(curl -s http://coincap.io/page/${1^^}) 
 	name=$(echo $url | jq -cr '.display_name')
 	price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
