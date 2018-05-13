@@ -4,7 +4,8 @@
 # via the command-line
 
 # Baseball-Reference
-function mlb () {
+# Using 'the' in the search query is Baseball-Reference's version of "I'm Feeling Lucky"
+function bbref () {
     term=$*
 
     if [[ $term ]]; then
@@ -15,7 +16,7 @@ function mlb () {
 }
 
 # Pro-Football-Reference
-function nfl () {
+function pfref () {
     term=$*
 
     if [[ $term ]]; then
