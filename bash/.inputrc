@@ -1,0 +1,6 @@
+# Use vi/vim keybindings in the terminal
+set editing-mode vi
+
+# Exit normal/command mode by typing 'jk' or 'kj'
+"jk":"\e"
+"kj":"\e"

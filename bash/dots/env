@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-# Uses vi/vim keybindings in the terminal
-set -o vi
-
-# Binds 'jk' and 'kj' to exit insert mode and enter normal mode 
-# for vi movement in the terminal
-bind '"jk":"\e"'
-bind '"kj":"\e"'
-
 # Ignores all one-word and two-word commands for more efficient
 # bash history searching
 export HISTIGNORE=?:??
