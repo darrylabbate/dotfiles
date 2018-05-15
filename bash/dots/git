@@ -46,3 +46,6 @@ alias gps="git push server"
 
 # Status
 alias gs="git status -sb"
+
+# Update submodules
+alias gsu="git submodule update --recursive --remote"
