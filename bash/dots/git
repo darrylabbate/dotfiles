@@ -2,8 +2,10 @@
 # This file houses all the git aliases and functions
 
 # Alias GitHub's `hub` cli to work alongside `git`
-# as recommended by GitHub
-alias git="hub"
+# as recommended by GitHub (only macOS for now)
+if [ "$(uname -s)" == "Darwin" ]; then
+	alias git="hub"
+fi
 
 # Add
 alias ga="git add"
