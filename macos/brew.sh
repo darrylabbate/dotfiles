@@ -31,6 +31,7 @@ brew install stow
 brew install watch
 
 # Git
+brew install gibo
 brew install git
 brew install hub
 
