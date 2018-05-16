@@ -23,15 +23,16 @@ brew tap koekeishiya/formulae
 # Makefile will configure default shell
 brew install bash
 
-# Unix tools
+# General tools
 brew install coreutils
 brew install ctags
+brew install gibo
 brew install jq
 brew install stow
+brew install tldr
 brew install watch
 
 # Git
-brew install gibo
 brew install git
 brew install hub
 
@@ -69,9 +70,6 @@ mas install 918858936	# Airmail 3
 mas install 931657367	# Calcbot
 mas install 873245660	# Spillo
 mas install 497799835	# Xcode
-
-# Misc tools
-brew install tldr
 
 # Terminal fun
 brew install cmatrix
