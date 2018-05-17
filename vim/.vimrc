@@ -51,6 +51,8 @@ nmap <leader>w :w!<cr>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
+nmap ga <Plug>(EasyAlign)
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
