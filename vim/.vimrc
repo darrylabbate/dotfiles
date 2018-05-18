@@ -54,10 +54,12 @@ inoremap kj <Esc>
 nmap ga <Plug>(EasyAlign)
 
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'seoul256',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'modified' ] ],
+      \   'right': [ [ 'filetype' ],
+      \              [ 'gitbranch', 'readonly', 'filename' ] ]
       \ },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head'
