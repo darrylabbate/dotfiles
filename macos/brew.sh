@@ -53,6 +53,7 @@ brew install --devel sass/sass/sass
 
 # Casks
 brew install cask
+brew cask install 1password
 brew cask install adobe-creative-cloud
 brew cask install font-source-code-pro
 brew cask install font-source-sans-pro
@@ -65,7 +66,6 @@ brew cask install qlcolorcode qlstephen
 
 # mas
 brew install mas
-mas install 443987910	# 1Password
 mas install 918858936	# Airmail 3
 mas install 931657367	# Calcbot
 mas install 873245660	# Spillo
