@@ -55,6 +55,7 @@ chunkc set focused_border_skip_floating  1
 chunkc tiling::rule --owner iTerm --name Hotkey Window --state float
 
 # always float these as well
+chunkc tiling::rule --owner 1Password --state float
 chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner iTunes --state float
 chunkc tiling::rule --owner Messages --state float
