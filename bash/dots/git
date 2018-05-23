@@ -41,6 +41,9 @@ alias gpl="git pull origin master"
 # Push
 alias gp="git push -u origin master"
 
+# Push to `dev` branch
+alias gpd="git push -u origin dev"
+
 # Push to webhost
 alias gps="git push server"
 
