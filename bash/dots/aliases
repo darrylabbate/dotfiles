@@ -18,6 +18,9 @@ alias fkill="killall Finder"
 # Open file in mark-text
 alias md="open -a 'Mark Text'"
 
+# Slim
+alias slim="slimrb"
+
 # Cleanup
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
