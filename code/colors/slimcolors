@@ -3,7 +3,7 @@
 # Author: machinebacon
 # Source: http://linuxbbq.org/bbs/viewtopic.php?f=4&t=1656#p33237
 
-T='*'   # The test text
+T='•'   # The text for the color test
 
 echo -e "\n             40m 41m 42m 43m\
  44m 45m 46m 47m";
