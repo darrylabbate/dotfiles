@@ -10,8 +10,9 @@ set wildmenu
 set t_Co=256
 syntax on
 
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set autoindent
 set mouse=a
 set nolist
@@ -71,13 +72,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
-
-" Keep it slim and sassy
-autocmd FileType sass setlocal shiftwidth=2 tabstop=2 expandtab
-autocmd FileType slim setlocal shiftwidth=2 tabstop=2 expandtab
-
 " Haskell
-autocmd FileType haskell setlocal shiftwidth=2 tabstop=2 expandtab
 let g:haskell_indent_if = 3
 let g:haskell_indent_case = 2
 let g:haskell_indent_let = 4
