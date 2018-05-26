@@ -10,13 +10,13 @@ alias outrun="office on && hue 1 brightness 165 && hue 1 color 0.2017 0.3274 && 
 alias night="office on && hue lights brightness 125 && hue lights color 0.47 0.41"
 
 function office () {
-	cmd=$*
-	# Commands are on, off, flash, blink, solid
+  cmd=$*
+  # Commands are on, off, flash, blink, solid
 
-	if  [[ $cmd ]]; then
-		hue 1 "${cmd}"
-		hue 2 "${cmd}"
-	else
-		echo ERROR: No command given
-	fi
+  if  [[ $cmd ]]; then
+    hue 1 "${cmd}"
+    hue 2 "${cmd}"
+  else
+    echo ERROR: No command given
+  fi
 }

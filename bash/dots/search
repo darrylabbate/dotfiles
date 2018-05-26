@@ -6,22 +6,22 @@
 # Baseball-Reference
 # Using 'the' in the search query is Baseball-Reference's version of "I'm Feeling Lucky"
 function bbref () {
-    term=$*
+  term=$*
 
-    if [[ $term ]]; then
-        open -a Safari "https://www.baseball-reference.com/search/search.fcgi?search=the+${term}"
-    else
-        echo ERROR: Invalid search parameters
-    fi
+  if [[ $term ]]; then
+    open -a Safari "https://www.baseball-reference.com/search/search.fcgi?search=the+${term}"
+  else
+      echo ERROR: Invalid search parameters
+  fi
 }
 
 # Pro-Football-Reference
 function pfref () {
-    term=$*
+  term=$*
 
-    if [[ $term ]]; then
-        open -a Safari "https://www.pro-football-reference.com/search/search.fcgi?search=the+${term}"
-    else
-        echo ERROR: Invalid search parameters
-    fi
+  if [[ $term ]]; then
+    open -a Safari "https://www.pro-football-reference.com/search/search.fcgi?search=the+${term}"
+  else
+      echo ERROR: Invalid search parameters
+  fi
 }

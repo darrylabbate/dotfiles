@@ -20,13 +20,13 @@ alias gca="git commit --amend"
 
 # Quick commit with message without quotes
 function qc () {
-    message=$*
+  message=$*
 
-    if [[ $message ]]; then   
-        git commit -m "${message}"
-    else
-        echo ERROR: Commit message required
-    fi
+  if [[ $message ]]; then   
+    git commit -m "${message}"
+  else
+    echo ERROR: Commit message required
+  fi
 }
 
 # Fetch
