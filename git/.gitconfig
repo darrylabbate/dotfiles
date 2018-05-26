@@ -7,7 +7,7 @@
 [commit]
 	gpgsign = true
 [core]
-	excludesfile = '~/.gitignore_global'
+	excludesfile = ~/.gitignore_global
 	ignorecase = true
 [credential]
 	helper = osxkeychain
