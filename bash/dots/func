@@ -2,9 +2,9 @@
 
 # Super quick note
 function n () {
-    title=$(date +%Y-%m-%d)
-    note=$*
-    echo $(date): $note >> ~/Desktop/Note_${title}.txt
+  title=$(date +%Y-%m-%d)
+  note=$*
+  echo $(date): $note >> ~/Desktop/Note_${title}.txt
 }
 
 # Check price of individual cryptocurrency
@@ -19,8 +19,8 @@ function n () {
 #	Output: Bitcoin: $8,999.99
 
 function coin () {
-	url=$(curl -s http://coincap.io/page/${1^^}) 
-	name=$(echo $url | jq -cr '.display_name')
-	price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
-	echo $name" (${1^^}) \$"$price
+  url=$(curl -s http://coincap.io/page/${1^^}) 
+  name=$(echo $url | jq -cr '.display_name')
+  price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
+  echo $name" (${1^^}) \$"$price
 }
