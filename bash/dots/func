@@ -13,10 +13,10 @@ function n () {
 # is super broken, but is the most well-suited for
 # easily building the request URL from a command-line argument.
 #
-#	Dependency: jq (brew install jq)
+# Dependency: jq (brew install jq)
 #
-#	Usage: 'coin btc' (use ticker symbol; case-insensitive)
-#	Output: Bitcoin: $8,999.99
+# Usage: 'coin btc' (use ticker symbol; case-insensitive)
+# Output: Bitcoin: $8,999.99
 
 function coin () {
   url=$(curl -s http://coincap.io/page/${1^^}) 
