@@ -77,4 +77,5 @@ stow:
 	stow bash
 	stow git
 	stow gpg
+	stow haskell
 	stow vim
