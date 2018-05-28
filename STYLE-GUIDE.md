@@ -4,6 +4,7 @@
 * [Directory Structure](#directory-structure)
 * [File Extensions](#file-extensions)
 * [Language Rules and Code Formatting](#language-rules-and-code-formatting)
+  * [General Rules](#general-rules)
   * [Bash](#bash)
   * [Make](#make)
 
@@ -36,7 +37,7 @@ Executables should not have a file extension, since the knowledge of the languag
 
 ## Language Rules and Code Formatting
 
-### General rules
+### General Rules
 * Indentation and whitespace
   * 2 spaces. Avoid tabs unless necessary.
 * Line length
