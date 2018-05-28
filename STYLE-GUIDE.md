@@ -3,7 +3,7 @@
 ## Table of Contents
 * [Directory Structure](#directory-structure)
 * [File Extensions](#file-extensions)
-* [Language Rules and Code Formatting](#language-rules)
+* [Language Rules and Code Formatting](#language-rules-and-code-formatting)
   * [Bash](#bash)
   * [Make](#make)
 
@@ -39,13 +39,10 @@ Executables should not have a file extension, since the knowledge of the languag
 ### General rules
 * Indentation and whitespace
   * 2 spaces. Avoid tabs unless necessary.
-
 * Line length
   * 80-100 character maximum encouraged. Not strict.
-
 * Alignment 
   * Alignment for the sake of legibility is strongly encouraged unless functionally inhibitive.
-
 * Comments
   * Commenting is strongly encouraged for the sake of good documentation. Always err on the side of verbosity for comments.
 
