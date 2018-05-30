@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ---------------------------------------
-#  chunkwm
+# chunkwm
 # ---------------------------------------
 
 # --grid-layout guide
@@ -11,34 +11,34 @@
 # X:Y defines the rows:columns of the virtual grid
 #
 # A:B defines the placement of the window on the grid
-# 	1:0 places window in topmost row and 2nd leftmost colum
+#   1:0 places window in topmost row and 2nd leftmost colum
 #
 # C:D defines the size of the window
-# 	2:1 would resize the window to 2 times width and 1 times height
-#	of the grid defined in X:Y
+#   2:1 would resize the window to 2 times width and 1 times height
+#   of the grid defined in X:Y
 
 
-# change tiling mode of desktop
+# Change tiling mode of desktop
 alt + cmd - b : chunkc tiling::desktop --layout bsp
 alt + cmd - n : chunkc tiling::desktop --layout float
 
 
-### bsp mode shortcuts ###
+### BSP mode shortcuts ###
 
-# toggle focused window's float/bsp status while desktop is in bsp mode
+# Toggle focused window's float/bsp status while desktop is in bsp mode
 alt - d : chunkc tiling::window --toggle float
 
-# increase/decrease window size
+# Increase/decrease window size
 alt + cmd - h : chunkc tiling::window --use-temporary-ratio 0.025 --adjust-window-edge west\
-				chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge east
+                chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge east
 alt + cmd - j : chunkc tiling::window --use-temporary-ratio 0.025 --adjust-window-edge south\
-				chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge north
+                chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge north
 alt + cmd - k : chunkc tiling::window --use-temporary-ratio 0.025 --adjust-window-edge north\
-				chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge south
+                chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge south
 alt + cmd - l : chunkc tiling::window --use-temporary-ratio 0.025 --adjust-window-edge east\
-				chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge west
+                chunkc tiling::window --use-temporary-ratio -0.025 --adjust-window-edge west
 
-# warp focused container
+# Warp focused container
 alt - h : chunkc tiling::window --warp west
 alt - j : chunkc tiling::window --warp south
 alt - k : chunkc tiling::window --warp north
@@ -47,37 +47,37 @@ alt - l : chunkc tiling::window --warp east
 # Make focused window the largest
 alt - m : chunkc tiling::window --warp biggest
 
-# increase/decrease padding
+# Increase/decrease padding
 alt + cmd - p : chunkc tiling::desktop --padding inc
 alt + cmd - o : chunkc tiling::desktop --padding dec
 
-# increase/decrease gap between windows
+# Increase/decrease gap between windows
 alt + cmd - v : chunkc tiling::desktop --gap inc
 alt + cmd - c : chunkc tiling::desktop --gap dec
 
-# change focused window
+# Change focused window
 alt - w : chunkc tiling::window --focus next
 
-# rotate window arrangement 90 degrees
+# Rotate window arrangement 90 degrees
 alt + cmd - r : chunkc tiling::desktop --rotate 90
 
-# rotate window arrangement 180 degrees (flip)
+# Rotate window arrangement 180 degrees (flip)
 alt + cmd - f : chunkc tiling::desktop --rotate 180
 
-# equalize size of windows
+# Equalize size of windows
 alt + cmd - e : chunkc tiling::desktop --equalize
 
-# toggle split
+# Toggle split
 alt + cmd - x : chunkc tiling::window --toggle split
 
 
-### float mode shortcuts ###
+### Float mode shortcuts ###
 
-# make focused window fill screen
+# Make focused window fill screen
 alt + cmd - m : chunkc tiling::window --grid-layout 1:1:0:0:1:1
 
-# move focused window to center (mainly to set iTerm hotkey window)
+# Move focused window to center (mainly to set iTerm hotkey window)
 alt + cmd - g : chunkc tiling::window --grid-layout 5:6:2:2:2:1
 
-# move focused window to middle (ideal readability)
+# Move focused window to middle (ideal readability)
 alt + cmd - t : chunkc tiling::window --grid-layout 5:5:1:0:3:5
