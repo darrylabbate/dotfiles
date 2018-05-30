@@ -6,21 +6,19 @@ chunkc core::log_file stdout
 chunkc core::log_level error
 chunkc core::hotload 0
 
-# chunkc core::load border.so
 chunkc core::load tiling.so
-# chunkc core:: load ffm.so
 
-# Default mode is float
+# Set default mode to float
 chunkc set global_desktop_mode           float
 
-# This sets default padding/gaps between windows
+# Set default padding/gaps between windows
 chunkc set global_desktop_offset_top     5
 chunkc set global_desktop_offset_bottom  5
 chunkc set global_desktop_offset_left    5
 chunkc set global_desktop_offset_right   5
 chunkc set global_desktop_offset_gap     5
 
-# This defines the increment in which the padding/gap is adjusted
+# Define the increment in which the padding/gap is adjusted
 # when we invoke the toggle hotkeys
 chunkc set desktop_padding_step_size     5.0
 chunkc set desktop_gap_step_size         5.0
@@ -51,10 +49,10 @@ chunkc set focused_border_width          5
 chunkc set focused_border_radius         0
 chunkc set focused_border_skip_floating  1
 
-# always float iTerm hotkey window
+# Always float iTerm hotkey window
 chunkc tiling::rule --owner iTerm --name Hotkey Window --state float
 
-# always float these as well
+# Always float these apps
 chunkc tiling::rule --owner 1Password --state float
 chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner iTunes --state float
