@@ -31,6 +31,7 @@ brew install gibo
 brew install jq
 brew install stow
 brew install tldr
+brew install unar
 brew install watch
 
 # Git
