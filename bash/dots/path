@@ -4,7 +4,7 @@
 
 # Check if we're using Linux or macOS
 if [ "$(uname -s)" == "Darwin" ]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims:/usr/local/Cellar/python3/3.6.5/bin"
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/curl/bin:$PATH:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims:/usr/local/Cellar/python3/3.6.5/bin"
 elif [ "$(uname -s)" == "Linux" ]; then
   export PATH="$PATH:/home/darryl/.rbenv/bin:/home/darryl/.rbenv/shims"
 fi
