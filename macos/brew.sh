@@ -26,6 +26,7 @@ brew install bash
 # General tools
 brew install coreutils
 brew install ctags
+brew install curl
 brew install gibo
 brew install jq
 brew install stow
