@@ -21,15 +21,16 @@ help: usage
 
 usage:
 	@echo ""
-	@echo "dotfiles"
+	@echo "━━━ dotfiles ━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 	@echo ""
 	@echo "Custom macOS settings and terminal configurations"
+	@echo "See README.md for detailed information"
 	@echo ""
-	@echo "- Install standard terminal-based configs (suitable for work-issued computers or servers):"
-	@echo "    make"
+	@echo "    make            Install standard configurations and applications."
+	@echo "                    Suitable for work-issued computers or servers."
 	@echo ""
-	@echo "- Install all configs (suitable for personal computers):"
-	@echo "    make home"
+	@echo "    make home       Install all configurations and applications."
+	@echo "                    Suitable for personal computers."
 	@echo ""
 
 .PHONY: linux macos
