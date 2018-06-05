@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="header.png" alt="dotfiles" title="dotfiles">
+  <img src="header.png" alt="dotfiles" title="dotfiles">
 </p>
 
 ## About
@@ -9,11 +9,11 @@ This repository contains files for configuring my Terminal environment and other
 ## Table of Contents
 * [Installation](#installation)
 * [How it Works](#how-it-works)
-	* [Makefile](#makefile)
-	* [Symlinks with GNU Stow](#symlinks)
-	* [Bash](#bash)
-	* [Vim](#vim)
-	* [Window Management](#window-management)
+  * [Makefile](#makefile)
+  * [Symlinks with GNU Stow](#symlinks)
+  * [Bash](#bash)
+  * [Vim](#vim)
+  * [Window Management](#window-management)
 * [Ongoing Development](#ongoing-development)
 
 ---
