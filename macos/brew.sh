@@ -3,7 +3,9 @@
 # This gives us more control over using the conventional Brewfile mehod
 
 # Install Homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! [[ -x "$(command -v brew)" ]]; then 
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
 # Update, upgrade
 brew update
@@ -51,7 +53,7 @@ brew install ghc cabal-install stack
 brew install python pipenv
 brew install ruby-build rbenv
 brew install rust
-brew install --devel sass/sass/sass
+brew install sass/sass/sass
 
 # Casks
 brew install cask
