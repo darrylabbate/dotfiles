@@ -24,7 +24,7 @@ This repository contains files for configuring my Terminal environment and other
 $ curl get.darryl.sh | sh
 ```
 
-The SHA-256 checksum of the script is `43f828f91ea32c42fc2a228165d4ffd0343b8de4f0d9cd23c5d0d586fadc027e`. You can verify this before downloading by running:
+The SHA-256 checksum of the script is `64cd014f0c789db8cbc351873620c249f0000c39d485dc0d7db570550ec73666`. You can verify this before downloading by running:
 
 ```bash
 $ curl get.darryl.sh | shasum -a 256
