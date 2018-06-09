@@ -9,5 +9,4 @@ export CLICOLOR=1
 export LSCOLORS=exgxbxbxCxfxfxCaCaeaea
 
 export EDITOR='vim'
-export MANWIDTH=65
 export GPG_TTY=$(tty)
