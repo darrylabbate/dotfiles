@@ -4,7 +4,6 @@
 # I wouldn't install on a work computer
 
 # Language-specific tools
-brew install ghc cabal-install stack
 brew install rust
 
 # Cask
