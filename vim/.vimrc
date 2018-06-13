@@ -2,7 +2,6 @@ execute pathogen#infect()
 filetype indent plugin on
 
 set noswapfile
-set backupdir=~/.vim/backups
 
 set path+=**
 set wildmenu
