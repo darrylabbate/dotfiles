@@ -28,3 +28,6 @@
 [submodule "vim/.vim/bundle/vim-easy-align"]
 	path = vim/.vim/bundle/vim-easy-align
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "vim/.vim/bundle/vim-stylish-haskell"]
+	path = vim/.vim/bundle/vim-stylish-haskell
+	url = https://github.com/nbouscal/vim-stylish-haskell.git
