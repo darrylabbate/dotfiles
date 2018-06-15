@@ -441,27 +441,6 @@
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
 	<string>1</string>
-	<key>NSFontPanelSizeList</key>
-	<array>
-		<string>9</string>
-		<string>10</string>
-		<string>11</string>
-		<string>12</string>
-		<string>13</string>
-		<string>14</string>
-		<string>18</string>
-		<string>24</string>
-		<string>36</string>
-		<string>48</string>
-		<string>64</string>
-		<string>72</string>
-		<string>96</string>
-		<string>144</string>
-		<string>288</string>
-		<string>16</string>
-	</array>
-	<key>NSFontPanelSizeSliderParams</key>
-	<string>1 0 100</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles/macos/iterm/colors</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -480,8 +459,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
-		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 303.000000, NO, NO</string>
+		<string>0.000000, 304.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -512,23 +491,21 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>1053 132 228 280 0 0 1920 1058 </string>
+	<string>529 133 228 284 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>706 230 445 77 0 0 1920 1058 </string>
+	<string>791 33 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 499 620 392 0 0 1920 1058 </string>
+	<string>373 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 207 606 469 0 0 1920 1058 </string>
+	<string>269 191 606 469 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>547 236 796 473 0 0 1920 1058 </string>
+	<string>380 337 928 394 0 0 1366 746 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>5 5 1356 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1153 5 762 1048 0 0 1920 1058 </string>
+	<string>685 5 676 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 962 220 96 0 0 1920 1058 </string>
-	<key>NSWindow Frame iTerm Window 2</key>
-	<string>62 507 500 306 0 0 1920 1058 </string>
-	<key>NSWindow Frame iTerm Window 4</key>
-	<string>108 94 500 306 0 0 1920 1058 </string>
+	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -639,9 +616,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90973925590515137</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.457275390625</real>
+				<real>0.31372549019607843</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -717,9 +694,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89019608497619629</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.49019607901573181</real>
+				<real>0.5253523588180542</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -805,13 +782,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.52520245313644409</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.31759446859359741</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.99836844205856323</real>
+				<real>0.31372549019607843</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
@@ -822,19 +799,19 @@
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
-			<real>0.066772151898734186</real>
+			<real>0.047401685393258425</real>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.97425812482833862</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89264869689941406</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.48657578229904175</real>
+				<real>0.31372549019607843</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1190,13 +1167,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99607843160629272</real>
+				<real>0.35294117647058826</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90588235855102539</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.29803922772407532</real>
+				<real>0.6470588235294118</real>
 			</dict>
 			<key>Mouse Reporting</key>
 			<true/>
@@ -2105,7 +2082,7 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>3F5D364A-F3B6-4040-964F-72EE64635ADF</string>
+	<string>EA11AF2B-DF07-475A-9803-5EE7B11BAA65</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -2113,7 +2090,7 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>528596869.587964</real>
+	<real>526347527.51308101</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -2165,16 +2142,18 @@
 	<false/>
 	<key>RememberWindowPositions</key>
 	<false/>
+	<key>SUAutomaticallyUpdate</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<false/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=37</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=31</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-26T06:50:10Z</date>
+	<date>2018-06-12T07:13:40Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2205,6 +2184,8 @@
 	<integer>16</integer>
 	<key>TrackingRunloopForLiveResize</key>
 	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1527801856</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseColorfgbgFallback</key>
