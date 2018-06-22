@@ -58,6 +58,7 @@ brew install sass/sass/sass
 brew install cask
 brew cask install 1password
 brew cask install adobe-creative-cloud
+brew cask install font-envy-code-r
 brew cask install font-source-code-pro
 brew cask install font-source-sans-pro
 brew cask install font-oswald
