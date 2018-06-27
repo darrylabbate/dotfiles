@@ -111,9 +111,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90973925590515137</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.457275390625</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -189,9 +189,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89019608497619629</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.49019607901573181</real>
+				<real>0.5253523588180542</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -237,13 +237,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12546983361244202</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12550082802772522</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12547165155410767</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -263,26 +263,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.52520245313644409</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.31759446859359741</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.99836844205856323</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.97425812482833862</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89264869689941406</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.48657578229904175</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -328,13 +328,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99607843160629272</real>
+				<real>0.35294118523597717</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90588235855102539</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.29803922772407532</real>
+				<real>0.64705884456634521</real>
 			</dict>
 			<key>Selected Text Color</key>
 			<dict>
@@ -493,17 +493,17 @@
 	<key>NSWindow Frame NSColorPanel</key>
 	<string>529 133 228 284 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>791 33 445 77 0 0 1366 746 </string>
+	<string>409 160 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>373 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 606 469 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>380 337 928 394 0 0 1366 746 </string>
+	<string>448 202 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>5 5 1356 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>685 5 676 736 0 0 1366 746 </string>
+	<string>276 5 814 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -511,6 +511,8 @@
 		<dict>
 			<key>ASCII Anti Aliased</key>
 			<true/>
+			<key>ASCII Ligatures</key>
+			<false/>
 			<key>AWDS Pane Directory</key>
 			<string></string>
 			<key>AWDS Pane Option</key>
@@ -795,7 +797,7 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>70</integer>
+			<integer>80</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
@@ -1184,7 +1186,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>EnvyCodeR 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1391,9 +1393,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90973925590515137</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.457275390625</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
@@ -1469,9 +1471,9 @@
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89019608497619629</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.49019607901573181</real>
+				<real>0.5253523588180542</real>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
@@ -1519,13 +1521,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12546983361244202</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12550082802772522</real>
 				<key>Red Component</key>
-				<real>0.14901961386203766</real>
+				<real>0.12547165155410767</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1555,20 +1557,20 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.52520245313644409</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.31759446859359741</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.99836844205856323</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Character Encoding</key>
 			<integer>4</integer>
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>68</integer>
+			<integer>80</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Boost</key>
@@ -1578,13 +1580,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.97425812482833862</real>
+				<real>1</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89264869689941406</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.48657578229904175</real>
+				<real>0.31372550129890442</real>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -1964,13 +1966,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.99607843160629272</real>
+				<real>0.35294118523597717</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90588235855102539</real>
+				<real>1</real>
 				<key>Red Component</key>
-				<real>0.29803922772407532</real>
+				<real>0.64705884456634521</real>
 			</dict>
 			<key>Minimum Contrast</key>
 			<real>0.0</real>
@@ -1983,7 +1985,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SourceCodePro-Regular 14</string>
+			<string>EnvyCodeR 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1993,7 +1995,7 @@
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
-			<integer>12</integer>
+			<integer>10</integer>
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
@@ -2153,7 +2155,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-12T07:13:40Z</date>
+	<date>2018-06-17T08:33:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
