@@ -41,6 +41,7 @@ linux: apt git-init ruby-linux stow
 macos: bash brew git-init ruby-macos stow
 	chmod +x $(DOTFILES_DIR)/macos/.chunkwmrc
 	source $(DOTFILES_DIR)/macos/defaults.sh
+	source $(DOTFILES_DIR)/macos/fonts.sh
 	stow macos
 	brew services start chunkwm
 	brew services start skhd
