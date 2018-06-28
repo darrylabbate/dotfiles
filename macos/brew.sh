@@ -31,6 +31,8 @@ brew install ctags
 brew install curl
 brew install gibo
 brew install jq
+brew install nmap
+brew install shc
 brew install stow
 brew install tldr
 brew install unar
@@ -58,6 +60,7 @@ brew install sass/sass/sass
 brew install cask
 brew cask install 1password
 brew cask install adobe-creative-cloud
+brew cask install electrum
 brew cask install iterm2
 brew cask install keybase
 brew cask install mark-text
