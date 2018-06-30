@@ -23,6 +23,9 @@ set incsearch
 set showmatch
 set noshowmode
 
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
+
 set number
 set relativenumber
 set numberwidth=3
