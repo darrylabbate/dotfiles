@@ -1,5 +1,5 @@
-UNAME        := $(shell uname -s)
 DOTFILES_DIR := $(shell pwd)
+UNAME        := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
 OS           := macos
@@ -13,53 +13,48 @@ endif
 all: $(OS)
 
 home: all
-	source $(DOTFILES_DIR)/macos/home.sh
+	bash $(DOTFILES_DIR)/macos/home.sh
 
 .PHONY: help usage
 
 help: usage
 
 usage:
-	@echo ""
-	@echo "━━━ dotfiles ━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-	@echo ""
-	@echo "Custom macOS settings and terminal configurations"
-	@echo "See README.md for detailed information"
-	@echo ""
-	@echo "    make            Install standard configurations and applications."
-	@echo "                    Suitable for work-issued computers or servers."
-	@echo ""
-	@echo "    make home       Install all configurations and applications."
-	@echo "                    Suitable for personal computers."
-	@echo ""
+	@printf "\n━━━ \e[1mdotfiles\e[0m ━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+	@printf "\n    Custom macOS settings and terminal configurations"
+	@printf "\n    See README.md for detailed information\n"
+	@printf "\n    make            Install standard configurations and applications."
+	@printf "\n                    Suitable for work-issued computers or servers.\n"
+	@printf "\n    make home       Install all configurations and applications."
+	@printf "\n                    Suitable for personal computers.\n"
 
 .PHONY: linux macos
 
 linux: apt git-init ruby-linux stow
-	source ~/.bash_profile
+	bash ~/.bash_profile
 
 macos: bash brew git-init ruby-macos stow
 	chmod +x $(DOTFILES_DIR)/macos/.chunkwmrc
-	source $(DOTFILES_DIR)/macos/defaults.sh
-	source $(DOTFILES_DIR)/macos/fonts.sh
+	bash $(DOTFILES_DIR)/macos/defaults.sh
+	bash $(DOTFILES_DIR)/macos/fonts.sh
 	stow macos
 	brew services start chunkwm
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-	source ~/.bash_profile
+	bash ~/.bash_profile
 	softwareupdate -aiR
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 
 apt:
-	source $(DOTFILES_DIR)/linux/apt.sh
+	bash $(DOTFILES_DIR)/linux/apt.sh
 
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells
 	chsh -s /usr/local/bin/bash
 
 brew:
-	source $(DOTFILES_DIR)/macos/brew.sh
+	bash $(DOTFILES_DIR)/macos/brew.sh
 
 git-init:
 	git submodule init
