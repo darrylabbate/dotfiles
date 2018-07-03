@@ -11,3 +11,5 @@
 	ignorecase = true
 [credential]
 	helper = osxkeychain
+[hub]
+	protocol = https
