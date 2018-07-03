@@ -7,6 +7,7 @@ function n () {
   echo $(date): $note >> ~/Desktop/Note_${title}.txt
 }
 
+
 # Check price of individual cryptocurrency
 #
 # Dependency: jq (brew install jq)
@@ -15,8 +16,9 @@ function n () {
 # Output: Bitcoin (BTC) $8,999.99
 
 function coin () {
-  url=$(curl -s http://coincap.io/page/${1^^}) 
-  name=$(echo $url | jq -cr '.display_name')
-  price=$(echo $url | printf "%.2f\n" $(jq '.price_usd'))
+  id=$(curl -s https://api.coinmarketcap.com/v2/listings/ | jq --arg x "${1^^}" '.data[] | if .symbol == $x then .id else empty end')
+  ticker=$(curl -s https://api.coinmarketcap.com/v2/ticker/$id/)
+  name=$(echo $ticker | jq -cr '.data.name')
+  price=$(echo $ticker | printf "%.2f\n" $(jq -cr '.data.quotes.USD.price'))
   echo $name" (${1^^}) \$"$price
 }
