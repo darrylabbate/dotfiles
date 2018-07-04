@@ -11,7 +11,7 @@ function bbref () {
   if [[ $term ]]; then
     open -a Safari "https://www.baseball-reference.com/search/search.fcgi?search=the+${term}"
   else
-    echo ERROR: Invalid search parameters
+    echo -e "\e[31mERROR:\e[0m Invalid search parameters"
   fi
 }
 
@@ -22,6 +22,6 @@ function pfref () {
   if [[ $term ]]; then
     open -a Safari "https://www.pro-football-reference.com/search/search.fcgi?search=the+${term}"
   else
-    echo ERROR: Invalid search parameters
+    echo -e "\e[31mERROR:\e[0m Invalid search parameters"
   fi
 }

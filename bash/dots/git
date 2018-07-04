@@ -3,7 +3,7 @@
 
 # Alias GitHub's `hub` cli to work alongside `git`
 # as recommended by GitHub (only macOS for now)
-if [ "$(uname -s)" == "Darwin" ]; then
+if [[ "$(uname -s)" == "Darwin" ]]; then
   alias git="hub"
 fi
 
@@ -25,7 +25,7 @@ function qc () {
   if [[ $message ]]; then   
     git commit -m "${message}"
   else
-    echo ERROR: Commit message required
+    echo -e "\e[31mERROR:\e[0m Commit message required"
   fi
 }
 

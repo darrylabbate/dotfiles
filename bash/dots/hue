@@ -17,6 +17,6 @@ function office () {
     hue 1 "${cmd}"
     hue 2 "${cmd}"
   else
-    echo ERROR: No command given
+    echo -e "\e[31mERROR:\e[0m No command given"
   fi
 }
