@@ -52,7 +52,7 @@ alias temp="osx-cpu-temp"
 # Networking
 alias netusers="arp -a | awk '/10.0.1/{print \$1, \$2}' | column -t" # Deprecated, needs tweaking to work with current router
 alias myip="curl ipinfo.io/ip"
-alias copyip="curl ipinfo.io.ip | pbcopy"
+alias copyip="curl ipinfo.io/ip | pbcopy"
 
 # Colorscripts
 alias bars=". ~/dotfiles/code/colors/bars"
