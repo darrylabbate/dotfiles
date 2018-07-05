@@ -3,12 +3,6 @@
 # Close System Preferences just in case
 osascript -e 'tell application "System Preferences" to quit'
 
-# sudo it up
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until `.macos` has finished
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
 # Disable startup noise
 sudo nvram SystemAudioVolume=%01
 
