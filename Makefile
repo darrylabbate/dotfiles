@@ -20,13 +20,14 @@ home: all
 help: usage
 
 usage:
-	@printf "\n━━━ \033[1mdotfiles\033[0m ━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
-	@printf "\n    Custom macOS settings and terminal configurations"
-	@printf "\n    See README.md for detailed information\n"
-	@printf "\n    make            Install standard configurations and applications."
-	@printf "\n                    Suitable for work-issued computers or servers.\n"
-	@printf "\n    make home       Install all configurations and applications."
-	@printf "\n                    Suitable for personal computers.\n\n"
+	@printf "\n\033[1mDOTFILES\033[0m\n"
+	@printf "\nCustom macOS settings and terminal configurations"
+	@printf "\nSee README.md for detailed information\n"
+	@printf "\n\033[1mUSAGE:\033[0m\n"
+	@printf "\n  make            Install standard configurations and applications."
+	@printf "\n                  Suitable for work-issued computers or servers.\n"
+	@printf "\n  make home       Install all configurations and applications."
+	@printf "\n                  Suitable for personal computers.\n\n"
 
 .PHONY: linux macos
 
