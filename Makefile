@@ -1,4 +1,5 @@
 DOTFILES_DIR := $(shell pwd)
+SHELL        := /bin/bash
 UNAME        := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
