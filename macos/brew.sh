@@ -29,10 +29,12 @@ brew install bash
 brew install coreutils
 brew install ctags
 brew install curl
+brew install dash
 brew install gibo
 brew install jq
 brew install nmap
 brew install shc
+brew install shellcheck
 brew install stow
 brew install tldr
 brew install unar
