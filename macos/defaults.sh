@@ -39,9 +39,6 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # Set dark theme
 sudo defaults write /Library/Preferences/.GlobalPreferences AppleInterfaceTheme Dark
 
-# Position dock on right-hand side
-# defaults write com.apple.Dock orientation -string right
-
 # Set minimal autohide/show delay for hidden dock
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0.5
@@ -208,6 +205,12 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 # Sort Activity Monitor results by CPU usage
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+### Etc ###
+
+# Set Sublime Text as default text editor
+defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
+'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
 
 killall Dock
 killall Finder
