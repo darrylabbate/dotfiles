@@ -36,7 +36,6 @@ linux: apt git-init ruby-linux stow
 	bash ~/.bash_profile
 
 macos: bash brew git-init ruby-macos stow
-	chmod +x $(DOTFILES_DIR)/macos/.chunkwmrc
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/fonts.sh
 	stow macos
