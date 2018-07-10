@@ -13,8 +13,8 @@ alias b="cd -"
 alias p="cd ~/projects"
 alias d="cd ~/dotfiles"
 alias a="cd ~/applications"
-alias v="cd /volumes"
-alias e="vim"
+alias v="vim"
+alias vol="cd /volumes"
 
 #tree
 alias t="tree -C"
