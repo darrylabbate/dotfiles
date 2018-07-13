@@ -13,6 +13,7 @@
 .map
 .md
 .nginxconf
+.pl
 .plist
 .py
 .rb
