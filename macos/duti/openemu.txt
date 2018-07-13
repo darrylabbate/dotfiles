@@ -1,0 +1,16 @@
+.agb
+.g64
+.gb
+.gba
+.gbc
+.gen
+.n64
+.nds
+.nes
+.sgb
+.smc
+.smd
+.snes
+.srm
+.v64
+.z64
