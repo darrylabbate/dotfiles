@@ -3,8 +3,8 @@
 # files in one subdirectory, as opposed to having a separate folder
 # in the root dotfiles directory for the sake of Stow
 
+/brew
+/duti
 /iterm
-brew.sh
 defaults.sh
-home.sh
 .DS_Store
