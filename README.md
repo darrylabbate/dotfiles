@@ -46,11 +46,12 @@ The `--recursive` flag clones all included submodules. This option is not fully 
 
 ### Makefile
 
-* Runs [`brew.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
+* Runs [`brew/install.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/install.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
 * Sets Homebrew-installed Bash (4.4+) as the default shell
 * Updates macOS and configures preferred system defaults defined in [`defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
-* Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/) 
+* Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
+* Runs [`duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
 
 ### Symlinks
 
