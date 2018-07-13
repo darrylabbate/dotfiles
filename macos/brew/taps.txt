@@ -1,0 +1,8 @@
+caskroom/cask
+caskroom/fonts
+caskroom/versions
+crisidev/chunkwm
+homebrew/bundle
+homebrew/core
+homebrew/services
+koekeishiya/formulae
