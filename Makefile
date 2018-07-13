@@ -9,12 +9,9 @@ ifeq ($(UNAME), Linux)
 OS           := linux
 endif
 
-.PHONY: all home
+.PHONY: all
 
 all: $(OS)
-
-home: all
-	bash $(DOTFILES_DIR)/macos/home.sh
 
 .PHONY: help usage
 
@@ -25,10 +22,7 @@ usage:
 	@printf "\nCustom macOS settings and terminal configurations"
 	@printf "\nSee README.md for detailed information\n"
 	@printf "\n\033[1mUSAGE:\033[0m\n"
-	@printf "\n  make            Install standard configurations and applications."
-	@printf "\n                  Suitable for work-issued computers or servers.\n"
-	@printf "\n  make home       Install all configurations and applications."
-	@printf "\n                  Suitable for personal computers.\n\n"
+	@printf "\n  make            Install standard configurations and applications.\n\n"
 
 .PHONY: linux macos
 
@@ -37,13 +31,13 @@ linux: apt git-init ruby-linux stow
 
 macos: bash brew git-init ruby-macos stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
-	bash $(DOTFILES_DIR)/macos/fonts.sh
 	stow macos
 	brew services start chunkwm
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	bash ~/.bash_profile
 	softwareupdate -aiR
+	bash $(DOTFILES_DIR)/macos/duti/run.sh
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 
@@ -55,7 +49,7 @@ bash: brew
 	chsh -s /usr/local/bin/bash
 
 brew:
-	bash $(DOTFILES_DIR)/macos/brew.sh
+	bash $(DOTFILES_DIR)/macos/brew/install.sh
 
 git-init:
 	git submodule init
