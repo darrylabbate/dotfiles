@@ -37,7 +37,7 @@ macos: bash brew git-init ruby-macos stow
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	bash ~/.bash_profile
 	softwareupdate -aiR
-	bash $(DOTFILES_DIR)/macos/duti/run.sh
+	bash $(DOTFILES_DIR)/macos/duti/set.sh
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 
