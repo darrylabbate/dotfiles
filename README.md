@@ -46,12 +46,12 @@ The `--recursive` flag clones all included submodules. This option is not fully 
 
 ### Makefile
 
-* Runs [`brew/install.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/install.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
+* Runs [`/macos/brew/install.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/install.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
 * Sets Homebrew-installed Bash (4.4+) as the default shell
-* Updates macOS and configures preferred system defaults defined in [`defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
+* Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
-* Runs [`duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
+* Runs [`/macos/duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
 
 ### Symlinks
 
@@ -63,7 +63,7 @@ Assuming you clone the dotfiles repository in your home directory, executing the
 $ cd dotfiles
 $ stow bash
 ```
-will symlink the contents of [`/bash`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/) to the home directory, which is currently `.bash_profile`, `.bashrc` and `.hushlogin`
+will symlink the contents of [`/bash`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/) to the home directory.
 
 You can use the `stow` command anytime you add a new file to a folder you wish to symlink directly to the home directory. This can all be done without Stow using the `ln -s` command, but I find GNU Stow with folder management to be cleaner and easier to maintain.
 
@@ -73,7 +73,7 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Vim
 
-My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is auoloaded and invokes the plugins in the `/bundle` folder via a single line in my `.vimrc`:
+My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is auoloaded and invokes the plugins in the `/vim/bundle` folder via a single line in my `.vimrc`:
 
 ```
 execute pathogen#infect()
