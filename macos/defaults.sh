@@ -206,11 +206,5 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-### Etc ###
-
-# Set Sublime Text as default text editor
-defaults write com.apple.LaunchServices/com.apple.launchservices.secure LSHandlers -array-add \
-'{LSHandlerContentType=public.plain-text;LSHandlerRoleAll=com.sublimetext.3;}'
-
 killall Dock
 killall Finder
