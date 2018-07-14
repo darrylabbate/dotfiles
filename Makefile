@@ -31,13 +31,13 @@ linux: apt git-init ruby-linux stow
 
 macos: bash brew git-init ruby-macos stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
+	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	stow macos
 	brew services start chunkwm
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	bash ~/.bash_profile
 	softwareupdate -aiR
-	bash $(DOTFILES_DIR)/macos/duti/set.sh
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 
