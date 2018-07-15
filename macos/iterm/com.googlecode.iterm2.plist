@@ -436,7 +436,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>1</string>
+	<string>7</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
@@ -459,8 +459,8 @@
 	<false/>
 	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
 	<array>
-		<string>0.000000, 0.000000, 228.000000, 303.000000, NO, NO</string>
-		<string>0.000000, 304.000000, 228.000000, 43.000000, NO, NO</string>
+		<string>0.000000, 0.000000, 228.000000, 299.000000, NO, NO</string>
+		<string>0.000000, 300.000000, 228.000000, 43.000000, NO, NO</string>
 	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
@@ -491,7 +491,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>529 133 228 284 0 0 1366 746 </string>
+	<string>529 65 228 280 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>409 160 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -499,11 +499,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 606 469 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>448 202 796 473 0 0 1366 746 </string>
+	<string>414 260 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>5 5 1356 736 0 0 1366 746 </string>
+	<string>5 0 676 372 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>276 5 814 736 0 0 1366 746 </string>
+	<string>144 200 640 288 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -1250,13 +1250,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.57046490910000003</real>
+				<real>0.57415497299999996</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.57047235969999999</real>
+				<real>0.57416242360000003</real>
 				<key>Red Component</key>
-				<real>0.57045853140000002</real>
+				<real>0.57414853570000002</real>
 			</dict>
 			<key>Tags</key>
 			<array>
@@ -2155,7 +2155,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-06-17T08:33:10Z</date>
+	<date>2018-07-12T00:44:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -2187,7 +2187,7 @@
 	<key>TrackingRunloopForLiveResize</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1527801856</real>
+	<real>1531613312</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseColorfgbgFallback</key>
