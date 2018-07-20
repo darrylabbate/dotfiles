@@ -5,6 +5,8 @@ font-envy-code-r
 font-m-plus
 font-nova-mono
 font-oswald
+font-share
+font-share-tech
 font-share-tech-mono
 font-source-code-pro
 font-source-sans-pro
