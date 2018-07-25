@@ -14,7 +14,6 @@ This repository contains files for configuring my Terminal environment and other
   * [Bash](#bash)
   * [Vim](#vim)
   * [Window Management](#window-management)
-* [Ongoing Development](#ongoing-development)
 
 ---
 
@@ -73,7 +72,7 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Vim
 
-My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is auoloaded and invokes the plugins in the `/vim/bundle` folder via a single line in my `.vimrc`:
+My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is autoloaded and invokes the plugins in the `/vim/bundle` folder via a single line in my `.vimrc`:
 
 ```
 execute pathogen#infect()
@@ -83,13 +82,4 @@ Vim plugins are currently contained as git submodules, to keep the remote reposi
 
 ### Window Management
 
-chunkwm and skhd are configured vis `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
-
-## Ongoing Development
-
-My dotfiles are in constant development since I'm actively learning new things and finding new tools to streamline my productivity.
-
-Some other dotfiles repositories that helped me shape my own:
-
-* [Mathias Bynens](https://github.com/mathiasbynens/dotfiles)
-* [xero](https://github.com/xero/dotfiles)
+chunkwm and skhd are configured via `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
