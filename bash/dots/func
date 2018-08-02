@@ -13,12 +13,11 @@ function n () {
 # Dependency: jq (brew install jq)
 #
 # Usage: `coin btc` (use ticker symbol; case-insensitive)
-# Output: Bitcoin (BTC) $8,999.99
+# Output: BTC: $8,999.99 (Coinbase)
 
 function coin () {
-  id=$(curl -s https://api.coinmarketcap.com/v2/listings/ | jq --arg x "${1^^}" '.data[] | if .symbol == $x then .id else empty end')
-  ticker=$(curl -s https://api.coinmarketcap.com/v2/ticker/$id/)
-  name=$(echo $ticker | jq -cr '.data.name')
-  price=$(echo $ticker | printf "%.2f\n" $(jq -cr '.data.quotes.USD.price'))
-  echo $name" (${1^^}) \$"$price
+  ticker=$(curl -s "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="${1^^}"&tsyms=USD")
+  price=$(echo $ticker | printf "%.2f\n" $(jq -cr '.RAW.'${1^^}'.USD.PRICE'))
+  exchange=$(echo $ticker | jq -cr '.DISPLAY.'${1^^}'.USD.LASTMARKET')
+  echo "${1^^}: \$"$price "("$exchange")"
 }
