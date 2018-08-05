@@ -20,13 +20,13 @@ This repository contains files for configuring my Terminal environment and other
 ## Installation
 
 ```bash
-$ curl get.darryl.sh | sh
+$ curl get.darryl.sh/dotfiles | sh
 ```
 
 The SHA-256 checksum of the script is `2aa8848937852e4e4e01cf738938dc18edabf86a4b3e2a8a9c29b15b66b7a747`. You can verify this before downloading by running:
 
 ```bash
-$ curl get.darryl.sh | shasum -a 256
+$ curl get.darryl.sh/dotfiles | shasum -a 256
 ```
 
 The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. See the [repository](https://github.com/rootbeersoup/get.darryl.sh) for more detailed information on what the script does.
