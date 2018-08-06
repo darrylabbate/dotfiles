@@ -1,3 +1,5 @@
+:set -XOverloadedStrings
+
 :set prompt "λ "
 :set +s
 :set +t
