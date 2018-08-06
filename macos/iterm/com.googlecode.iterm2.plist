@@ -436,11 +436,11 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSColorPanelMode</key>
-	<string>7</string>
+	<string>3</string>
 	<key>NSColorPickerPreferredRGBEntryMode</key>
 	<integer>2</integer>
 	<key>NSColorPickerSlidersDefaults</key>
-	<string>1</string>
+	<string>3</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/dotfiles/macos/iterm/colors</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
@@ -491,19 +491,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSColorPanel</key>
-	<string>529 65 228 280 0 0 1366 746 </string>
+	<string>529 78 228 280 0 0 1366 746 </string>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>409 160 445 77 0 0 1366 746 </string>
+	<string>409 33 445 77 0 0 1366 746 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>373 265 620 392 0 0 1366 746 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 191 606 469 0 0 1366 746 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>414 260 796 473 0 0 1366 746 </string>
+	<string>42 267 796 473 0 0 1366 746 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>5 0 676 372 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>144 200 640 288 0 0 1366 746 </string>
+	<string>821 5 540 736 0 0 1366 746 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>165 145 584 344 0 0 1366 746 </string>
 	<key>New Bookmarks</key>
@@ -1186,7 +1186,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>EnvyCodeR 14</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -1985,7 +1985,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>EnvyCodeR 14</string>
+			<string>SourceCodePro-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
 			<key>Option Key Sends</key>
@@ -2103,6 +2103,8 @@
 	<true/>
 	<key>OpenNoWindowsAtStartup</key>
 	<true/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>2</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2187,7 +2189,7 @@
 	<key>TrackingRunloopForLiveResize</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1531613312</real>
+	<real>1531863296</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseColorfgbgFallback</key>
