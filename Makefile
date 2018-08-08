@@ -3,10 +3,10 @@ SHELL        := /bin/bash
 UNAME        := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
-OS           := macos
+	OS         := macos
 endif
 ifeq ($(UNAME), Linux)
-OS           := linux
+	OS         := linux
 endif
 
 .PHONY: all
@@ -18,11 +18,12 @@ all: $(OS)
 help: usage
 
 usage:
-	@printf "\n\033[1mDOTFILES\033[0m\n"
-	@printf "\nCustom macOS settings and terminal configurations"
-	@printf "\nSee README.md for detailed information\n"
-	@printf "\n\033[1mUSAGE:\033[0m\n"
-	@printf "\n  make            Install standard configurations and applications.\n\n"
+	@printf "\\n\\033[1mDOTFILES\\033[0m\\n"
+	@printf "\\nCustom macOS settings and terminal configurations"
+	@printf "\\nSee README.md for detailed information\\n"
+	@printf "\\n\\033[1mUSAGE:\\033[0m make [target]\\n"
+	@printf "\\n  make         Install all configurations and applications.\\n"
+	@printf "\\n  make brew    Homebrew maintenance; install, upgrade, cleanup packages.\\n\\n"
 
 .PHONY: linux macos
 
@@ -49,7 +50,7 @@ bash: brew
 	chsh -s /usr/local/bin/bash
 
 brew:
-	bash $(DOTFILES_DIR)/macos/brew/install.sh
+	bash $(DOTFILES_DIR)/macos/brew/init.sh
 
 git-init:
 	git submodule init
