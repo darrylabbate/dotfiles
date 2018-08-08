@@ -3,10 +3,10 @@ SHELL        := /bin/bash
 UNAME        := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
-	OS         := macos
+  OS         := macos
 endif
 ifeq ($(UNAME), Linux)
-	OS         := linux
+  OS         := linux
 endif
 
 .PHONY: all
