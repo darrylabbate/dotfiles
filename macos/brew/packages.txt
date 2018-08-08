@@ -18,7 +18,6 @@ mas
 neofetch
 nmap
 pandoc
-pipenv
 pth
 python 
 rbenv
