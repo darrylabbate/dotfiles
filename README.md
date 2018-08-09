@@ -24,7 +24,7 @@ This repository contains files for configuring my Terminal environment and other
 $ curl get.darryl.sh/dotfiles | sh
 ```
 
-The SHA-256 checksum of the script is `2aa8848937852e4e4e01cf738938dc18edabf86a4b3e2a8a9c29b15b66b7a747`. You can verify this before downloading by running:
+The SHA-256 checksum of the script is `5e235d8c44c5f3eab3f04d999281349cde47b34d26328293b66b4325f815de62`. You can verify this before downloading by running:
 
 ```bash
 $ curl get.darryl.sh/dotfiles | shasum -a 256
