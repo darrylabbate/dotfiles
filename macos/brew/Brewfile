@@ -45,8 +45,8 @@ brew "unar"
 brew "watch"
 brew "wget"
 brew "youtube-dl"
-brew "crisidev/chunkwm/chunkwm"
-brew "koekeishiya/formulae/skhd"
+brew "crisidev/chunkwm/chunkwm", restart_service: :changed
+brew "koekeishiya/formulae/skhd", restart_service: :changed
 brew "sass/sass/sass"
 cask "1password"
 cask "adobe-creative-cloud"
