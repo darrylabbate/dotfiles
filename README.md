@@ -8,6 +8,7 @@ This repository contains files for configuring my Terminal environment and other
 
 ## Table of Contents
 * [Installation](#installation)
+* [Usage](#usage)
 * [How it Works](#how-it-works)
   * [Makefile](#makefile)
   * [Symlinks with GNU Stow](#symlinks)
@@ -41,11 +42,18 @@ $ make
 
 The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
 
+## Usage
+
+Command | Function
+--------|---------
+`make`      | Full installation and configuration
+`make brew` | Homebrew maintenance
+
 ## How it Works
 
 ### Makefile
 
-* Runs [`/macos/brew/install.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/install.sh), which installs [Homebrew](https://brew.sh) and all packages. As well as installing App Store applications via [mas-cli](https://github.com/mas-cli/mas)
+* Runs [`/macos/brew/init.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/init.sh), which installs [Homebrew](https://brew.sh) and maintains all packages defined in the Brewfile (`brew bundle`, `update`, `upgrade`, `cleanup`).
 * Sets Homebrew-installed Bash (4.4+) as the default shell
 * Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
