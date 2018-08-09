@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Exit if run on something other than macOS
+if ! [[ "$(uname -s)" == "Darwin" ]]; then
+  printf "\\033[31mERROR:\\033[0m macOS required to use Homebrew\\n"
+  exit 1
+fi
+
 BREW_DIR=$HOME/dotfiles/macos/brew
 
 # Install Homebrew
