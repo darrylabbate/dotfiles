@@ -1,6 +1,9 @@
 # Use vi/vim keybindings in the terminal
 set editing-mode vi
 
+# Show all matching filenames for tab-completion
+set show-all-if-ambiguous on
+
 # Ignore case for tab auto-completion
 set completion-ignore-case on
 
