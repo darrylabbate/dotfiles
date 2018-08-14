@@ -1,6 +1,9 @@
 # Use vi/vim keybindings in the terminal
 set editing-mode vi
 
+# Ignore case for tab auto-completion
+set completion-ignore-case on
+
 # Exit normal/command mode by typing 'jk' or 'kj'
 "jk":"\e"
 "kj":"\e"
