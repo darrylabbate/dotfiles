@@ -16,7 +16,7 @@ fi
 
 # Brew bundle
 printf "Checking Brewfile for missing packages...\\n"
-(cd "$BREW_DIR" && exec brew bundle)
+brew bundle --file="$BREW_DIR"/Brewfile
 
 # Update, upgrade, cleanup
 brew update
