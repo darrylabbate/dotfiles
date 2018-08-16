@@ -21,6 +21,8 @@ The general rule for subdirectory organization is to group analogous configurati
 * OS-ambiguous files should reside in their own corresponding folders.
   * e.g. `.bash_profile` should reside in `/bash`, while `.vimrc` resides in `/vim`.
 
+Hidden directories within the root `/dotfiles` folder serve no purpose and should be avoided.
+
 ## File Extensions
 
 Unless being directly symlinked to the home directory, configuration files should *not* begin with a dot or period. Naturally, any files or folders utilized by git should retain their formatting.
@@ -38,14 +40,20 @@ Executables should not have a file extension, since the knowledge of the languag
 ## Language Rules and Code Formatting
 
 ### General Rules
+* Shell scripting
+  * sh (dash) is encouraged for global or Linux-only shell scripts.
+  * Bash is acceptable for macOS-only scripts
+    * macOS symlinks `/bin/sh` to Bash v3.2.57
 * Indentation and whitespace
-  * 2 spaces. Avoid tabs unless necessary.
+  * 2 spaces. 
+  * Avoid tabs unless necessary, such as prefixing Makefile recipes.
 * Line length
-  * 80-100 character maximum encouraged. Not strict.
+  * 80 character maximum encouraged. Not strict.
 * Alignment 
   * Alignment for the sake of legibility is strongly encouraged unless functionally inhibitive.
 * Comments
-  * Commenting is strongly encouraged for the sake of good documentation. Always err on the side of verbosity for comments.
+  * Commenting is strongly encouraged for the sake of good documentation. 
+  * Always err on the side of verbosity for comments.
 
 ### Bash
 * She-bang
@@ -53,5 +61,10 @@ Executables should not have a file extension, since the knowledge of the languag
   * She-bangs are generally encouraged, especially within files which have no file extension.
 
 ### Make
+* The Makefile must accommodate GNU Make v3.81
+  * This accommodates macOS, which only comes installed with v3.81 by default.
+* Alignment
+  * Variable assignments (`=`, `:=`, etc) should be aligned
+    * This does not break any of Make's functionality.
 * Indentation
-  * Recipes **must** be prefixed with tab characters. macOS ships with GNU Make v3.8.1, which does not include the `.RECIPEPREFIX` functionality. Considering the main use of the `Makefile` is to install dotfiles on a fresh machine, we should accommodate whichever version of Make that ships with macOS by default.
+  * Recipes **must** be prefixed with tab characters. 
