@@ -1,4 +1,4 @@
-DOTFILES_DIR := $(shell pwd)
+DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
 SHELL        := /bin/bash
 UNAME        := $(shell uname -s)
 
