@@ -6,7 +6,7 @@ if ! [[ "$(uname -s)" == "Darwin" ]]; then
   exit 1
 fi
 
-BREW_DIR=$HOME/dotfiles/macos/brew
+BREW_DIR=$HOME/dotfiles/macos
 
 # Install Homebrew
 if ! [[ -x "$(command -v brew)" ]]; then 
