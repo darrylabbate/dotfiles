@@ -53,7 +53,7 @@ Command | Function
 
 ### Makefile
 
-* Runs [`/macos/brew/init.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew/init.sh), which installs [Homebrew](https://brew.sh) and maintains all packages defined in the Brewfile (`brew bundle`, `update`, `upgrade`, `cleanup`).
+* Runs [`/macos/brew.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/brew.sh), which installs [Homebrew](https://brew.sh) and maintains all packages defined in the Brewfile (`brew bundle`, `update`, `upgrade`, `cleanup`).
 * Sets Homebrew-installed Bash (4.4+) as the default shell
 * Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
