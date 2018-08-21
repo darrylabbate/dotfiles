@@ -14,6 +14,7 @@ alias a="cd ~/applications"
 alias d="cd ~/dotfiles"
 alias e="cd ~/exercism"
 alias p="cd ~/projects"
+alias u="cd ~/UNO"
 alias v="vim"
 alias vol="cd /volumes"
 
