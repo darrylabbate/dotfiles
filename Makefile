@@ -34,7 +34,7 @@ usage:
 .PHONY: linux macos
 
 linux: apt git-init ruby-linux stow
-	bash ~/.bash_profile
+	. $(HOME)/.bash_profile
 
 macos: bash brew git-init ruby-macos stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
@@ -43,7 +43,7 @@ macos: bash brew git-init ruby-macos stow
 	brew services start chunkwm
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-	bash ~/.bash_profile
+	. $(HOME)/.bash_profile
 	softwareupdate -aiR
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
