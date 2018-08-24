@@ -18,18 +18,17 @@ spinner()
   local clearln="\\033[2K"
   local spinnerstr="⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏"
   local delay="0.05"
-  local task=$1
-  local msg=$2
+  local process=$1
 
   while :; do
     jobs %1 &> /dev/null
     [[ $? = 0 ]] || {
-      printf "${clearln}\\033[32m✓\\033[0m ${task}\\n"
+      printf "${clearln}\\033[32m✓\\033[0m ${process}\\n"
       break
     }
     for (( i=0; i<${#spinnerstr}; i++ )); do
       sleep "${delay}"
-      printf "${clearln}${spinnerstr:$i:1} ${task} ${msg}\\r"
+      printf "${clearln}${spinnerstr:$i:1} ${process}\\r"
     done
   done
 }
