@@ -19,13 +19,15 @@ alias gc="git commit"
 alias gca="git commit --amend"
 
 # Quick commit with message without quotes
-function qc () {
+function qc ()
+{
   message=$*
 
   if [[ $message ]]; then   
     git commit -m "${message}"
   else
-    echo -e "\e[31mERROR:\e[0m Commit message required"
+    printf "\\033[31mERROR:\\033[0m Commit message required\\n"
+    return 1
   fi
 }
 
