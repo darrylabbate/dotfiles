@@ -10,3 +10,6 @@ export LSCOLORS=exgxbxbxCxfxfxCaCaeaea
 
 export EDITOR='vim'
 export GPG_TTY=$(tty)
+
+export HOMEBREW_CURLRC=1
+export HOMEBREW_FORCE_BREWED_CURL=1
