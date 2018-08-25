@@ -6,6 +6,4 @@
 /duti
 /iterm
 .DS_Store
-Brewfile
-brew.sh
 defaults.sh

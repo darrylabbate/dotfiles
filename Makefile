@@ -26,8 +26,6 @@ usage:
 	\\033[1mUSAGE:\\033[0m make [target]\\n \
 	\\n\
 	  make         Install all configurations and applications.\\n\
-	\\n\
-	  make brew    Homebrew maintenance; install, upgrade, cleanup packages.\\n\
 	\\n"
 
 
@@ -56,7 +54,8 @@ bash: brew
 	chsh -s /usr/local/bin/bash
 
 brew:
-	@bash $(DOTFILES_DIR)/macos/brew.sh
+	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
 
 git-init:
 	git submodule init
