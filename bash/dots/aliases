@@ -9,7 +9,6 @@ alias rekey="brew services restart skhd"
 
 # Update macOS and Homebrew. Also clean up Homebrew.
 alias update="sudo softwareupdate -aiR"
-alias upbrew="bash ~/dotfiles/macos/brew.sh"
 
 # Finder
 alias f="open ."
