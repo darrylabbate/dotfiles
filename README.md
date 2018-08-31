@@ -8,10 +8,12 @@ This repository contains files for configuring my Terminal environment and other
 
 ## Table of Contents
 * [Installation](#installation)
+  * [`curl` method](#curl-method-easiest)
+  * [Manual method](#manual-method)
+* [Makefile](#makefile)
   * [`make`](#make)
   * [`make lite`](#make-lite)
 * [How it Works](#how-it-works)
-  * [Makefile](#makefile)
   * [Symlinks with GNU Stow](#symlinks)
   * [Bash](#bash)
   * [Vim](#vim)
@@ -20,6 +22,8 @@ This repository contains files for configuring my Terminal environment and other
 ---
 
 ## Installation
+
+### `curl` method (easiest)
 
 ```bash
 $ curl get.darryl.sh/dotfiles | sh
@@ -33,6 +37,8 @@ $ curl get.darryl.sh/dotfiles | shasum -a 256
 
 The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. See the [repository](https://github.com/rootbeersoup/get.darryl.sh) for more detailed information on what the script does.
 
+### Manual method
+
 You can also manually clone the repository and invoke the `Makefile`
 
 ```bash
@@ -43,18 +49,9 @@ $ make
 
 The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
 
+## Makefile
+
 ### `make`
-
-Full installation and configuration. This will install all packages and applications defined in the `.Brewfile` on macOS. If run on a Linux machine, `make` will run [linux/apt.sh](https://github.com/rootbeersoup/dotfiles/blob/master/linux/apt.sh) and install all packages outlined in the script.
-
-### `make lite`
-
-This will simply symlink only the Bash and Vim configurations to the home directory using `ln` commands. Nothing new is installed to the machine, but files *may* be overwritten in the process, since `make lite` passes the `-f` flag for every `ln` command.  This is useful for temporarily configuring a shared computer.
-* *TODO: Makefile recipe for removing config files symlinked by `make lite`*
-
-## How it Works
-
-### Makefile
 
 * Installs [Homebrew](https://brew.sh) on macOS and installs all packages defined in the [Brewfile](https://github.com/rootbeersoup/dotfiles/blob/master/macos/.Brewfile).
 * Sets Homebrew-installed Bash (4.4+) as the default shell
@@ -62,6 +59,13 @@ This will simply symlink only the Bash and Vim configurations to the home direct
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
 * Runs [`/macos/duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
+
+### `make lite`
+
+* Symlinks only Bash and Vim configuration files to the home directory using `ln` commands. Useful for temporarily configuring a shared computer. Nothing new is installed to the machine, but files *may* be overwritten since the Makefile recipe passes the `-f` flag for every `ln` command.
+* *TODO: Makefile recipe to remove config files symlinked by `make lite`*
+
+## How it Works
 
 ### Symlinks
 
