@@ -21,15 +21,17 @@ usage:
 	\\033[1mDOTFILES\\033[0m\\n\
 	\\n\
 	Custom macOS settings and terminal configurations.\\n\
-	See README.md for detailed information.\\n\
+	See README.md for detailed usage information.\\n\
 	\\n\
-	\\033[1mUSAGE:\\033[0m make [target]\\n \
+	\\033[1mUSAGE:\\033[0m make [target]\\n\
 	\\n\
 	  make         Install all configurations and applications.\\n\
-	\\n"
+	\\n\
+	  make lite    Symlink only Bash and Vim configurations to the home directory.\\n\
+	\\n\
+	"
 
-
-.PHONY: linux macos
+.PHONY: linux macos lite
 
 linux: apt git-init ruby-linux stow
 	. $(HOME)/.bash_profile
@@ -43,6 +45,12 @@ macos: bash brew git-init ruby-macos stow
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	. $(HOME)/.bash_profile
 	softwareupdate -aiR
+
+lite: git-init
+	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
+	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bashrc
+	ln -fs $(DOTFILES_DIR)/vim/.vimrc $(HOME)/.vimrc
+	ln -fs $(DOTFILES_DIR)/vim/.vim $(HOME)/.vim
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 

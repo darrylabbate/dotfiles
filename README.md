@@ -8,7 +8,8 @@ This repository contains files for configuring my Terminal environment and other
 
 ## Table of Contents
 * [Installation](#installation)
-* [Usage](#usage)
+  * [`make`](#make)
+  * [`make lite`](#make-lite)
 * [How it Works](#how-it-works)
   * [Makefile](#makefile)
   * [Symlinks with GNU Stow](#symlinks)
@@ -42,11 +43,14 @@ $ make
 
 The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
 
-## Usage
+### `make`
 
-Command | Function
---------|---------
-`make`  | Full installation and configuration
+Full installation and configuration. This will install all packages and applications defined in the `.Brewfile` on macOS. If run on a Linux machine, `make` will run [linux/apt.sh](https://github.com/rootbeersoup/dotfiles/blob/master/linux/apt.sh) and install all packages outlined in the script.
+
+### `make lite`
+
+This will simply symlink only the Bash and Vim configurations to the home directory using `ln` commands. Nothing new is installed to the machine, but files *may* be overwritten in the process, since `make lite` passes the `-f` flag for every `ln` command.  This is useful for temporarily configuring a shared computer.
+* *TODO: Makefile recipe for removing config files symlinked by `make lite`*
 
 ## How it Works
 
