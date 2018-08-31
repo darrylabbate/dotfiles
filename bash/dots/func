@@ -1,23 +1,41 @@
 #!/usr/bin/env bash
 
 # Super quick note
-function n () {
+function n ()
+{
   title=$(date +%Y-%m-%d)
   note=$*
   echo $(date): $note >> ~/Desktop/Note_${title}.txt
 }
 
-
 # Check price of individual cryptocurrency
 #
 # Dependency: jq (brew install jq)
 #
-# Usage: `coin btc` (use ticker symbol; case-insensitive)
-# Output: BTC: $8,999.99 (Coinbase)
+# Usage: `cq btc` (use ticker symbol; case-insensitive)
+# Output: BTC: $8999.99
 
-function coin () {
-  ticker=$(curl -s "https://min-api.cryptocompare.com/data/pricemultifull?fsyms="${1^^}"&tsyms=USD")
-  price=$(echo $ticker | printf "%.2f\n" $(jq -cr '.RAW.'${1^^}'.USD.PRICE'))
-  exchange=$(echo $ticker | jq -cr '.DISPLAY.'${1^^}'.USD.LASTMARKET')
-  echo "${1^^}: \$"$price "("$exchange")"
+function coin ()
+{
+  local SYMBOL=${1^^}
+  local TICKER=$(curl -s "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${SYMBOL}&tsyms=USD")
+  local PRICE=$(echo ${TICKER} | printf "%.2f\n" $(jq -cr '.RAW.'${SYMBOL}'.USD.PRICE'))
+  echo "${SYMBOL}: \$"${PRICE}
+}
+
+# (n)eo(f)etch(g)rep
+# Usage: `nfg shell`
+# Output: Shell: /usr/local/bin/bash 4.4.23
+
+function nfg ()
+{
+  local QUERY=$1
+
+  if [[ ${QUERY} ]]; then
+    neofetch --config ~/dotfiles/bash/neofetch-stdout.conf \
+    | grep -i ${QUERY}
+  else
+    printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
+    return 1
+  fi
 }

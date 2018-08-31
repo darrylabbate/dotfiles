@@ -60,17 +60,4 @@ alias tanks="bash ~/dotfiles/code/colors/tanks"
 # Misc
 alias spd="speedtest-cli"
 alias dl="youtube-dl"
-alias about="neofetch \
---config off \
---uptime_shorthand tiny \
---speed_shorthand on \
---cpu_temp F \
---ip_host ipinfo.io/ip \
---colors 6 4 5 2 4 7 \
---bold off \
---underline off \
---block_range 1 6 \
---block_width 4 \
---ascii_colors 2 3 1 1 5 4 \
---ascii_bold off \
-"
+alias nf="neofetch --config ~/dotfiles/bash/neofetch.conf"
