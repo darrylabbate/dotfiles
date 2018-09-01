@@ -1,5 +1,5 @@
 DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
-SHELL        := /bin/bash
+SHELL        := /bin/sh
 UNAME        := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
@@ -8,9 +8,11 @@ else ifeq ($(UNAME), Linux)
   OS         := linux
 endif
 
-.PHONY: all
+.PHONY: all install
 
-all: $(OS)
+all: install
+
+install: $(OS)
 
 .PHONY: help usage
 
@@ -27,11 +29,13 @@ usage:
 	\\n\
 	  make         Install all configurations and applications.\\n\
 	\\n\
-	  make lite    Symlink only Bash and Vim configurations to the home directory.\\n\
+	  make link    Symlink only Bash and Vim configurations to the home directory.\\n\
+	\\n\
+	  make unlink  Remove symlinks created by \`make link\`.\\n\
 	\\n\
 	"
 
-.PHONY: linux macos lite
+.PHONY: linux macos link unlink
 
 linux: apt git-init ruby-linux stow
 	. $(HOME)/.bash_profile
@@ -46,11 +50,24 @@ macos: bash brew git-init ruby-macos stow
 	. $(HOME)/.bash_profile
 	softwareupdate -aiR
 
-lite: git-init
+link: git-init
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
-	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bashrc
+	ln -fs $(DOTFILES_DIR)/bash/.bashrc $(HOME)/.bashrc
+	ln -fs $(DOTFILES_DIR)/bash/.curlrc $(HOME)/.curlrc
+	ln -fs $(DOTFILES_DIR)/bash/.inputrc $(HOME)/.inputrc
+	ln -fs $(DOTFILES_DIR)/bash/.hushlogin $(HOME)/.hushlogin
 	ln -fs $(DOTFILES_DIR)/vim/.vimrc $(HOME)/.vimrc
 	ln -fs $(DOTFILES_DIR)/vim/.vim $(HOME)/.vim
+
+unlink:
+	unlink $(HOME)/.bash_profile
+	unlink $(HOME)/.bashrc
+	unlink $(HOME)/.curlrc
+	unlink $(HOME)/.hushlogin
+	unlink $(HOME)/.inputrc
+	unlink $(HOME)/.vimrc
+	unlink $(HOME)/.vim
+	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
 .PHONY: apt bash brew git-init ruby-linux ruby-macos stow
 

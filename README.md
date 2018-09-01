@@ -12,7 +12,7 @@ This repository contains files for configuring my Terminal environment and other
   * [Manual method](#manual-method)
 * [Makefile](#makefile)
   * [`make`](#make)
-  * [`make lite`](#make-lite)
+  * [`make link`](#make-link)
 * [How it Works](#how-it-works)
   * [Symlinks with GNU Stow](#symlinks)
   * [Bash](#bash)
@@ -61,10 +61,10 @@ The `--recursive` flag clones all included submodules. This option is not fully 
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
 * Runs [`/macos/duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
 
-### `make lite`
+### `make link`
 
 * Symlinks only Bash and Vim configuration files to the home directory using `ln` commands. Useful for temporarily configuring a shared computer. Nothing new is installed to the machine, but files *may* be overwritten since the Makefile recipe passes the `-f` flag for every `ln` command.
-* *TODO: Makefile recipe to remove config files symlinked by `make lite`*
+* Run `make unlink` to remove these symlinks.
 
 ## How it Works
 
