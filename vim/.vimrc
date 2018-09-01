@@ -57,7 +57,7 @@ inoremap kj <Esc>
 nmap ga <Plug>(EasyAlign)
 
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'seoul256',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'modified' ] ],
