@@ -15,11 +15,12 @@ all: install
 install: $(OS)
 
 .PHONY: help usage
+.SILENT: help usage
 
 help: usage
 
 usage:
-	@printf "\\n\
+	printf "\\n\
 	\\033[1mDOTFILES\\033[0m\\n\
 	\\n\
 	Custom macOS settings and terminal configurations.\\n\
