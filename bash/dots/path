@@ -4,7 +4,7 @@
 
 # Check if we're using Linux or macOS
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  export PATH="/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/curl/bin:$PATH:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims"
+  export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/curl/bin:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims"
 elif [[ "$(uname -s)" == "Linux" ]]; then
   export PATH="$PATH:/home/darryl/.rbenv/bin:/home/darryl/.rbenv/shims"
 fi
