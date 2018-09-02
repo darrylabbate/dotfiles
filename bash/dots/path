@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-# Brew-installed GNU coreutils precede the $PATH so we can use them by their default names 
-# e.g. ls (as well as gls) uses the GNU coreutils version over the default that is shipped with macOS
 
-# Check if we're using Linux or macOS
+# $PATH is left-associative; utilities sourced first take precedence.
+#
+# e.g. here we force Brew-installed `curl` to override the system `curl`
+# but we don't allow non-prefixed GNU Coreutils to override default 
+# system utilities.
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/curl/bin:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims"
+  export PATH="/usr/local/opt/curl/bin:$PATH:/usr/local/opt/coreutils/libexec/gnubin:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims"
 elif [[ "$(uname -s)" == "Linux" ]]; then
   export PATH="$PATH:/home/darryl/.rbenv/bin:/home/darryl/.rbenv/shims"
 fi
