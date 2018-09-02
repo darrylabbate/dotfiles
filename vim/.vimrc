@@ -74,6 +74,9 @@ let g:limelight_conceal_ctermfg = 'gray'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+" Use C++ style comments in C files
+autocmd FileType c setlocal commentstring=//\ %s
+
 " Haskell
 let g:haskell_indent_if = 3
 let g:haskell_indent_case = 2
