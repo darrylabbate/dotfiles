@@ -32,7 +32,7 @@ function nfg ()
   local QUERY=$1
 
   if [[ ${QUERY} ]]; then
-    neofetch --config ~/dotfiles/bash/neofetch-stdout.conf \
+    neofetch --config ~/dotfiles/bash/neofetch-all.conf \
     | grep -i ${QUERY}
   else
     printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
