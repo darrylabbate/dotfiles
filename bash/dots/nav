@@ -21,8 +21,12 @@ alias vol="cd /volumes"
 #tree
 alias t="tree -C"
 
-# Use GNU `ls` if installed (gls)
-if [[ "$(command -v gls)" ]]; then
+# Use GNU `ls` if installed (gls via Homebrew on macOS)
+if [[ "$(uname -s)" == "Linux" ]]; then
+  alias l="ls -Fh --color --group-directories-first"
+  alias la="ls -AFh --color --group-directories-first"
+  alias ll="ls -AFhlo --color --group-directories-first"
+elif [[ "$(command -v gls)" ]]; then
   alias l="gls -Fh --color --group-directories-first"
   alias la="gls -AFh --color --group-directories-first"
   alias ll="gls -AFhlo --color --group-directories-first"
