@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
 # Super quick note
-function n ()
+n()
 {
-  title=$(date +%Y-%m-%d)
-  note=$*
-  echo $(date): $note >> ~/Desktop/Note_${title}.txt
+  local NOTE
+  NOTE=$*
+
+  echo "$(date)": "$NOTE" >> "$HOME/notes.txt"
 }
 
 # Check price of individual cryptocurrency
@@ -15,25 +16,31 @@ function n ()
 # Usage: `cq btc` (use ticker symbol; case-insensitive)
 # Output: BTC: $8999.99
 
-function coin ()
+coin()
 {
-  local SYMBOL=${1^^}
-  local TICKER=$(curl -s "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${SYMBOL}&tsyms=USD")
-  local PRICE=$(echo ${TICKER} | printf "%.2f\n" $(jq -cr '.RAW.'${SYMBOL}'.USD.PRICE'))
-  echo "${SYMBOL}: \$"${PRICE}
+  local SYMBOL
+  local TICKER
+  local PRICE
+  
+  SYMBOL=${1^^}
+  TICKER=$(curl -s "https://min-api.cryptocompare.com/data/pricemultifull?fsyms=${SYMBOL}&tsyms=USD")
+  PRICE=$(echo "$TICKER" | jq -cr '.RAW.'${SYMBOL}'.USD.PRICE')
+
+  printf "%s: \\033[32m\$%.2f\\033[0m\\n" "$SYMBOL" "$PRICE"
 }
 
 # (n)eo(f)etch(g)rep
 # Usage: `nfg shell`
 # Output: Shell: /usr/local/bin/bash 4.4.23
 
-function nfg ()
+nfg()
 {
-  local QUERY=$1
+  local QUERY
+  QUERY=$1
 
-  if [[ ${QUERY} ]]; then
-    neofetch --config ~/dotfiles/bash/neofetch-all.conf \
-    | grep -i ${QUERY}
+  if [[ "$QUERY" ]]; then
+    neofetch --config "$HOME/dotfiles/bash/neofetch-all.conf" \
+    | grep -i "$QUERY"
   else
     printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
     return 1
