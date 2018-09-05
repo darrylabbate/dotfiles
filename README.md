@@ -18,6 +18,7 @@ This repository contains files for configuring my Terminal environment and other
   * [Bash](#bash)
   * [Vim](#vim)
   * [Window Management](#window-management)
+* [License](#license)
 
 ---
 
@@ -99,3 +100,9 @@ Vim plugins are currently contained as git submodules, to keep the remote reposi
 ### Window Management
 
 chunkwm and skhd are configured via `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
+
+## License
+
+Source code is licensed under the [MIT License](https://github.com/rootbeersoup/dotfiles/blob/master/LICENSE).
+
+All documentation and images are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
