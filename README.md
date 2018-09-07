@@ -55,12 +55,12 @@ The `--recursive` flag clones all included submodules. This option is not fully 
 
 ### `make`
 
-* Installs [Homebrew](https://brew.sh) on macOS and installs all packages defined in the [Brewfile](https://github.com/rootbeersoup/dotfiles/blob/master/macos/.Brewfile).
+* Installs [Homebrew](https://brew.sh) on macOS and installs all packages defined in the [Brewfile](./macos/.Brewfile).
 * Sets Homebrew-installed Bash (4.4+) as the default shell
-* Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/defaults.sh)
+* Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](./macos/defaults.sh)
 * Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
-* Runs [`/macos/duti/set.sh`](https://github.com/rootbeersoup/dotfiles/blob/master/macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
+* Runs [`/macos/duti/set.sh`](./macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
 
 ### `make link`
 
@@ -79,13 +79,13 @@ Assuming you clone the dotfiles repository in your home directory, executing the
 $ cd dotfiles
 $ stow bash
 ```
-will symlink the contents of [`/bash`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/) to the home directory.
+will symlink the contents of [`/bash`](./bash/) to the home directory.
 
 You can use the `stow` command anytime you add a new file to a folder you wish to symlink directly to the home directory. This can all be done without Stow using the `ln -s` command, but I find GNU Stow with folder management to be cleaner and easier to maintain.
 
 ### Bash
 
-`.bash_profile` automatically sources configurations defined in the files contained in the [`/bash/dots`](https://github.com/rootbeersoup/dotfiles/blob/master/bash/dots/) folder. Any changes to any existing file, as well as any new files in the `/bash/dots` folder will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
+`.bash_profile` automatically sources configurations defined in the files contained in the [`/bash/dots`](./bash/dots/) folder. Any changes to any existing file, as well as any new files in the `/bash/dots` folder will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
 
 ### Vim
 
@@ -103,6 +103,6 @@ chunkwm and skhd are configured via `.chunkwmrc` and `.skhdrc` respectively. Bot
 
 ## License
 
-Source code is licensed under the [MIT License](https://github.com/rootbeersoup/dotfiles/blob/master/LICENSE).
+Source code is licensed under the [MIT License](./LICENSE).
 
 All documentation and images are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
