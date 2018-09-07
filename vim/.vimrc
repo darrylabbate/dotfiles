@@ -88,6 +88,11 @@ let g:haskell_indent_do = 3
 let g:haskell_indent_in = 1
 let g:haskell_indent_guard = 2
 
+" Indent using 4 spaces in Java
+" I can't wait to delete this
+autocmd FileType java setlocal shiftwidth=4
+autocmd FileType java setlocal tabstop=4
+
 " gitgutter
 let g:gitgutter_sign_added = '•'
 let g:gitgutter_sign_modified = '•'
