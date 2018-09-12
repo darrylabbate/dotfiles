@@ -14,6 +14,10 @@ alias update="sudo softwareupdate -aiR"
 alias f="open ."
 alias fkill="killall Finder"
 
+# type
+alias t="type"
+alias ta="type -a"
+
 # Slim
 alias slim="slimrb"
 
