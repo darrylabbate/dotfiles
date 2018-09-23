@@ -53,13 +53,8 @@ alias temp="osx-cpu-temp"
 alias myip="curl ipinfo.io/ip"
 alias copyip="curl ipinfo.io/ip | pbcopy"
 
-# Fun with colors
+# Pipes.sh
 alias pipes="/usr/local/bin/pipes.sh/"
-alias bars="bash ~/dotfiles/code/colors/bars"
-alias colors="bash ~/dotfiles/code/colors/colors"
-alias spooky="bash ~/dotfiles/code/colors/ghosts"
-alias slimcolors="bash ~/dotfiles/code/colors/slimcolors"
-alias tanks="bash ~/dotfiles/code/colors/tanks"
 
 # Misc
 alias spd="speedtest-cli"

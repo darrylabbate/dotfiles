@@ -9,6 +9,15 @@ n()
   echo "$(date)": "$NOTE" >> "$HOME/notes.txt"
 }
 
+# Run a color script
+# https://git.io/color.sh
+color()
+{
+  local SCRIPT
+  SCRIPT=$1
+  $HOME/Resources/color-scripts/color-scripts/${SCRIPT}
+}
+
 # Check price of individual cryptocurrency
 #
 # Dependency: jq (brew install jq)
