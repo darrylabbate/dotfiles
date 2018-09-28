@@ -49,6 +49,7 @@ macos: bash brew git-init ruby-macos stow
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	. $(HOME)/.bash_profile
+	open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
 	softwareupdate -aiR
 
 link: git-init
