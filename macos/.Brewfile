@@ -11,6 +11,7 @@ tap "koekeishiya/formulae"
 tap "sass/sass"
 brew "bash"
 brew "ghc"
+brew "awscli"
 brew "bats"
 brew "cabal-install"
 brew "cask"
@@ -81,4 +82,3 @@ cask "ubersicht"
 mas "Airmail 3", id: 918858936
 mas "Calcbot", id: 931657367
 mas "Spillo", id: 873245660
-mas "Xcode", id: 497799835
