@@ -1,4 +1,5 @@
 DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
+RUBY_VERSION := 2.5.1
 SHELL        := /bin/sh
 UNAME        := $(shell uname -s)
 
@@ -86,17 +87,18 @@ brew:
 
 git-init:
 	git submodule init
-	git sobmodule update
+	git submodule update
 
 ruby-linux: apt
-	git clone git://github.com/sstephenson/rbenv.git .rbenv
-	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-	rbenv install 2.5.0
-	rbenv global 2.5.0
+	git clone git://github.com/sstephenson/rbenv.git $(HOME)/.rbenv
+	git clone git://github.com/sstephenson/ruby-build.git $(HOME)/.rbenv/plugins/ruby-build
+	sudo chown -R $(whoami) $(HOME)/.rbenv
+	rbenv install $(RUBY_VERSION)
+	rbenv global $(RUBY_VERSION)
 
 ruby-macos: brew
-	rbenv install 2.5.0
-	rbenv global 2.5.0
+	rbenv install $(RUBY_VERSION)
+	rbenv global $(RUBY_VERSION)
 
 stow:
 	stow bash
