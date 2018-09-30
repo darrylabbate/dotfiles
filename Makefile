@@ -2,6 +2,7 @@ DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
 RUBY_VERSION := 2.5.1
 SHELL        := /bin/sh
 UNAME        := $(shell uname -s)
+USER         := $(shell whoami)
 
 ifeq ($(UNAME), Darwin)
   OS         := macos
@@ -92,7 +93,8 @@ git-init:
 ruby-linux: apt
 	git clone git://github.com/sstephenson/rbenv.git $(HOME)/.rbenv
 	git clone git://github.com/sstephenson/ruby-build.git $(HOME)/.rbenv/plugins/ruby-build
-	sudo chown -R $(whoami) $(HOME)/.rbenv
+	sudo chown -R $(USER) $(HOME)/.rbenv
+	rbenv init -
 	rbenv install $(RUBY_VERSION)
 	rbenv global $(RUBY_VERSION)
 
