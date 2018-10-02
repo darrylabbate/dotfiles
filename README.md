@@ -1,10 +1,6 @@
-<p align="center" >
-  <img src="header.png" alt="dotfiles" title="dotfiles">
-</p>
+# dotfiles
 
-## About
-
-This repository contains files for configuring my Terminal environment and other various macOS settings. See [Github does dotfiles](https://dotfiles.github.io) for more info
+Files for configuring a terminal environment and other various system settings. Largely centered around macOS, as well as other Unix-like systems. See [Github does dotfiles](https://dotfiles.github.io) for more info
 
 ## Table of Contents
 * [Installation](#installation)
@@ -18,7 +14,6 @@ This repository contains files for configuring my Terminal environment and other
   * [Bash](#bash)
   * [Vim](#vim)
   * [Window Management](#window-management)
-* [License](#license)
 
 ---
 
@@ -97,9 +92,3 @@ Vim plugins are currently contained as git submodules, to keep the remote reposi
 ### Window Management
 
 chunkwm and skhd are configured via `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
-
-## License
-
-Source code is licensed under the [MIT License](LICENSE).
-
-All documentation and images are licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
