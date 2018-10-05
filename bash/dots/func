@@ -10,7 +10,6 @@ n()
 }
 
 # Run a color script
-# https://git.io/color.sh
 color()
 {
   local SCRIPT
@@ -54,4 +53,13 @@ nfg()
     printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
     return 1
   fi
+}
+
+# Adjust volume on macOS
+volume()
+{
+  local PCT
+  PCT=$1
+
+  osascript -e 'set volume output volume "'$PCT'"'
 }

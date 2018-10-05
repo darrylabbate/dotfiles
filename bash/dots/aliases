@@ -28,13 +28,6 @@ alias ghci="stack ghci"
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
 
-# Volume Control (useful for SSH just in case)
-alias mute="osascript -e 'set volume output muted true'"
-alias volume25="osascript -e 'set volume output volume 25'"
-alias volume50="osascript -e 'set volume output volume 50'"
-alias volume100="osascript -e 'set volume output volume 100'"
-alias volumemax="osascript -e 'set volume output volume 100'"
-
 # CPU Monitoring
 alias cpu="top -F -R -o cpu"
 
