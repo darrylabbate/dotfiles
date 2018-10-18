@@ -53,6 +53,8 @@ nmap <leader>w :w!<cr>
 
 inoremap jk <Esc>
 inoremap kj <Esc>
+inoremap JK <Esc>
+inoremap KJ <Esc>
 
 nmap ga <Plug>(EasyAlign)
 
