@@ -1,3 +1,4 @@
+tap "cjbassi/gotop"
 tap "crisidev/chunkwm"
 tap "dart-lang/dart"
 tap "homebrew/bundle"
