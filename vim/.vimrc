@@ -28,7 +28,7 @@ autocmd GUIEnter * set visualbell t_vb=
 
 set number
 set relativenumber
-set numberwidth=3
+set numberwidth=2
 hi LineNr cterm=None ctermfg=DarkGray
 
 set cursorline
