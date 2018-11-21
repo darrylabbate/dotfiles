@@ -110,10 +110,10 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 ### Finder ###
 
 # Show Finder status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Show Finder path bar
-defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowPathbar -bool false
 
 # Disable Quick Look animation
 defaults write -g QLPanelAnimationDuration -float 0
