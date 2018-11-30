@@ -4,9 +4,9 @@
 # Displays blue prompt during SSH session
 
 if [[ $(id -u) -eq 0 ]]; then
-  PS1="\[\e[1;31m\][\h:\u]\[\e[m\] \w \[\e[1m\]::\[\e[m\] "
+  PS1="\[\e[1;31m\][\h:\u]\[\e[m\] \W \[\e[1m\]::\[\e[m\] "
 elif [[ -n "$SSH_CLIENT" ]]; then
-  PS1="\[\e[1;34m\][\h:\u]\[\e[m\] \w \[\e[1m\]::\[\e[m\] " 
+  PS1="\[\e[1;34m\][\h:\u]\[\e[m\] \W \[\e[1m\]::\[\e[m\] " 
 else
   PS1="\W \[\e[1m\]::\[\e[m\] "
 fi
