@@ -21,9 +21,6 @@ alias ta="type -a"
 # Slim
 alias slim="slimrb"
 
-# Use Stack's GHCi
-alias ghci="stack ghci"
-
 # Cleanup
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
 alias empty="sudo rm -rf ~/.Trash/*"
