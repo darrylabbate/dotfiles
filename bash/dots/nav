@@ -18,8 +18,8 @@ alias u="cd ~/UNO"
 alias v="vim"
 alias vol="cd /volumes"
 
-#tree
-alias tr="tree -C"
+# Always use colored `tree` output
+alias tree="tree -C"
 
 # Use GNU `ls` if installed (gls via Homebrew on macOS)
 if [[ "$(uname -s)" == "Linux" ]]; then
