@@ -1,33 +1,33 @@
 [submodule "vim/.vim/bundle/vim-surround"]
 	path = vim/.vim/bundle/vim-surround
-	url = https://github.com/tpope/vim-surround.git
+	url = git@github.com:tpope/vim-surround.git
 [submodule "vim/.vim/bundle/vim-repeat"]
 	path = vim/.vim/bundle/vim-repeat
-	url = https://github.com/tpope/vim-repeat.git
+	url = git@github.com:tpope/vim-repeat.git
 [submodule "vim/.vim/bundle/vim-commentary"]
 	path = vim/.vim/bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
+	url = git@github.com:tpope/vim-commentary.git
 [submodule "vim/.vim/bundle/vim-polyglot"]
 	path = vim/.vim/bundle/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
+	url = git@github.com:sheerun/vim-polyglot.git
 [submodule "vim/.vim/bundle/vim-gitgutter"]
 	path = vim/.vim/bundle/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
+	url = git@github.com:airblade/vim-gitgutter.git
 [submodule "vim/.vim/bundle/lightline.vim"]
 	path = vim/.vim/bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim
+	url = git@github.com:itchyny/lightline.vim
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
+	url = git@github.com:tpope/vim-fugitive.git
 [submodule "vim/.vim/bundle/limelight.vim"]
 	path = vim/.vim/bundle/limelight.vim
-	url = https://github.com/junegunn/limelight.vim.git
+	url = git@github.com:junegunn/limelight.vim.git
 [submodule "vim/.vim/bundle/goyo.vim"]
 	path = vim/.vim/bundle/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
+	url = git@github.com:junegunn/goyo.vim.git
 [submodule "vim/.vim/bundle/vim-easy-align"]
 	path = vim/.vim/bundle/vim-easy-align
-	url = https://github.com/junegunn/vim-easy-align.git
+	url = git@github.com:junegunn/vim-easy-align.git
 [submodule "vim/.vim/bundle/vim-stylish-haskell"]
 	path = vim/.vim/bundle/vim-stylish-haskell
-	url = https://github.com/nbouscal/vim-stylish-haskell.git
+	url = git@github.com:nbouscal/vim-stylish-haskell.git
