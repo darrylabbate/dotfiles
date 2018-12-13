@@ -4,10 +4,12 @@ SHELL        := /bin/sh
 UNAME        := $(shell uname -s)
 USER         := $(shell whoami)
 
-ifeq ($(UNAME), Darwin)
-  OS         := macos
+ifeq      ($(UNAME), Darwin)
+  OS := macos
 else ifeq ($(UNAME), Linux)
-  OS         := linux
+  OS := linux
+else ifeq ($(UNAME), CYGWIN_NT-6.1)
+	OS := windows
 endif
 
 .PHONY: all install
@@ -38,7 +40,7 @@ usage:
 	\\n\
 	"
 
-.PHONY: linux macos link unlink
+.PHONY: linux macos windows link unlink
 
 linux: apt git-init ruby-linux stow
 	. $(HOME)/.bash_profile
@@ -53,6 +55,13 @@ macos: bash brew git-init ruby-macos stow
 	. $(HOME)/.bash_profile
 	open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
 	softwareupdate -aiR
+
+windows: git-init
+	stow bash
+	stow cygwin
+	stow gpg
+	stow vim
+	. $(HOME)/.bash_profile
 
 link: git-init
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
