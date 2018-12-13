@@ -1,0 +1,17 @@
+[user]
+	name = Darryl Abbate
+	email = dabbat1@entergy.com
+	signingkey = 99811CC28EB2AC0E
+[color]
+	ui = true
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = ~/.gitignore_global
+	ignorecase = true
+[credential]
+	helper = wincred
+[hub]
+	protocol = https
+[gpg]
+	program = gpg2
