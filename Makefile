@@ -27,7 +27,7 @@ usage:
 	printf "\\n\
 	\\033[1mDOTFILES\\033[0m\\n\
 	\\n\
-	Custom macOS settings and terminal configurations.\\n\
+	Custom settings and configurations for Unix-like environments.\\n\
 	See README.md for detailed usage information.\\n\
 	\\n\
 	\\033[1mUSAGE:\\033[0m make [target]\\n\
