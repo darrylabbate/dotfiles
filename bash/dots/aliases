@@ -47,7 +47,8 @@ alias copyip="curl ipinfo.io/ip | pbcopy"
 alias pipes="/usr/local/bin/pipes.sh/"
 
 # Misc
-alias spd="speedtest-cli"
 alias dl="youtube-dl"
+alias nawk="/usr/bin/awk"
 alias nf="neofetch --config ~/dotfiles/bash/neofetch.conf"
 alias nff="neofetch --config ~/dotfiles/bash/neofetch-all.conf"
+alias spd="speedtest-cli"
