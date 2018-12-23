@@ -84,7 +84,7 @@ unlink:
 .PHONY: apk bash brew git-init stow
 
 apk:
-	cat $(DOTFILES_DIR)/linux/apk.txt | xargs apk add
+	cat $(DOTFILES_DIR)/linux/apk.txt | sudo xargs apk add
 
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells
