@@ -41,7 +41,7 @@ usage:
 
 .PHONY: linux macos windows link unlink
 
-linux: apt git-init stow
+linux: apk git-init stow
 	. $(HOME)/.bash_profile
 
 macos: bash brew git-init stow
@@ -81,10 +81,10 @@ unlink:
 	unlink $(HOME)/.vim
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
-.PHONY: apt bash brew git-init ruby-linux ruby-macos stow
+.PHONY: apk bash brew git-init ruby-linux ruby-macos stow
 
-apt:
-	bash $(DOTFILES_DIR)/linux/apt.sh
+apk:
+	cat $(DOTFILES_DIR)/linux/apk.txt | xargs apk add
 
 bash: brew
 	echo /usr/local/bin/bash >> /etc/shells

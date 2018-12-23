@@ -1,0 +1,11 @@
+bash
+bash-completion
+bash-doc
+curl
+git
+hugo
+nginx
+stow
+sudo
+tree
+vim
