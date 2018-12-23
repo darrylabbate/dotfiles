@@ -81,7 +81,7 @@ unlink:
 	unlink $(HOME)/.vim
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
-.PHONY: apk bash brew git-init ruby-linux ruby-macos stow
+.PHONY: apk bash brew git-init stow
 
 apk:
 	cat $(DOTFILES_DIR)/linux/apk.txt | xargs apk add
