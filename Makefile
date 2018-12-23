@@ -1,5 +1,4 @@
 DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
-RUBY_VERSION := 2.5.1
 SHELL        := /bin/sh
 UNAME        := $(shell uname -s)
 USER         := $(shell whoami)
@@ -42,10 +41,10 @@ usage:
 
 .PHONY: linux macos windows link unlink
 
-linux: apt git-init ruby-linux stow
+linux: apt git-init stow
 	. $(HOME)/.bash_profile
 
-macos: bash brew git-init ruby-macos stow
+macos: bash brew git-init stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	stow macos
@@ -98,18 +97,6 @@ brew:
 git-init:
 	git submodule init
 	git submodule update
-
-ruby-linux: apt
-	git clone git://github.com/sstephenson/rbenv.git $(HOME)/.rbenv
-	git clone git://github.com/sstephenson/ruby-build.git $(HOME)/.rbenv/plugins/ruby-build
-	sudo chown -R $(USER) $(HOME)/.rbenv
-	rbenv init -
-	rbenv install $(RUBY_VERSION)
-	rbenv global $(RUBY_VERSION)
-
-ruby-macos: brew
-	rbenv install $(RUBY_VERSION)
-	rbenv global $(RUBY_VERSION)
 
 stow:
 	stow bash
