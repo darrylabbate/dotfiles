@@ -7,7 +7,5 @@
 # system utilities.
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  export PATH="/usr/local/bin:/usr/local/opt/curl/bin:/Users/darryl/.rbenv/bin:/Users/darryl/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin"
-elif [[ "$(uname -s)" == "Linux" ]]; then
-  export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+  export PATH="/usr/local/bin:/usr/local/opt/curl/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin"
 fi
