@@ -87,8 +87,8 @@ apk:
 	cat $(DOTFILES_DIR)/linux/apk.txt | sudo xargs apk add
 
 bash: brew
-	echo /usr/local/bin/bash >> /etc/shells
-	chsh -s /usr/local/bin/bash
+	sudo echo /usr/local/bin/bash >> /etc/shells
+	sudo chsh -s /usr/local/bin/bash
 
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
