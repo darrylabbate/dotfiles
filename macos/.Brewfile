@@ -80,7 +80,7 @@ cask "microsoft-office"
 cask "openemu"
 cask "qlcolorcode"
 cask "qlstephen"
-cask "sony-ps4-remoteplay"
+cask "sony-ps4-remote-play"
 cask "sublime-text"
 cask "ubersicht"
 mas "Airmail 3", id: 918858936
