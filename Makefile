@@ -8,7 +8,7 @@ ifeq      ($(UNAME), Darwin)
 else ifeq ($(UNAME), Linux)
   OS := linux
 else ifeq ($(UNAME), CYGWIN_NT-6.1)
-	OS := windows
+  OS := windows
 endif
 
 .PHONY: all install
