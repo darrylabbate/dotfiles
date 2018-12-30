@@ -389,8 +389,12 @@
 	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DisableMetalWhenIdle</key>
+	<false/>
 	<key>DisablePotentiallyInsecureEscapeSequences</key>
 	<false/>
+	<key>DisableWindowShadowWhenTransparencyOnMojave</key>
+	<true/>
 	<key>DisableWindowSizeSnap</key>
 	<true/>
 	<key>EnableDivisionView</key>
@@ -431,6 +435,8 @@
 	<real>0.15000000596046448</real>
 	<key>IndicateBellsInDockBadgeLabel</key>
 	<false/>
+	<key>InvalidateShadowTimesPerSecond</key>
+	<real>0.0</real>
 	<key>JobName</key>
 	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -478,9 +484,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>250 259 796 486 0 0 1440 877 </string>
+	<string>250 337 796 486 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>728 15 697 848 0 0 1440 877 </string>
+	<string>15 15 697 416 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -751,7 +757,7 @@
 			<key>Blinking Cursor</key>
 			<false/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>30</real>
 			<key>Bold Color</key>
@@ -1165,7 +1171,7 @@
 			<key>Normal Font</key>
 			<string>Hasklig-Regular 14</string>
 			<key>Only The Default BG Color Uses Transparency</key>
-			<true/>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1244,7 +1250,7 @@
 			<key>Thin Strokes</key>
 			<integer>4</integer>
 			<key>Transparency</key>
-			<real>0.34101562499999999</real>
+			<real>0.27760945431472084</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
@@ -2070,6 +2076,8 @@
 	<integer>1</integer>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567798908.64622903</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -2125,6 +2133,8 @@
 	<false/>
 	<key>RetinaInlineImages</key>
 	<false/>
+	<key>RunJobsInServers</key>
+	<false/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -2134,7 +2144,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-29T23:37:56Z</date>
+	<date>2018-12-30T00:46:51Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
