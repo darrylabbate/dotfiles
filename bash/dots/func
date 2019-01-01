@@ -14,7 +14,7 @@ color()
 {
   local SCRIPT
   SCRIPT=$1
-  $HOME/Projects/colors/src/${SCRIPT}
+  $HOME/projects/colors/src/${SCRIPT}
 }
 
 # Check price of individual cryptocurrency
