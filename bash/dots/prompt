@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-# Displays red prompt if root
-# Displays blue prompt during SSH session
-
-if [[ $(id -u) -eq 0 ]]; then
-  PS1="\W \[\e[31m\]::\[\e[m\] " 
-elif [[ -n "$SSH_CLIENT" ]]; then
-  PS1="\W \[\e[34m\]::\[\e[m\] " 
-else
+if [[ $(id -u) -eq 0 ]]; then       # Root
+  PS1="\W \[\e[31m\]::\[\e[m\] "
+elif [[ -n "$SSH_CLIENT" ]]; then   # SSH session
+  PS1="\W \[\e[33m\]::\[\e[m\] "
+else                                # Normal
   PS1="\W \[\e[1m\]::\[\e[m\] "
 fi
