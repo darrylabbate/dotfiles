@@ -42,7 +42,6 @@ usage:
 .PHONY: linux macos windows link unlink
 
 linux: apt git-init stow
-	. $(HOME)/.bash_profile
 
 macos: bash brew git-init stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
@@ -51,7 +50,6 @@ macos: bash brew git-init stow
 	brew services start chunkwm
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
-	. $(HOME)/.bash_profile
 	open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
 	softwareupdate -aiR
 
@@ -60,7 +58,6 @@ windows: git-init
 	stow cygwin
 	stow gpg
 	stow vim
-	. $(HOME)/.bash_profile
 
 link: git-init
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
