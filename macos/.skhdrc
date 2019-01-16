@@ -25,9 +25,8 @@ alt + cmd - n : chunkc tiling::desktop --layout float
 
 ### BSP mode shortcuts ###
 
-# Detach focused window from bsp and resize to ideal readability
-alt - d : chunkc tiling::window --toggle float\
-          chunkc tiling::window --grid-layout 5:5:1:0:3:5
+# Detach focused window from bsp
+alt - d : chunkc tiling::window --toggle float
 
 # Increase/decrease window size
 alt + cmd - h : chunkc tiling::window --use-temporary-ratio 0.025 --adjust-window-edge west\
