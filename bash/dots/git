@@ -35,7 +35,7 @@ function qc ()
 alias gf="git fetch --dry-run --verbose"
 
 # Log
-alias gl="git log --pretty=oneline -n 10 --graph --abbrev-commit"
+alias gl="git log --oneline -n 10"
 
 # Pull
 alias gpl="git pull origin master"
