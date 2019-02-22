@@ -76,6 +76,9 @@ let g:limelight_conceal_ctermfg = 'gray'
 autocmd! User GoyoEnter Limelight
 autocmd! User GoyoLeave Limelight!
 
+" Spellcheck markdown files
+autocmd FileType markdown setlocal spell spelllang=en_us
+
 " Use C++ style comments in C files
 autocmd FileType c setlocal commentstring=//\ %s
 
