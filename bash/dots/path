@@ -7,5 +7,5 @@
 # system utilities.
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  export PATH="/usr/local/bin:/usr/local/opt/curl/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin:/Library/TeX/texbin"
+  export PATH="/usr/local/bin:/usr/local/opt/llvm/bin:/usr/local/opt/curl/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin:/Library/TeX/texbin"
 fi
