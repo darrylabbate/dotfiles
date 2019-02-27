@@ -94,11 +94,10 @@ let g:haskell_indent_in = 1
 let g:haskell_indent_guard = 2
 
 " Assembly
-autocmd FileType asm setlocal noexpandtab
+autocmd FileType asm setlocal shiftwidth=8
 autocmd FileType asm setlocal tabstop=8
 
 " Indent using 4 spaces in Java
-" I can't wait to delete this
 autocmd FileType java setlocal shiftwidth=4
 autocmd FileType java setlocal tabstop=4
 
