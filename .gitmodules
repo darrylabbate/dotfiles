@@ -19,12 +19,6 @@
 [submodule "vim/.vim/bundle/vim-fugitive"]
 	path = vim/.vim/bundle/vim-fugitive
 	url = ../../tpope/vim-fugitive.git
-[submodule "vim/.vim/bundle/limelight.vim"]
-	path = vim/.vim/bundle/limelight.vim
-	url = ../../junegunn/limelight.vim.git
-[submodule "vim/.vim/bundle/goyo.vim"]
-	path = vim/.vim/bundle/goyo.vim
-	url = ../../junegunn/goyo.vim.git
 [submodule "vim/.vim/bundle/vim-easy-align"]
 	path = vim/.vim/bundle/vim-easy-align
 	url = ../../junegunn/vim-easy-align.git
