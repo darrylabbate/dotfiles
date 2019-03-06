@@ -6,7 +6,8 @@ set noswapfile
 set path+=**
 set wildmenu
 
-set t_Co=256
+set t_Co=16
+set bg=dark
 syntax on
 
 set tabstop=2
@@ -29,7 +30,7 @@ autocmd GUIEnter * set visualbell t_vb=
 set number
 set relativenumber
 set numberwidth=2
-hi LineNr cterm=None ctermfg=Gray
+hi LineNr cterm=None ctermfg=DarkGray
 
 set cursorline
 hi CursorLine cterm=None ctermbg=Black ctermfg=None
