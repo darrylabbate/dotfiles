@@ -72,11 +72,6 @@ let g:lightline = {
       \ },
       \ }
 
-let g:limelight_conceal_ctermfg = 'gray'
-
-autocmd! User GoyoEnter Limelight
-autocmd! User GoyoLeave Limelight!
-
 " Spellcheck markdown files
 autocmd FileType markdown setlocal spell spelllang=en_us
 
