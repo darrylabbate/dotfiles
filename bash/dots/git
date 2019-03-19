@@ -31,6 +31,9 @@ function qc ()
   fi
 }
 
+# Diff
+alias gd="git diff"
+
 # Fetch
 alias gf="git fetch --dry-run --verbose"
 
