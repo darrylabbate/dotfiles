@@ -22,12 +22,12 @@ Files for configuring a terminal environment and other various system settings. 
 ### `curl` method (easiest)
 
 ```bash
-$ curl get.darryl.sh | sh
+$ curl get.darryl.cx | sh
 $ cd ~/dotfiles
 $ make
 ```
 
-Source code for the script is [here](https://github.com/rootbeersoup/get.darryl.sh/blob/master/src/dotfiles.sh). Checksums can be found in the [tag notes](https://github.com/rootbeersoup/get.darryl.sh/tags).
+Source code for the script is [here](https://github.com/rootbeersoup/get-dotfiles/blob/master/src/dotfiles.sh). Checksums can be found in the [tag notes](https://github.com/rootbeersoup/get-dotfiles/tags).
 
 The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. 
 
