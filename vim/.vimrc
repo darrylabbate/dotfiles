@@ -78,6 +78,10 @@ autocmd FileType markdown setlocal spell spelllang=en_us
 " Use C++ style comments in C files
 autocmd FileType c setlocal commentstring=//\ %s
 
+" 3 space indents for C
+autocmd FileType c setlocal shiftwidth=3
+autocmd FileType c setlocal tabstop=3
+
 " Haskell
 let g:haskell_indent_if = 3
 let g:haskell_indent_case = 2
