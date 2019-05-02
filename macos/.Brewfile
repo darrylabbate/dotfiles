@@ -84,7 +84,6 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "sony-ps4-remote-play"
 cask "spotify"
-cask "sublime-text"
 mas "Airmail 3", id: 918858936
 mas "Calcbot", id: 931657367
 mas "Cascadea", id: 1432182561
