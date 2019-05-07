@@ -7,8 +7,6 @@ ifeq      ($(UNAME), Darwin)
   OS := macos
 else ifeq ($(UNAME), Linux)
   OS := linux
-else ifeq ($(UNAME), CYGWIN_NT-6.1)
-  OS := windows
 endif
 
 .PHONY: all install
@@ -39,7 +37,7 @@ usage:
 	\\n\
 	"
 
-.PHONY: linux macos windows link unlink
+.PHONY: linux macos link unlink
 
 linux: apt git-init stow
 
@@ -52,12 +50,6 @@ macos: bash brew git-init stow
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
 	softwareupdate -aiR
-
-windows: git-init
-	stow bash
-	stow cygwin
-	stow gpg
-	stow vim
 
 link: git-init
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
