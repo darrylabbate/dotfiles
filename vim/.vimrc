@@ -1,4 +1,5 @@
 execute pathogen#infect()
+Helptags
 filetype indent plugin on
 
 set noswapfile
@@ -60,17 +61,31 @@ inoremap KJ <Esc>
 nmap ga <Plug>(EasyAlign)
 
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'modified' ] ],
-      \   'right': [ [ 'filetype' ],
-      \              [ 'gitbranch', 'readonly', 'filename' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
-      \ },
-      \ }
+  \ 'colorscheme': 'darcula',
+  \ 'active': {
+  \   'left':  [ [ 'mode', 'paste' ],
+  \              [ 'filename', 'modified' ] ],
+  \   'right': [ [ 'filetype' ],
+  \              [ 'gitbranch', 'readonly' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head'
+  \ },
+  \ }
+
+let g:lightline.mode_map = {
+  \ 'n' : 'N',
+  \ 'i' : 'I',
+  \ 'R' : 'R',
+  \ 'v' : 'V',
+  \ 'V' : 'V-LINE',
+  \ "\<C-v>": 'V-BLOCK',
+  \ 'c' : 'C',
+  \ 's' : 'S',
+  \ 'S' : 'S-LINE',
+  \ "\<C-s>": 'S-BLOCK',
+  \ 't': 'T',
+  \ }
 
 " Spellcheck markdown files
 autocmd FileType markdown setlocal spell spelllang=en_us
@@ -92,14 +107,3 @@ let g:haskell_indent_guard = 2
 " Assembly
 autocmd FileType asm setlocal shiftwidth=8
 autocmd FileType asm setlocal tabstop=8
-
-" Indent using 4 spaces in Java
-autocmd FileType java setlocal shiftwidth=4
-autocmd FileType java setlocal tabstop=4
-
-" gitgutter
-let g:gitgutter_sign_added = '•'
-let g:gitgutter_sign_modified = '•'
-let g:gitgutter_sign_removed = '•'
-let g:gitgutter_sign_removed_first_line = '•'
-let g:gitgutter_sign_modified_removed = '•'
