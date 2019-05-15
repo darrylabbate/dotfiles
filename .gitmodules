@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/vim-stylish-haskell"]
 	path = vim/.vim/bundle/vim-stylish-haskell
 	url = ../../nbouscal/vim-stylish-haskell.git
+[submodule "vim/.vim/bundle/lightline-gitdiff"]
+	path = vim/.vim/bundle/lightline-gitdiff
+	url = ../../niklaas/lightline-gitdiff.git

@@ -64,12 +64,19 @@ let g:lightline = {
   \ 'colorscheme': 'darcula',
   \ 'active': {
   \   'left':  [ [ 'mode', 'paste' ],
-  \              [ 'filename', 'modified' ] ],
+  \              [ 'filename', 'modified' ],
+  \              [ 'gitdiff' ] ],
   \   'right': [ [ 'filetype' ],
   \              [ 'gitbranch', 'readonly' ] ]
   \ },
   \ 'component_function': {
   \   'gitbranch': 'fugitive#head'
+  \ },
+  \ 'component_expand': {
+  \   'gitdiff': 'lightline#gitdiff#get',
+  \ },
+  \ 'component_type': {
+  \   'gitdiff': 'middle',
   \ },
   \ }
 
@@ -87,6 +94,11 @@ let g:lightline.mode_map = {
   \ 't': 'T',
   \ }
 
+let g:lightline#gitdiff#indicator_added    = '+'
+let g:lightline#gitdiff#indicator_deleted  = '-'
+let g:lightline#gitdiff#indicator_modified = 'Δ'
+let g:lightline#gitdiff#separator          = ' '
+
 " Spellcheck markdown files
 autocmd FileType markdown setlocal spell spelllang=en_us
 
@@ -94,15 +106,15 @@ autocmd FileType markdown setlocal spell spelllang=en_us
 autocmd FileType c setlocal commentstring=//\ %s
 
 " Haskell
-let g:haskell_indent_if = 3
-let g:haskell_indent_case = 2
-let g:haskell_indent_let = 4
-let g:haskell_indent_where = 6
-let g:haskell_indent_before_where = 2
+let g:haskell_indent_if               = 3
+let g:haskell_indent_case             = 2
+let g:haskell_indent_let              = 4
+let g:haskell_indent_where            = 6
+let g:haskell_indent_before_where     = 2
 let g:haskell_indent_after_bare_where = 2
-let g:haskell_indent_do = 3
-let g:haskell_indent_in = 1
-let g:haskell_indent_guard = 2
+let g:haskell_indent_do               = 3
+let g:haskell_indent_in               = 1
+let g:haskell_indent_guard            = 2
 
 " Assembly
 autocmd FileType asm setlocal shiftwidth=8
