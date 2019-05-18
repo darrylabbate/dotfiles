@@ -90,6 +90,7 @@ mas "Airmail 3", id: 918858936
 mas "Calcbot", id: 931657367
 mas "Cascadea", id: 1432182561
 mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Spillo", id: 873245660
