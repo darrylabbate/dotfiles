@@ -39,9 +39,9 @@ usage:
 
 .PHONY: linux macos link unlink
 
-linux: apt git-init stow
+linux: apt stow
 
-macos: bash brew git-init stow
+macos: bash brew stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	stow macos
@@ -51,7 +51,7 @@ macos: bash brew git-init stow
 	open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
 	softwareupdate -aiR
 
-link: git-init
+link:
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
 	ln -fs $(DOTFILES_DIR)/bash/.bashrc $(HOME)/.bashrc
 	ln -fs $(DOTFILES_DIR)/bash/.curlrc $(HOME)/.curlrc
@@ -70,7 +70,7 @@ unlink:
 	unlink $(HOME)/.vim
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
-.PHONY: apt bash brew git-init stow
+.PHONY: apt bash brew stow
 
 apt:
 	bash $(DOTFILES_DIR)/linux/apt.sh
@@ -82,10 +82,6 @@ bash: brew
 brew:
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
-
-git-init:
-	git submodule init
-	git submodule update
 
 stow:
 	stow bash

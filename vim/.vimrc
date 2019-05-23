@@ -1,5 +1,14 @@
-execute pathogen#infect()
-Helptags
+call plug#begin('~/.vim/plugs')
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
+Plug 'niklaas/lightline-gitdiff'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+call plug#end()
+
 filetype indent plugin on
 
 set noswapfile

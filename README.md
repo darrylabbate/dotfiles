@@ -36,12 +36,10 @@ The `curl` method will install everything automatically. This is really useful f
 You can also manually clone the repository and invoke the `Makefile`
 
 ```bash
-$ git clone --recursive https://github.com/rootbeersoup/dotfiles.git
+$ git clone https://github.com/rootbeersoup/dotfiles.git
 $ cd dotfiles
 $ make
 ```
-
-The `--recursive` flag clones all included submodules. This option is not fully necessary; the `Makefile` will clone the submodules if they are missing.
 
 ## Makefile
 
@@ -81,13 +79,7 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Vim
 
-My vim plugin manager of choice is [Pathogen](https://github.com/tpope/vim-pathogen). The `pathogen.vim` file is autoloaded and invokes the plugins in the `/vim/bundle` folder via a single line in my `.vimrc`:
-
-```
-execute pathogen#infect()
-```
-
-Vim plugins are currently contained as git submodules, to keep the remote repository slimmer. The extraneous `git submodule init` and `git submodule update` commands are handled by the `Makefile`.
+I use [Plug](https://github.com/junegunn/vim-plug) to manage all Vim plugins.
 
 ### Window Management
 
