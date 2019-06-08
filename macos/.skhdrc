@@ -1,7 +1,5 @@
-#!/usr/bin/env bash
-
 # ---------------------------------------
-# chunkwm
+# skhdrc
 # ---------------------------------------
 
 # --grid-layout guide
@@ -11,7 +9,7 @@
 # X:Y defines the rows:columns of the virtual grid
 #
 # A:B defines the placement of the window on the grid
-#   1:0 places window in topmost row and 2nd leftmost colum
+#   1:0 places window in topmost row and 2nd leftmost column
 #
 # C:D defines the size of the window
 #   2:1 would resize the window to 2 times width and 1 times height
