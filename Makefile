@@ -80,7 +80,7 @@ bash: brew
 	chsh -s /usr/local/bin/bash
 
 brew:
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
 
 stow:
