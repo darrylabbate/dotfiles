@@ -33,6 +33,8 @@ set showcmd
 set incsearch
 set showmatch
 set noshowmode
+set modelines=0
+set nomodeline
 
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
