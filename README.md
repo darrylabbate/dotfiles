@@ -68,5 +68,5 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Window Management
 
-- [chunkwm](../koekeishiya/chunkwm)
-- [skhd](../koekeishiya/skhd)
+- [chunkwm](https://github.com/koekeishiya/chunkwm)
+- [skhd](https://github.com/koekeishiya/skhd)
