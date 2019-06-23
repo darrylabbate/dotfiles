@@ -2,21 +2,6 @@
 
 Files for configuring a terminal environment and other various system settings. Largely centered around macOS, as well as other Unix-like systems. See [Github does dotfiles](https://dotfiles.github.io) for more info
 
-## Table of Contents
-* [Installation](#installation)
-  * [`curl` method](#curl-method-easiest)
-  * [Manual method](#manual-method)
-* [Makefile](#makefile)
-  * [`make`](#make)
-  * [`make link`](#make-link)
-* [How it Works](#how-it-works)
-  * [Symlinks with GNU Stow](#symlinks)
-  * [Bash](#bash)
-  * [Vim](#vim)
-  * [Window Management](#window-management)
-
----
-
 ## Installation
 
 ### `curl` method (easiest)
@@ -79,8 +64,9 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Vim
 
-I use [Plug](https://github.com/junegunn/vim-plug) to manage all Vim plugins.
+- [Plug](https://github.com/junegunn/vim-plug)
 
 ### Window Management
 
-chunkwm and skhd are configured via `.chunkwmrc` and `.skhdrc` respectively. Both are located in the `/macos` folder and symlinked to the home directory with `stow macos`.
+- [chunkwm](../koekeishiya/chunkwm)
+- [skhd](../koekeishiya/skhd)
