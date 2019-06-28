@@ -61,7 +61,6 @@ brew "unar"
 brew "watch"
 brew "wget"
 brew "youtube-dl"
-cask "1password"
 cask "adobe-creative-cloud"
 cask "font-envy-code-r"
 cask "font-hasklig"
@@ -86,6 +85,7 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "sony-ps4-remote-play"
 cask "spotify"
+mas "1password 7", id: 1333542190
 mas "Airmail 3", id: 918858936
 mas "Calcbot", id: 931657367
 mas "Cascadea", id: 1432182561
