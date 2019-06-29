@@ -39,7 +39,8 @@ usage:
 
 .PHONY: linux macos link unlink
 
-linux: apt stow
+linux: brew stow
+	stow linux
 
 macos: bash brew stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
@@ -69,19 +70,22 @@ unlink:
 	unlink $(HOME)/.vim
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
-.PHONY: apt bash brew stow
-
-apt:
-	bash $(DOTFILES_DIR)/linux/apt.sh
+.PHONY: bash brew stow
 
 bash: brew
 	echo /usr/local/bin/bash | sudo tee -a /etc/shells
 	chsh -s /usr/local/bin/bash
 
 brew:
+ifeq ($(UNAME), Darwin)
 	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew analytics off
 	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
+else ifeq ($(UNAME), Linux)
+	sudo apt install build-essential
+	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+	/home/linuxbrew/.linuxbrew/bin/brew bundle --file=$(DOTFILES_DIR)/linux/.Brewfile
+endif
+	brew analytics off
 
 stow:
 	stow bash
