@@ -9,5 +9,5 @@
 if [[ "$(uname -s)" == "Darwin" ]]; then
     export PATH="/usr/local/bin:/usr/local/opt/llvm/bin:/usr/local/opt/curl/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/opt/coreutils/libexec/gnubin"
 elif [[ "$(uname -s)" == "Linux" ]]; then
-    export PATH="/home/linuxbrew/.linuxbrew/bin/brew:$PATH"
+    export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 fi
