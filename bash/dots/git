@@ -1,59 +1,36 @@
 #!/usr/bin/env bash
-# This file houses all the git aliases and functions
 
-# Alias GitHub's `hub` cli to work alongside `git`
-# as recommended by GitHub (only macOS for now)
+# Git
+# ---
+
+# Alias `git` to `hub` on macOS
 if [[ "$(uname -s)" == "Darwin" ]]; then
-  alias git="hub"
+    alias git="hub"
 fi
 
-# Add
 alias ga="git add"
 alias gall="git add --all"
-
-# Clone with recursive flag
-alias gcl="git clone --recursive"
-
-# Commit
 alias gc="git commit"
 alias gca="git commit --amend"
+alias gcl="git clone --recursive"           # Clone including any submodules
+alias gd="git diff"
+alias gf="git fetch --dry-run --verbose"
+alias gl="git log --oneline -n 10"
+alias gp="git push -u origin master"
+alias gpd="git push -u origin dev"          # Push to `dev` branch
+alias gpl="git pull origin master"          # Pull from master
+alias gps="git push server"                 # Push to server (defined in local config)
+alias gs="git status -sb"
 
 # Quick commit with message without quotes
 function qc ()
 {
-  message=$*
+    message=$*
 
-  if [[ $message ]]; then   
-    git commit -m "${message}"
-  else
-    printf "\\033[31mERROR:\\033[0m Commit message required\\n"
-    return 1
-  fi
+    if [[ $message ]]; then   
+        git commit -m "${message}"
+    else
+        printf "\\033[31mERROR:\\033[0m Commit message required\\n"
+        return 1
+    fi
 }
-
-# Diff
-alias gd="git diff"
-
-# Fetch
-alias gf="git fetch --dry-run --verbose"
-
-# Log
-alias gl="git log --oneline -n 10"
-
-# Pull
-alias gpl="git pull origin master"
-
-# Push
-alias gp="git push -u origin master"
-
-# Push to `dev` branch
-alias gpd="git push -u origin dev"
-
-# Push to webhost
-alias gps="git push server"
-
-# Status
-alias gs="git status -sb"
-
-# Update submodules
-alias gsu="git submodule update --recursive --remote"
