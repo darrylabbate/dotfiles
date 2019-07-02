@@ -58,8 +58,6 @@ fi
 alias cmdkill="pkill -i"
 alias empty="sudo rm -rf ~/.Trash/*"                        # Empty macOS trash
 alias fkill="killall Finder"
-alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"     # List top 4 processes by CPU usage
-alias ip="curl ipinfo.io/ip"
 alias kill="kill -9"
 alias nawk="/usr/bin/awk"                                   # One True AWK
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
@@ -68,6 +66,7 @@ alias rekey="brew services restart skhd"                    # Restart skhd
 alias pgrep="pgrep -i"
 alias pipes="/usr/local/bin/pipes.sh/"
 alias temp="osx-cpu-temp"
+alias tempf="osx-cpu-temp -F"
 alias tidy="find . -type f -name '*.DS_Store' -ls -delete"  # Delete all `.DS_Store` files
 alias tree="tree -C"                                        # Always use colored `tree` output
 alias update="sudo softwareupdate -aiR"                     # Install all macOS updates and restart system
