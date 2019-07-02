@@ -1,20 +1,11 @@
 #!/usr/bin/env bash
 
-# Super quick note
-n()
-{
-  local NOTE
-  NOTE=$*
-
-  echo "$(date)": "$NOTE" >> "$HOME/notes.txt"
-}
-
 # Run a color script
 color()
 {
-  local SCRIPT
-  SCRIPT=$1
-  $HOME/projects/colors/src/${SCRIPT}
+    local SCRIPT
+    SCRIPT=$1
+    $HOME/projects/colors/src/${SCRIPT}
 }
 
 # (n)eo(f)etch(g)rep
@@ -23,23 +14,23 @@ color()
 
 nfg()
 {
-  local QUERY
-  QUERY=$1
+    local QUERY
+    QUERY=$1
 
-  if [[ "$QUERY" ]]; then
-    neofetch --config "$HOME/dotfiles/bash/neofetch-all.conf" \
-    | grep -i "$QUERY"
-  else
-    printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
-    return 1
-  fi
+    if [[ "$QUERY" ]]; then
+        neofetch --config "$HOME/dotfiles/bash/neofetch-all.conf" \
+        | grep -i "$QUERY"
+    else
+        printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
+        return 1
+    fi
 }
 
 # Adjust volume on macOS
 volume()
 {
-  local PCT
-  PCT=$1
+    local PCT
+    PCT=$1
 
-  osascript -e 'set volume output volume "'$PCT'"'
+    osascript -e 'set volume output volume "'$PCT'"'
 }
