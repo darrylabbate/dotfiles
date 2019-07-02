@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 if [[ $(id -u) -eq 0 ]]; then       # Root
-  PS1="\W \[\e[31m\]::\[\e[m\] "
+    PS1="\W \[\e[31m\]::\[\e[m\] "
 elif [[ -n "$SSH_CLIENT" ]]; then   # SSH session
-  PS1="\W \[\e[33m\]::\[\e[m\] "
+    PS1="\W \[\e[33m\]::\[\e[m\] "
 else                                # Normal
-  PS1="\W \[\e[1m\]::\[\e[m\] "
+    PS1="\W \[\e[1m\]::\[\e[m\] "
 fi
