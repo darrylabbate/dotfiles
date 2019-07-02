@@ -1,55 +1,73 @@
 #!/usr/bin/env bash
 
-# Reload .bash_profile
-alias rebash="source ~/.bash_profile"
+alias ..="cd .."            # Up one level
+alias ...="cd ../.."        # Up two levels
+alias ....="cd ../../.."    # Up three levels
 
-# Restart chunkwm or skhd
-alias rechunk="brew services restart chunkwm"
-alias rekey="brew services restart skhd"
 
-# Update macOS and Homebrew. Also clean up Homebrew.
-alias update="sudo softwareupdate -aiR"
+# Single-letter aliases
+# ---------------------
 
-# Finder
-alias f="open ."
-alias fkill="killall Finder"
-
-# type
+alias a="cd ~/apps"
+alias b="cd -"              # Return to previous directory
+alias c="clear"
+alias d="cd ~/dotfiles"
+alias e="cd ~/exercism"
+alias f="open ."            # Open current directory in Finder
+alias k="pkill -i"          # Kill app by name
+alias h="cd ~"              # Home directory
+alias p="cd ~/projects"
+alias r="cd ~/resources"
 alias t="type"
-alias ta="type -a"
+alias u="cd ~/uno"
+alias v="vim"
 
-# Slim
-alias slim="slimrb"
 
-# Cleanup
-alias tidy="find . -type f -name '*.DS_Store' -ls -delete"
-alias empty="sudo rm -rf ~/.Trash/*"
+# Two and three letter aliases
+# ----------------------------
 
-# CPU Monitoring
 alias cpu="top -F -R -o cpu"
-
-# Lists the top 4 processes by CPU usage
-alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"
-
-# k [app name] or kill [process id]
-alias pgrep="pgrep -i"
-alias k="pkill -i"
-alias cmdkill="pkill -i"
-alias kill="kill -9"
-alias pidkill="kill -9"
-alias temp="osx-cpu-temp"
-
-# Networking
-alias myip="curl ipinfo.io/ip"
-alias copyip="curl ipinfo.io/ip | pbcopy"
-
-# Pipes.sh
-alias pipes="/usr/local/bin/pipes.sh/"
-
-# Misc
 alias dl="youtube-dl"
-alias nawk="/usr/bin/awk"
 alias nf="neofetch --config ~/dotfiles/bash/neofetch.conf"
 alias nff="neofetch --config ~/dotfiles/bash/neofetch-all.conf"
 alias rh="runhaskell"
 alias spd="speedtest-cli"
+alias ta="type -a"
+alias tl="cd /"
+alias vol="cd /volumes"
+
+# Use GNU `ls` if installed (gls via Homebrew on macOS)
+if [[ "$(uname -s)" == "Linux"  || "$(uname -s)" == "CYGWIN_NT-6.1" ]]; then
+    alias l="ls -Fh --color --group-directories-first"
+    alias la="ls -AFh --color --group-directories-first"
+    alias ll="ls -AFhlo --color --group-directories-first"
+elif [[ "$(command -v gls)" ]]; then
+    alias l="gls -Fh --color --group-directories-first"
+    alias la="gls -AFh --color --group-directories-first"
+    alias ll="gls -AFhlo --color --group-directories-first"
+else
+    alias l="ls -F"
+    alias la="ls -AF"
+    alias ll="ls -AFlo"
+fi
+
+
+# Longer aliases
+# --------------
+
+alias cmdkill="pkill -i"
+alias empty="sudo rm -rf ~/.Trash/*"                        # Empty macOS trash
+alias fkill="killall Finder"
+alias hogs="ps -acrx -o pid,%cpu,command | awk 'NR<=5'"     # List top 4 processes by CPU usage
+alias ip="curl ipinfo.io/ip"
+alias kill="kill -9"
+alias nawk="/usr/bin/awk"                                   # One True AWK
+alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
+alias rechunk="brew services restart chunkwm"               # Restart chunkwm
+alias rekey="brew services restart skhd"                    # Restart skhd
+alias pgrep="pgrep -i"
+alias pipes="/usr/local/bin/pipes.sh/"
+alias temp="osx-cpu-temp"
+alias tidy="find . -type f -name '*.DS_Store' -ls -delete"  # Delete all `.DS_Store` files
+alias tree="tree -C"                                        # Always use colored `tree` output
+alias update="sudo softwareupdate -aiR"                     # Install all macOS updates and restart system
