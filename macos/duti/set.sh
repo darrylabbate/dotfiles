@@ -17,5 +17,5 @@ done <"${DUTI_DIR}/openemu.txt"
 
 # Sublime Text
 while read -r ext; do
-  duti -s com.sublimetext.3 "$ext" all
-done <"${DUTI_DIR}/sublime.txt"
+  duti -s com.apple.TextEdit "$ext" all
+done <"${DUTI_DIR}/sourcecode.txt"
