@@ -211,5 +211,11 @@ defaults write com.apple.ActivityMonitor SortDirection -int 0
 defaults write org.n8gray.QLColorCode font Hasklig
 defaults write org.n8gray.QLColorCode hlTheme zenburn
 
+# Force dark/native UI in some "legacy" apps.
+# This only changes context menus and Finder windows when opening/saving files
+defaults write com.adobe.illustrator NSRequiresAquaSystemAppearance 0
+defaults write com.adobe.Photoshop NSRequiresAquaSystemAppearance 0
+defaults write com.adobe.xd NSRequiresAquaSystemAppearance 0
+
 killall Dock
 killall Finder
