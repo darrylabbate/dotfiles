@@ -85,7 +85,6 @@ cask "qlstephen"
 cask "sony-ps4-remote-play"
 cask "spotify"
 mas "1password 7", id: 1333542190
-mas "Airmail 3", id: 918858936
 mas "Cascadea", id: 1432182561
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft Outlook", id: 985367838
