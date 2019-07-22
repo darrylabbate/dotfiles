@@ -85,6 +85,7 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "sony-ps4-remote-play"
 cask "spotify"
+cask "transmission"
 mas "1password 7", id: 1333542190
 mas "Canary Mail", id: 1236045954
 mas "Cascadea", id: 1432182561
