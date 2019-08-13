@@ -83,14 +83,12 @@ cask "openemu"
 cask "philips-hue-sync"
 cask "qlcolorcode"
 cask "qlstephen"
-cask "sony-ps4-remote-play"
 cask "spotify"
 cask "transmission"
 mas "1password 7", id: 1333542190
 mas "Canary Mail", id: 1236045954
 mas "Cascadea", id: 1432182561
 mas "Microsoft Excel", id: 462058435
-mas "Microsoft Outlook", id: 985367838
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Spillo", id: 873245660
