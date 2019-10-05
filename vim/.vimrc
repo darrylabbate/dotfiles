@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugs')
+Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
