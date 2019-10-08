@@ -9,7 +9,6 @@ tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "sass/sass"
-brew "awscli"
 brew "bash"
 brew "cabal-install"
 brew "cask"
@@ -84,7 +83,6 @@ cask "qlstephen"
 cask "spotify"
 cask "transmission"
 mas "1password 7", id: 1333542190
-mas "Canary Mail", id: 1236045954
 mas "Cascadea", id: 1432182561
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
