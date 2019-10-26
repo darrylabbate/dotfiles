@@ -1,31 +1,5 @@
 #!/usr/bin/env bash
 
-# Run a color script
-color()
-{
-    local SCRIPT
-    SCRIPT=$1
-    $HOME/projects/colors/src/${SCRIPT}
-}
-
-# (n)eo(f)etch(g)rep
-# Usage: `nfg shell`
-# Output: Shell: /usr/local/bin/bash 4.4.23
-
-nfg()
-{
-    local QUERY
-    QUERY=$1
-
-    if [[ "$QUERY" ]]; then
-        neofetch --config "$HOME/dotfiles/bash/neofetch-all.conf" \
-        | grep -i "$QUERY"
-    else
-        printf "\\033[31mERROR:\\033[0m No pattern supplied\\n"
-        return 1
-    fi
-}
-
 # Adjust volume on macOS
 volume()
 {
