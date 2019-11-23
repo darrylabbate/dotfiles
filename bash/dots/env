@@ -13,3 +13,6 @@ export GPG_TTY=$(tty)
 
 export HOMEBREW_CURLRC=1
 export HOMEBREW_FORCE_BREWED_CURL=1
+
+# Clone github repos via SSH
+export HUB_PROTOCOL=ssh
