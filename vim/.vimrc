@@ -119,6 +119,9 @@ autocmd FileType markdown setlocal spell spelllang=en_us
 " Use C++ style comments in C files
 autocmd FileType c setlocal commentstring=//\ %s
 
+" (C) Do not indent case labels past the indent of switch statements
+set cino=:0
+
 " Haskell
 let g:haskell_indent_if               = 3
 let g:haskell_indent_case             = 2
