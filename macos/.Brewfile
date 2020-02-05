@@ -84,7 +84,6 @@ cask "qlcolorcode"
 cask "qlstephen"
 cask "spotify"
 cask "transmission"
-mas "1password 7", id: 1333542190
 mas "Cascadea", id: 1432182561
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
