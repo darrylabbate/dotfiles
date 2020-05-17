@@ -72,6 +72,10 @@ inoremap kj <Esc>
 inoremap JK <Esc>
 inoremap KJ <Esc>
 
+" Ctags
+nmap <leader>] <C-]>
+nmap <leader>t <C-t>
+
 nmap ga <Plug>(EasyAlign)
 
 let g:lightline = {
