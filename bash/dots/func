@@ -1,8 +1,23 @@
 #!/usr/bin/env bash
 
+# Print Lua disassembly of provided code
+function ld() {
+    local CODE
+    CODE=$1
+
+    echo $1 | /usr/local/bin/luac -l -
+}
+
+# Print mawk disassembly of provided code
+function md() {
+    local CODE
+    CODE="BEGIN{ ${1} }"
+
+    /usr/local/bin/mawk -W dump "$CODE"
+}
+
 # Adjust volume on macOS
-volume()
-{
+function volume() {
     local PCT
     PCT=$1
 
