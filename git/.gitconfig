@@ -14,3 +14,5 @@
 	helper = osxkeychain
 [hub]
 	protocol = ssh
+[pull]
+	rebase = false
