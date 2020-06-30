@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Print Lua disassembly of provided code
-function ld() {
+function luad() {
     local CODE
     CODE=$1
 
@@ -9,7 +9,7 @@ function ld() {
 }
 
 # Print mawk disassembly of provided code
-function md() {
+function mawkd() {
     local CODE
     CODE="BEGIN{ ${1} }"
 
