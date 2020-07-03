@@ -57,6 +57,7 @@ link:
 	ln -fs $(DOTFILES_DIR)/bash/.curlrc $(HOME)/.curlrc
 	ln -fs $(DOTFILES_DIR)/bash/.inputrc $(HOME)/.inputrc
 	ln -fs $(DOTFILES_DIR)/bash/.hushlogin $(HOME)/.hushlogin
+	ln -fs $(DOTFILES_DIR)/macos/kitty.conf $(HOME)/.config/kitty/kitty.conf
 	ln -fs $(DOTFILES_DIR)/vim/.vimrc $(HOME)/.vimrc
 	ln -fs $(DOTFILES_DIR)/vim/.vim $(HOME)/.vim
 

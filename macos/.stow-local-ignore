@@ -7,4 +7,5 @@
 /iterm
 .DS_Store
 defaults.sh
+kitty.conf
 README.md
