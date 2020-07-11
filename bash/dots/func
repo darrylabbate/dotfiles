@@ -8,12 +8,52 @@ function luad() {
     echo $1 | /usr/local/bin/luac -l -
 }
 
+# Print a single Lua expression
+function luap() {
+    local CODE
+    CODE="print(${1})"
+
+    /usr/local/bin/lua -e "$CODE"
+}
+
 # Print mawk disassembly of provided code
 function mawkd() {
     local CODE
-    CODE="BEGIN{ ${1} }"
+    CODE="BEGIN{${1}}"
 
     /usr/local/bin/mawk -W dump "$CODE"
+}
+
+# Print a single AWK expression, using mawk
+function mawkp() {
+    local CODE
+    CODE="BEGIN{print ${1}}"
+
+    /usr/local/bin/mawk "$CODE"
+}
+
+# Print a single Perl expression
+function perlp() {
+    local CODE
+    CODE="print(${1})"
+
+    /usr/local/bin/perl -le "$CODE"
+}
+
+# Print a single Python expression
+function pyp() {
+    local CODE
+    CODE="print(${1})"
+
+    /usr/local/bin/python3 -c "$CODE"
+}
+
+# Print a single Ruby expression
+function rubyp() {
+    local CODE
+    CODE="puts ${1}"
+
+    ruby -e "$CODE"
 }
 
 # Adjust volume on macOS
