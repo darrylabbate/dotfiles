@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugs')
+Plug 'arcticicestudio/nord-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
@@ -17,9 +18,20 @@ set noswapfile
 set path+=**
 set wildmenu
 
-set t_Co=16
+set t_Co=256
 set bg=dark
 syntax on
+
+" Prevent colorschemes from changing background color of screen, line
+" numbers or current line
+autocmd ColorScheme * hi Normal ctermbg=NONE guibg=NONE
+autocmd ColorScheme * hi CursorLine cterm=None ctermbg=Black ctermfg=None
+autocmd ColorScheme * hi CursorLineNr ctermbg=Black ctermfg=None
+autocmd ColorScheme * hi LineNr cterm=None ctermbg=None ctermfg=DarkGray
+
+" I think nord-vim actually uses the terminal's 16 colors, which is
+" what I want it to do
+colo nord
 
 set tabstop=4
 set shiftwidth=4
@@ -42,14 +54,14 @@ set textwidth=70
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-set number
-set relativenumber
-set numberwidth=2
-hi LineNr cterm=None ctermfg=DarkGray
+set nu
+set rnu
+set numberwidth=1
+hi LineNr cterm=None ctermbg=None ctermfg=DarkGray
 
 set cursorline
 hi CursorLine cterm=None ctermbg=Black ctermfg=None
-hi CursorLineNr ctermbg=Black ctermfg=Cyan
+hi CursorLineNr ctermbg=Black ctermfg=None
 
 set laststatus=2
 hi statusline  cterm=None ctermfg=Cyan
