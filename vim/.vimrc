@@ -84,6 +84,10 @@ inoremap kj <Esc>
 inoremap JK <Esc>
 inoremap KJ <Esc>
 
+" Markdown folding
+let g:markdown_folding = 1
+set foldlevelstart=99
+
 " Ctags
 nmap <leader>] <C-]>
 nmap <leader>t <C-t>
