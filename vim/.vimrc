@@ -5,6 +5,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'niklaas/lightline-gitdiff'
+Plug 'riff-lang/vim-riff'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
