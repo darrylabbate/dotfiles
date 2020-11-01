@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Silence message about zsh on macOS
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # Ignores all one-word and two-word commands for more efficient
 # bash history searching
 export HISTIGNORE=?:??
