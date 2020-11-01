@@ -33,7 +33,7 @@ $ make
 * Installs [Homebrew](https://brew.sh) on macOS and installs all packages defined in the [Brewfile](macos/.Brewfile).
 * Sets Homebrew-installed Bash (4.4+) as the default shell
 * Updates macOS and configures preferred system defaults defined in [`/macos/defaults.sh`](macos/defaults.sh)
-* Configures [chunkwm](https://github.com/koekeishiya/chunkwm) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
+* Configures [yabai](https://github.com/koekeishiya/yabai) and [skhd](https://github.com/koekeishiya/skhd) to run at system startup
 * Creates necessary symlinks via [GNU Stow](https://www.gnu.org/software/stow/)
 * Runs [`/macos/duti/set.sh`](macos/duti/set.sh), which sets defaults handlers/programs for file extensions via [duti](http://duti.org).
 
@@ -68,5 +68,5 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Window Management
 
-- [chunkwm](https://github.com/koekeishiya/chunkwm)
+- [yabai](https://github.com/koekeishiya/yabai)
 - [skhd](https://github.com/koekeishiya/skhd)

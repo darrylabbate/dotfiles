@@ -141,6 +141,9 @@ autocmd FileType markdown setlocal spell spelllang=en_us
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 
+" Use C++ style comments in Riff files
+autocmd FileType riff setlocal commentstring=//\ %s
+
 " (C) Do not indent case labels past the indent of switch statements
 set cino=:0
 

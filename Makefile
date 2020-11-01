@@ -46,7 +46,7 @@ macos: bash brew stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	stow macos
-	brew services start chunkwm
+	brew services start yabai
 	brew services start skhd
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	softwareupdate -aiR

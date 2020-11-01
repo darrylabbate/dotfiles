@@ -57,13 +57,13 @@ fi
 
 alias cmdkill="pkill -i"
 alias empty="sudo rm -rf ~/.Trash/*"                        # Empty macOS trash
-alias ffmon="chunkc core::load ffm.so"                      # Enable focus follow mouse
-alias ffmoff="chunkc core::unload ffm.so"                   # Disable focus follow mouse
+alias ffmon="yabai -m config focus_follows_mouse autofocus" # Enable focus follow mouse
+alias ffmoff="yabai -m config focus_follows_mouse off"      # Disable focus follow mouse
 alias fkill="killall Finder"
 alias kill="kill -9"
 alias nawk="/usr/bin/awk"                                   # One True AWK
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
-alias rechunk="brew services restart chunkwm"               # Restart chunkwm
+alias reyabai="brew services restart yabai"                 # Restart yabai
 alias rekey="brew services restart skhd"                    # Restart skhd
 alias pgrep="pgrep -i"
 alias pipes="/usr/local/bin/pipes.sh/"
