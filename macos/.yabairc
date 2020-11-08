@@ -20,7 +20,8 @@ yabai -m config active_window_border_color  0xff8AFAFB
 yabai -m config active_window_border_width  5
 
 # Always float iTerm hotkey window
-yabai -m rule --add app="^iTerm$" title="^Hotkey Window$" manage=off
+# Uncomment if hotkey window starts tiling
+# yabai -m rule --add app="^iTerm$" title="^Hotkey Window$" manage=off
 
 # Always float these apps
 yabai -m rule --add app="^App Store$" manage=off
