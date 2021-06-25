@@ -43,6 +43,7 @@ brew "nasm"
 brew "neofetch"
 brew "nmap"
 brew "pandoc"
+brew "pcre2"
 brew "perl"
 brew "pipes-sh"
 brew "python@2", link: false
