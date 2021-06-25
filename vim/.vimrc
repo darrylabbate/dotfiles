@@ -36,6 +36,10 @@ colo nord
 
 set tabstop=4
 set shiftwidth=4
+
+autocmd FileType html setlocal tabstop=2 shiftwidth=2
+autocmd FileType xml setlocal tabstop=2 shiftwidth=2
+
 set expandtab
 set autoindent
 set mouse=a
