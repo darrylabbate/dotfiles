@@ -13,7 +13,7 @@
 [credential]
 	helper = osxkeychain
 [hub]
-	protocol = ssh
+	protocol = https
 [pull]
 	rebase = false
 [init]
