@@ -18,3 +18,5 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[tag]
+	gpgSign = true
