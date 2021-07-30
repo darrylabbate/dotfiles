@@ -138,6 +138,10 @@ let g:lightline#gitdiff#indicator_deleted  = '-'
 let g:lightline#gitdiff#indicator_modified = 'Δ'
 let g:lightline#gitdiff#separator          = ' '
 
+" This prevents opening brackets in compound literals from being
+" highlighted as errors
+let c_no_curly_error = 1
+
 " Spellcheck markdown files
 autocmd FileType markdown setlocal spell spelllang=en_us
 
