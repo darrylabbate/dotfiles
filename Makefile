@@ -30,9 +30,7 @@ usage:
 	\\033[1mUSAGE:\\033[0m make [target]\\n\
 	\\n\
 	  make         Install all configurations and applications.\\n\
-	\\n\
 	  make link    Symlink only Bash and Vim configurations to the home directory.\\n\
-	\\n\
 	  make unlink  Remove symlinks created by \`make link\`.\\n\
 	\\n\
 	"
@@ -74,8 +72,8 @@ unlink:
 .PHONY: bash brew stow
 
 bash: brew
-	echo /usr/local/bin/bash | sudo tee -a /etc/shells
-	chsh -s /usr/local/bin/bash
+	echo $(shell brew --prefix)/bin/bash | sudo tee -a /etc/shells
+	chsh -s $(shell brew --prefix)/bin/bash
 
 brew:
 ifeq ($(UNAME), Darwin)
