@@ -47,7 +47,6 @@ brew "pandoc"
 brew "pcre2"
 brew "perl"
 brew "pipes-sh"
-brew "python@2", link: false
 brew "python@3"
 brew "rename"
 brew "sass"
