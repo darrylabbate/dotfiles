@@ -23,8 +23,7 @@ alias gps="git push server"                 # Push to server (defined in local c
 alias gs="git status -sb"
 
 # Quick commit with message without quotes
-function qc ()
-{
+function qc() {
     message=$*
 
     if [[ $message ]]; then   

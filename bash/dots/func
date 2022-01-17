@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+function rf() {
+    local CODE
+    CODE="print(${1})"
+
+    riff -e "$CODE"
+}
 # Print Lua disassembly of provided code
 function luad() {
     local CODE

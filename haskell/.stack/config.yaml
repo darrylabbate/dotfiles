@@ -1,7 +1,0 @@
-templates:
-  params:
-    author-name: Darryl Abbate
-    author-email: rootbeersoup@gmail.com
-    copyright: 2018 Darryl Abbate
-    github-username: rootbeersoup
-local-bin-path: /usr/local/bin
