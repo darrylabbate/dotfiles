@@ -3,7 +3,6 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'nbouscal/vim-stylish-haskell', {'for': 'haskell'}
 Plug 'niklaas/lightline-gitdiff'
 Plug 'riff-lang/vim-riff'
 Plug 'tpope/vim-commentary'
@@ -154,17 +153,6 @@ autocmd FileType riff setlocal commentstring=//\ %s
 
 " (C) Do not indent case labels past the indent of switch statements
 set cino=:0
-
-" Haskell
-let g:haskell_indent_if               = 3
-let g:haskell_indent_case             = 2
-let g:haskell_indent_let              = 4
-let g:haskell_indent_where            = 6
-let g:haskell_indent_before_where     = 2
-let g:haskell_indent_after_bare_where = 2
-let g:haskell_indent_do               = 3
-let g:haskell_indent_in               = 1
-let g:haskell_indent_guard            = 2
 
 " Assembly
 autocmd FileType asm setlocal shiftwidth=8
