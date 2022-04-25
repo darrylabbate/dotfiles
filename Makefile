@@ -1,12 +1,19 @@
 DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
 SHELL        := /bin/sh
-UNAME        := $(shell uname -s)
+UNAME_M      := $(shell uname -m) # arm64, x86_64, etc
+UNAME_S      := $(shell uname -s) # Darwin, Linux, etc
 USER         := $(shell whoami)
 
-ifeq      ($(UNAME), Darwin)
-  OS := macos
-else ifeq ($(UNAME), Linux)
-  OS := linux
+ifeq ($(UNAME_S), Darwin)
+OS           := macos
+ifeq ($(UNAME_M), arm64)
+BREW_PREFIX  := /opt/homebrew
+else ifeq ($(UNAME_M), x86_64)
+BREW_PREFIX  := /usr/local
+endif
+else ifeq ($(UNAME_S), Linux)
+OS           := linux
+BREW_PREFIX  := /home/linuxbrew/.linuxbrew
 endif
 
 .PHONY: all install
@@ -72,23 +79,19 @@ unlink:
 .PHONY: bash brew stow
 
 bash: brew
-	echo $(shell brew --prefix)/bin/bash | sudo tee -a /etc/shells
-	chsh -s $(shell brew --prefix)/bin/bash
+	echo $(BREW_PREFIX)/bin/bash | sudo tee -a /etc/shells
+	chsh -s $(BREW_PREFIX)/bin/bash
 
 brew:
-ifeq ($(UNAME), Darwin)
-	/usr/bin/ruby -e "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-	brew bundle --file=$(DOTFILES_DIR)/macos/.Brewfile
-else ifeq ($(UNAME), Linux)
+ifeq ($(UNAME_S), Linux)
 	sudo apt install build-essential
-	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-	/home/linuxbrew/.linuxbrew/bin/brew bundle --file=$(DOTFILES_DIR)/linux/.Brewfile
 endif
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	$(BREW_PREFIX)/bin/brew bundle --file=$(DOTFILES_DIR)/$(OS)/.Brewfile
 	brew analytics off
 
 stow:
 	stow bash
 	stow git
 	stow gpg
-	stow haskell
 	stow vim
