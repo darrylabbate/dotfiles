@@ -3,11 +3,6 @@
 # Git
 # ---
 
-# Alias `git` to `hub` on macOS
-if [[ "$(uname -s)" == "Darwin" ]]; then
-    alias git="hub"
-fi
-
 alias ga="git add"
 alias gall="git add --all"
 alias gc="git commit"

@@ -12,8 +12,6 @@
 	pager = diff-so-fancy | less --tabs=2 -RFX
 [credential]
 	helper = osxkeychain
-[hub]
-	protocol = https
 [pull]
 	rebase = false
 [init]
