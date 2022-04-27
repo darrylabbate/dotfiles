@@ -1,7 +1,7 @@
 DOTFILES_DIR := $(shell echo $(HOME)/dotfiles)
 SHELL        := /bin/sh
-UNAME_M      := $(shell uname -m) # arm64, x86_64, etc
-UNAME_S      := $(shell uname -s) # Darwin, Linux, etc
+UNAME_M      := $(shell uname -m)
+UNAME_S      := $(shell uname -s)
 USER         := $(shell whoami)
 
 ifeq ($(UNAME_S), Darwin)
@@ -47,7 +47,7 @@ usage:
 linux: brew stow
 	stow linux
 
-macos: bash brew stow
+macos: brew bash stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	stow macos
@@ -86,7 +86,7 @@ brew:
 ifeq ($(UNAME_S), Linux)
 	sudo apt install build-essential
 endif
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	$(BREW_PREFIX)/bin/brew bundle --file=$(DOTFILES_DIR)/$(OS)/.Brewfile
 	brew analytics off
 
