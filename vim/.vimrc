@@ -99,7 +99,7 @@ nmap <leader>t <C-t>
 nmap ga <Plug>(EasyAlign)
 
 let g:lightline = {
-  \ 'colorscheme': 'darcula',
+  \ 'colorscheme': 'powerline',
   \ 'active': {
   \   'left':  [ [ 'mode', 'paste' ],
   \              [ 'filename', 'modified' ],
@@ -108,7 +108,7 @@ let g:lightline = {
   \              [ 'gitbranch', 'readonly' ] ]
   \ },
   \ 'component_function': {
-  \   'gitbranch': 'fugitive#head'
+  \   'gitbranch': 'FugitiveHead'
   \ },
   \ 'component_expand': {
   \   'gitdiff': 'lightline#gitdiff#get',
