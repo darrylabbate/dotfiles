@@ -5,22 +5,31 @@ UNAME_S      := $(shell uname -s)
 USER         := $(shell whoami)
 
 ifeq ($(UNAME_S), Darwin)
-OS           := macos
+BASE         := macos
+BREWFILE     := macos/.Brewfile
 ifeq ($(UNAME_M), arm64)
 BREW_PREFIX  := /opt/homebrew
 else ifeq ($(UNAME_M), x86_64)
 BREW_PREFIX  := /usr/local
 endif
+
+# ParallelCluster
+else ifneq ($(shell uname -r | egrep "amzn2"),)
+BASE         := pcluster
+BREW_PREFIX  := /home/ec2-user/.linuxbrew
+BREWFILE     := linux/pcluster.brewfile
 else ifeq ($(UNAME_S), Linux)
-OS           := linux
+BASE         := linux
 BREW_PREFIX  := /home/linuxbrew/.linuxbrew
+BREWFILE     := linux/.Brewfile
 endif
 
 .PHONY: all install
 
 all: install
 
-install: $(OS)
+install: $(BASE)
+	@printf "Installation complete. If Vim was setup, make sure to run `:PlugInstall`\\n"
 
 .PHONY: help usage
 .SILENT: help usage
@@ -42,19 +51,26 @@ usage:
 	\\n\
 	"
 
-.PHONY: linux macos link unlink
+.PHONY: linux macos pcluster link unlink
 
 linux: brew stow
-	stow linux
+	$(BREW_PREFIX)/bin/stow linux
+	sudo apt install build-essential
 
-macos: brew bash stow
+macos: brew stow
 	bash $(DOTFILES_DIR)/macos/defaults.sh
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
-	stow macos
-	brew services start yabai
-	brew services start skhd
+	$(BREW_PREFIX)/bin/stow gpg
+	$(BREW_PREFIX)/bin/stow macos
+	$(BREW_PREFIX)/bin/brew services start yabai
+	$(BREW_PREFIX)/bin/brew services start skhd
+	echo $(BREW_PREFIX)/bin/bash | sudo tee -a /etc/shells
+	chsh -s $(BREW_PREFIX)/bin/bash
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
 	softwareupdate -aiR
+
+pcluster: brew stow
+	sudo yum groupinstall 'Developer Tools'
 
 link:
 	ln -fs $(DOTFILES_DIR)/bash/.bash_profile $(HOME)/.bash_profile
@@ -76,22 +92,19 @@ unlink:
 	unlink $(HOME)/.vim
 	@printf "\\033[32m✓\\033[0m Symlinks removed. Manually remove ~/dotfiles directory if needed.\\n"
 
-.PHONY: bash brew stow
-
-bash: brew
-	echo $(BREW_PREFIX)/bin/bash | sudo tee -a /etc/shells
-	chsh -s $(BREW_PREFIX)/bin/bash
+.PHONY: brew stow
 
 brew:
-ifeq ($(UNAME_S), Linux)
-	sudo apt install build-essential
-endif
+ifeq ($(shell which brew),)
+	@printf "Homebrew not detected; running install script\\n"
 	/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-	$(BREW_PREFIX)/bin/brew bundle --file=$(DOTFILES_DIR)/$(OS)/.Brewfile
-	brew analytics off
+else
+	@printf "Homebrew already installed; skipping installation\\n"
+endif
+	$(BREW_PREFIX)/bin/brew bundle --file=$(DOTFILES_DIR)/$(BREWFILE)
+	$(BREW_PREFIX)/bin/brew analytics off
 
 stow:
-	stow bash
-	stow git
-	stow gpg
-	stow vim
+	$(BREW_PREFIX)/bin/stow bash
+	$(BREW_PREFIX)/bin/stow git
+	$(BREW_PREFIX)/bin/stow vim
