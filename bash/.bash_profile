@@ -13,3 +13,5 @@ for file in ~/dotfiles/bash/dots/*; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

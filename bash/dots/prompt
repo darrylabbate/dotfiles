@@ -3,9 +3,9 @@
 # ParallelCluster prompt
 if [[ $(uname -r) =~ "amzn2" ]]; then
     if [[ $(hostname) =~ "ip-10-0-0" ]]; then
-        PS1="[pc head] \W \[\e[1m\]$\[\e[m\] "
+        PS1="[head] \W \[\e[1m\]$\[\e[m\] "
     else
-        PS1="[pc \h] \W \[\e[1m\]$\[\e[m\] "
+        PS1="[\h] \W \[\e[1m\]$\[\e[m\] "
     fi
 
 # Everything else
