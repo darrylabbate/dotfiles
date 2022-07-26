@@ -70,7 +70,6 @@ macos: brew stow
 
 # Install iTerm shell integ first since it'll likely write to ~/.bash_profile
 pcluster: iterm brew stow
-	sudo yum groupinstall -y 'Developer Tools'
 	sudo yum install -y python3-devel
 
 link:
@@ -109,6 +108,8 @@ iterm:
 	curl -L https://iterm2.com/shell_integration/install_shell_integration.sh | bash
 
 stow:
+	[ -f ~/.bash_profile ] && [ ! -L ~/.bash_profile ] && mv ~/.bash_profile ~/.bash_profile.bak
+	[ -f ~/.bashrc ] && [ ! -L ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
 	$(BREW_PREFIX)/bin/stow bash
 	$(BREW_PREFIX)/bin/stow git
 	$(BREW_PREFIX)/bin/stow vim
