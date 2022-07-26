@@ -1,0 +1,14 @@
+# ParallelCluster configs
+
+TOKEN=`curl -X PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600"`
+INSTANCE_FAMILY=$(curl -H "X-aws-ec2-metadata-token: $TOKEN" -v http://169.254.169.254/latest/meta-data/ami-id | awk -F. '{print $1}')
+
+export PATH="/home/ec2-user/.linuxbrew/bin:$PATH"
+
+# Prompt
+if [[ $(hostname) =~ "ip-10-0-0" ]]; then
+    NODE="head"
+else
+    NODE=$(hostname | awk -F- '{print $NF}')
+fi
+PS1="[$INSTANCE_FAMILY:$NODE] \W \[\e[1m\]$\[\e[m\] "

@@ -33,7 +33,7 @@ alias tl="cd /"
 alias vol="cd /volumes"
 
 # Use GNU `ls` if installed (gls via Homebrew on macOS)
-if [[ "$(uname -s)" == "Linux"  || "$(uname -s)" == "CYGWIN_NT-6.1" ]]; then
+if [[ "$(uname -s)" == "Linux" ]]; then
     alias l="ls -Fh --color --group-directories-first"
     alias la="ls -AFh --color --group-directories-first"
     alias ll="ls -AFhlo --color --group-directories-first"

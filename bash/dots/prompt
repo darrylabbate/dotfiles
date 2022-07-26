@@ -1,18 +1,9 @@
 #!/usr/bin/env bash
 
-# ParallelCluster prompt
-if [[ $(uname -r) =~ "amzn2" ]]; then
-    if [[ $(hostname) =~ "ip-10-0-0" ]]; then
-        PS1="[head] \W \[\e[1m\]$\[\e[m\] "
-    else
-        PS1="[\h] \W \[\e[1m\]$\[\e[m\] "
-    fi
-
-# Everything else
-elif [[ $(id -u) -eq 0 ]]; then     # Root
+if [[ $(id -u) -eq 0 ]]; then     # Root
     PS1="\W \[\e[31m\]$\[\e[m\] "
-elif [[ -n "$SSH_CLIENT" ]]; then   # SSH session
+elif [[ -n "$SSH_CLIENT" ]]; then # SSH session
     PS1="\W \[\e[33m\]$\[\e[m\] "
-else                                # Normal
+else                              # Normal
     PS1="\W \[\e[1m\]$\[\e[m\] "
 fi
