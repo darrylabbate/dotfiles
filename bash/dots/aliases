@@ -56,6 +56,8 @@ alias empty="sudo rm -rf ~/.Trash/*"                        # Empty macOS trash
 alias ffmon="yabai -m config focus_follows_mouse autofocus" # Enable focus follow mouse
 alias ffmoff="yabai -m config focus_follows_mouse off"      # Disable focus follow mouse
 alias fkill="killall Finder"
+alias egrep="egrep --color=auto"
+alias grep="grep --color=auto"
 alias kill="kill -9"
 alias nawk="/usr/bin/awk"                                   # One True AWK
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
