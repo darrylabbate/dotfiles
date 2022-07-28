@@ -4,6 +4,7 @@ BIN_PATHS=(
     "$HOME/.local"
     "/usr/local/cuda"
     "$HOME/ompi/install"
+    "$HOME/libfabric/install"
     "$HOME/.linuxbrew"
 )
 
@@ -22,6 +23,7 @@ LIB_PATHS=(
     "/usr/lib64"
     "/usr/local/cuda/lib64"
     "$HOME/ompi/install/lib"
+    "$HOME/libfabric/install/lib"
     "$HOME/.linuxbrew/lib"
 )
 
