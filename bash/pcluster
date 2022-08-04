@@ -1,43 +1,5 @@
 # ParallelCluster configs
 
-BIN_PATHS=(
-    "$HOME/.local"
-    "/usr/local/cuda"
-    "$HOME/ompi/install"
-    "$HOME/libfabric/install"
-    "$HOME/.linuxbrew"
-)
-
-DEFAULT_PATH=$PATH
-NEW_PATH=""
-
-for p in ${BIN_PATHS[@]}; do
-    if [[ -L $p || -d $p ]]; then
-        NEW_PATH="$p/bin:$NEW_PATH"
-    fi
-done
-
-export PATH="${NEW_PATH}${DEFAULT_PATH}"
-
-LIB_PATHS=(
-    "/usr/lib64"
-    "/usr/local/cuda/lib64"
-    "$HOME/ompi/install/lib"
-    "$HOME/libfabric/install/lib"
-    "$HOME/.linuxbrew/lib"
-)
-
-DEFAULT_PATH=$LD_LIBRARY_PATH
-NEW_PATH=""
-
-for p in ${LIB_PATHS[@]}; do
-    if [[ -L $p || -d $p ]]; then
-        NEW_PATH="$p:$NEW_PATH"
-    fi
-done
-
-export LD_LIBRARY_PATH="${NEW_PATH}${DEFAULT_PATH}"
-
 # Instance metadata
 TOKEN=$(curl -sX PUT "http://169.254.169.254/latest/api/token" -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")
 INSTANCE_FAMILY=$(curl -sH "X-aws-ec2-metadata-token: $TOKEN" http://169.254.169.254/latest/meta-data/instance-type | awk -F. '{print $1}')
