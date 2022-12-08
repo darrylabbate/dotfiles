@@ -62,10 +62,8 @@ function rubyp() {
     ruby -e "$CODE"
 }
 
-# Adjust volume on macOS
-function volume() {
-    local PCT
-    PCT=$1
-
-    osascript -e 'set volume output volume "'$PCT'"'
+function aocinput() {
+    local YEAR=$(pwd | awk -F/ '{printf "%s\n", $(NF-1)}')
+    local DAY=$(pwd | awk -F/ '{printf "%d\n", $(NF)}')
+    curl --cookie session=$AOC_COOKIE https://adventofcode.com/20$YEAR/day/$DAY/input > input
 }

@@ -16,6 +16,10 @@ for file in ~/dotfiles/bash/dots/*; do
 done
 unset file
 
+if [[ -f "$HOME/.aocrc" ]]; then
+    source "$HOME/.aocrc"
+fi
+
 # Source ParallelCluster configs after
 if [[ -d "/opt/parallelcluster" ]]; then
     source "$HOME/dotfiles/bash/pcluster"
