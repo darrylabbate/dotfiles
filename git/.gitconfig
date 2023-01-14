@@ -13,7 +13,7 @@
 [credential]
 	helper = osxkeychain
 [pull]
-	rebase = false
+	rebase = true
 [init]
 	defaultBranch = master
 [tag]
