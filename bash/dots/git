@@ -21,6 +21,7 @@ alias gp="git push"
 alias gpl="git pull origin master"          # Pull from master
 alias gpm="git push -u origin master"
 alias gps="git push server"                 # Push to server (defined in local config)
+alias grb="git rebase"
 alias gs="git status -sb"
 
 # Quick commit with message without quotes
