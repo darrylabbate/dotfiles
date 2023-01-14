@@ -36,6 +36,11 @@ alt + cmd - k : yabai -m window --resize top:0:-20; \
 alt + cmd - l : yabai -m window --resize right:20:0; \
                 yabai -m window --resize left:20:0
 
+alt + cmd - p : yabai -m space --gap rel:5; \
+                yabai -m space --padding rel:5:5:5:5
+alt + cmd - o : yabai -m space --gap rel:-5; \
+                yabai -m space --padding rel:-5:-5:-5:-5
+
 # Warp focused container
 alt - h : yabai -m window --warp west
 alt - j : yabai -m window --warp south
