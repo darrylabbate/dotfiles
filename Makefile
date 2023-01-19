@@ -90,6 +90,7 @@ iterm:
 stow:
 	[ -f ~/.bash_profile ] && [ ! -L ~/.bash_profile ] && mv ~/.bash_profile ~/.bash_profile.bak
 	[ -f ~/.bashrc ] && [ ! -L ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
+	$(BREW_PREFIX)/bin/stow aws
 	$(BREW_PREFIX)/bin/stow bash
 	$(BREW_PREFIX)/bin/stow git
 	$(BREW_PREFIX)/bin/stow vim
