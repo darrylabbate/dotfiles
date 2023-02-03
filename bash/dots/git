@@ -11,6 +11,7 @@ alias gc="git commit"
 alias gca="git commit --amend"
 alias gcl="git clone --recursive"           # Clone including any submodules
 alias gco="git checkout"
+alias gcp="git cherry-pick"
 alias gd="git diff"
 alias gf="git fetch --dry-run --verbose"
 alias gg="git grep"
