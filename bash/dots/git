@@ -18,9 +18,7 @@ alias gge="git grep -P"
 alias ggei="git grep -Pi"
 alias gl="git log --oneline -n 10"
 alias gp="git push"
-alias gpl="git pull origin master"          # Pull from master
-alias gpm="git push -u origin master"
-alias gps="git push server"                 # Push to server (defined in local config)
+alias gpl="git pull"
 alias grb="git rebase"
 alias gs="git status -sb"
 
