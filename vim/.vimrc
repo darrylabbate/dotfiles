@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugs')
 Plug 'arcticicestudio/nord-vim'
+Plug 'babaybus/DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/vim-easy-align'
