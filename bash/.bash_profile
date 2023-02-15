@@ -13,7 +13,7 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 if [[ "$(uname -s)" == "Darwin" ]]; then
     PATH=$BREW_PREFIX/opt/coreutils/libexec/gnubin:/usr/local/texlive/2022basic/bin/x86_64-darwin${PATH:+:${PATH}}
 elif [[ -d /etc/parallelcluster ]]; then
-    PATH=$HOME/libfabric/install/bin:$HOME/ompi/install/bin:/usr/local/cuda/bin${PATH:+:${PATH}}
+    PATH=$HOME/libfabric/install/bin:$HOME/ompi/install/bin:/usr/local/cuda/bin:/opt/slurm/bin:/opt/amazon/efa/bin:/opt/amazon/openmpi/bin${PATH:+:${PATH}}
     export LD_LIBRARY_PATH=$HOME/.local/lib:$BREW_PREFIX/lib:$HOME/libfabric/install/lib:$HOME/ompi/install/lib:/usr/local/cuda/lib64:/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 
