@@ -4,6 +4,10 @@ else
     BREW_PREFIX=/home/linuxbrew/.linuxbrew
 fi
 
+if [[ "$(uname -s)" == "Linux" ]]; then
+    ulimit -c unlimited
+fi
+
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
