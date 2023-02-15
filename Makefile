@@ -52,7 +52,7 @@ usage:
 
 .PHONY: linux macos pcluster
 
-linux: brew stow vim
+linux: stow vim
 	sudo apt install build-essential
 
 macos: brew stow vim
@@ -68,7 +68,7 @@ macos: brew stow vim
 	softwareupdate -aiR
 
 # Install iTerm shell integ first since it may write to ~/.bash_profile
-pcluster: iterm brew stow vim
+pcluster: iterm stow vim
 	sudo yum install -y python3-devel
 	sudo yum groupinstall -y 'Developer Tools'
 
@@ -90,10 +90,10 @@ iterm:
 stow:
 	[ -f ~/.bash_profile ] && [ ! -L ~/.bash_profile ] && mv ~/.bash_profile ~/.bash_profile.bak
 	[ -f ~/.bashrc ] && [ ! -L ~/.bashrc ] && mv ~/.bashrc ~/.bashrc.bak
-	$(BREW_PREFIX)/bin/stow aws
-	$(BREW_PREFIX)/bin/stow bash
-	$(BREW_PREFIX)/bin/stow git
-	$(BREW_PREFIX)/bin/stow vim
+	stow aws
+	stow bash
+	stow git
+	stow vim
 
 vim:
 	vim +PlugInstall +qall
