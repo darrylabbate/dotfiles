@@ -160,3 +160,5 @@ set cino=:0
 " Assembly
 autocmd FileType asm setlocal shiftwidth=8
 autocmd FileType asm setlocal tabstop=8
+
+autocmd BufNewFile,BufRead *[jJ]enkinsfile set ft=groovy
