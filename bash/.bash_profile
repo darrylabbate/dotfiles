@@ -1,7 +1,7 @@
 if [[ "$(uname -s)" == "Darwin" ]]; then
-    BREW_PREFIX=/opt/homebrew
+    brew_prefix=/opt/homebrew
 else
-    BREW_PREFIX=/home/linuxbrew/.linuxbrew
+    brew_prefix=/home/linuxbrew/.linuxbrew
 fi
 
 if [[ "$(uname -s)" == "Linux" ]]; then
@@ -11,14 +11,14 @@ fi
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-    PATH=$BREW_PREFIX/opt/coreutils/libexec/gnubin:/usr/local/texlive/2022basic/bin/x86_64-darwin${PATH:+:${PATH}}
+    PATH=$brew_prefix/opt/coreutils/libexec/gnubin:/usr/local/texlive/2022basic/bin/x86_64-darwin${PATH:+:${PATH}}
 elif [[ -d /etc/parallelcluster ]]; then
-    PATH=$HOME/libfabric/install/bin:$HOME/ompi/install/bin:/usr/local/cuda/bin:/opt/slurm/bin:/opt/amazon/efa/bin:/opt/amazon/openmpi/bin${PATH:+:${PATH}}
-    export LD_LIBRARY_PATH=$HOME/.local/lib:$BREW_PREFIX/lib:$HOME/libfabric/install/lib:$HOME/ompi/install/lib:/usr/local/cuda/lib64:/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+    PATH=$HOME/.libfabric/install/bin:$HOME/.ompi/install/bin:/usr/local/cuda/bin:/opt/slurm/bin:/opt/amazon/efa/bin:/opt/amazon/openmpi/bin${PATH:+:${PATH}}
+    export LD_LIBRARY_PATH=$HOME/.local/lib:$brew_prefix/lib:$HOME/.libfabric/install/lib:$HOME/.ompi/install/lib:/usr/local/cuda/lib64:/usr/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 fi
 
-if [[ -d $BREW_PREFIX ]]; then
-    eval "$($BREW_PREFIX/bin/brew shellenv)"
+if [[ -d $brew_prefix ]]; then
+    eval "$($brew_prefix/bin/brew shellenv)"
 fi
 
 # $HOME/.local should take precedence over Homebrew
