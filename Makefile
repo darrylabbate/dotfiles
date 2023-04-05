@@ -70,7 +70,6 @@ macos: brew stow vim
 # Install iTerm shell integ first since it may write to ~/.bash_profile
 pcluster: iterm stow vim
 	sudo yum install -y python3-devel
-	sudo yum groupinstall -y 'Developer Tools'
 
 .PHONY: brew stow
 
