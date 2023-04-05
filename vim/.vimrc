@@ -36,6 +36,7 @@ autocmd ColorScheme * hi LineNr cterm=None ctermbg=None ctermfg=DarkGray
 " what I want it to do
 colo nord
 
+set backspace=indent,eol,start
 set tabstop=4
 set shiftwidth=4
 
