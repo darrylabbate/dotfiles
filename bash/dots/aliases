@@ -61,8 +61,8 @@ alias grep="grep --color=auto"
 alias kill="kill -9"
 alias nawk="/usr/bin/awk"                                   # One True AWK
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
-alias reyabai="brew services restart yabai"                 # Restart yabai
-alias rekey="brew services restart skhd"                    # Restart skhd
+alias reyabai="yabai --restart-service"                     # Restart yabai
+alias rekey="skhd --restart-service"                        # Restart skhd
 alias pgrep="pgrep -i"
 alias temp="osx-cpu-temp"
 alias tempf="osx-cpu-temp -F"
