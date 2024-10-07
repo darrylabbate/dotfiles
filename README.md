@@ -7,12 +7,10 @@ Files for configuring a terminal environment and other various system settings. 
 ### `curl` method (easiest)
 
 ```bash
-$ curl get.darryl.cx | sh
-$ cd ~/dotfiles
-$ make
+curl get.darryl.cx | sh && make -C dotfiles
 ```
 
-Source code for the script is [here](https://github.com/rootbeersoup/get-dotfiles/blob/master/src/dotfiles.sh). Checksums can be found in the [tag notes](https://github.com/rootbeersoup/get-dotfiles/tags).
+Source code for the script is [here](https://github.com/darrylabbate/get-dotfiles/blob/master/src/dotfiles.sh). Checksums can be found in the [tag notes](https://github.com/darrylabbate/get-dotfiles/tags).
 
 The `curl` method will install everything automatically. This is really useful for quickly setting up a new machine. 
 
@@ -21,9 +19,7 @@ The `curl` method will install everything automatically. This is really useful f
 You can also manually clone the repository and invoke the `Makefile`
 
 ```bash
-$ git clone https://github.com/rootbeersoup/dotfiles.git
-$ cd dotfiles
-$ make
+git clone https://github.com/darrylabbate/dotfiles && make -C dotfiles
 ```
 
 ## Makefile
@@ -60,7 +56,7 @@ You can use the `stow` command anytime you add a new file to a folder you wish t
 
 ### Bash
 
-`.bash_profile` automatically sources configurations defined in the files contained in the [`/bash/dots`](bash/dots) folder. Any changes to any existing file, as well as any new files in `/bash/dots/` will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/rootbeersoup/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
+`.bash_profile` automatically sources configurations defined in the files contained in the [`/bash/dots`](bash/dots) folder. Any changes to any existing file, as well as any new files in `/bash/dots/` will be loaded into the shell upon opening a new Terminal window or [reloading](https://github.com/darrylabbate/dotfiles/blob/db902b9ac0c466d09672f58549bff4107ba53861/dots/aliases#L4) the `.bash_profile`.
 
 ### Vim
 
