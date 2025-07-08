@@ -41,7 +41,7 @@
 	f = fetch --dry-run --version
 	g = grep
 	gi = grep -i
-	l = log --oneline --n 10
+	l = log --oneline -n 10
 	p = push
 	pl = pull
 	rb = rebase
