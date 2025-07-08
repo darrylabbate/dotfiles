@@ -36,6 +36,7 @@
 	co = checkout
 	cp = cherry-pick
 	d = diff
+	ds = diff --cached
 	f = fetch --dry-run --version
 	g = grep
 	gi = grep -i
