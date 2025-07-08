@@ -13,6 +13,7 @@ alias b="cd -"              # Return to previous directory
 alias c="clear"
 alias d="cd ~/dotfiles"
 alias f="open ."            # Open current directory in Finder
+alias g="git"
 alias k="pkill -i"          # Kill app by name
 alias h="cd ~"              # Home directory
 alias p="cd ~/projects"
