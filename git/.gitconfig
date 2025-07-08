@@ -34,6 +34,7 @@
 	ca = commit --amend
 	cl = clone --recursive
 	co = checkout
+	cob = checkout -b
 	cp = cherry-pick
 	d = diff
 	ds = diff --cached
