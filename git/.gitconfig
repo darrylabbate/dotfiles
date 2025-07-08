@@ -43,6 +43,8 @@
 	p = push
 	pl = pull
 	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
 	rd = !git --no-pager diff --no-ext-diff --no-prefix
 	s = status -sb
 [grep]
