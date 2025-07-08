@@ -26,8 +26,6 @@ alias v="vim"
 
 alias cpu="top -F -R -o cpu"
 alias dl="youtube-dl"
-alias nf="neofetch --config ~/dotfiles/bash/neofetch.conf"
-alias nff="neofetch --config ~/dotfiles/bash/neofetch-all.conf"
 alias spd="speedtest-cli"
 alias ta="type -a"
 alias tl="cd /"
