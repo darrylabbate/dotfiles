@@ -25,3 +25,24 @@
 	required = true
 [push]
 	autoSetupRemote = true
+[alias]
+	a = add
+	all = add --all
+	b = branch
+	ba = branch --all
+	c = commit
+	ca = commit --amend
+	cl = clone --recursive
+	co = checkout
+	cp = cherry-pick
+	d = diff
+	f = fetch --dry-run --version
+	g = grep
+	ge = grep -P
+	gei = grep -Pi
+	l = log --oneline --n 10
+	p = push
+	pl = pull
+	rb = rebase
+	rd = !git --no-pager diff --no-ext-diff --no-prefix
+	s = status -sb
