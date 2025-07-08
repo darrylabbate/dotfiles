@@ -38,11 +38,12 @@
 	d = diff
 	f = fetch --dry-run --version
 	g = grep
-	ge = grep -P
-	gei = grep -Pi
+	gi = grep -i
 	l = log --oneline --n 10
 	p = push
 	pl = pull
 	rb = rebase
 	rd = !git --no-pager diff --no-ext-diff --no-prefix
 	s = status -sb
+[grep]
+	patternType = perl
