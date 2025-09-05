@@ -49,5 +49,6 @@
 	rbc = rebase --continue
 	rd = !git --no-pager diff --no-ext-diff --no-prefix
 	s = status -sb
+	cur = branch --show-current
 [grep]
 	patternType = perl
