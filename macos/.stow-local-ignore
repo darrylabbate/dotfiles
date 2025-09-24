@@ -5,6 +5,7 @@
 
 /duti
 /iterm
+/xbar
 .DS_Store
 defaults.sh
 kitty.conf
