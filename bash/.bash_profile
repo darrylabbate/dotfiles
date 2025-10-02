@@ -3,10 +3,6 @@ source ~/dotfiles/bash/init/modules
 
 [[ $(uname -s) == Linux ]] && ulimit -c unlimited
 
-if [[ $(uname -s) == Darwin ]]; then
-    PATH=$brew_prefix/opt/coreutils/libexec/gnubin:/usr/local/texlive/2024basic/bin/universal-darwin${PATH:+:$PATH}
-fi
-
 export PATH=$HOME/.local/bin${PATH:+:$PATH}
 
 # Search path for manual pages on macOS is deduced from $PATH
@@ -24,3 +20,9 @@ do
     [[ -r $file ]] && [[ -f $file ]] && source $file
 done
 unset file
+
+if [[ $(uname -s) == Darwin ]]; then
+    module use ~/dotfiles/macos/modulefiles
+    module load coreutils
+    module load basictex
+fi

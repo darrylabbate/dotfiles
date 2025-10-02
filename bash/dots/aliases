@@ -31,20 +31,9 @@ alias ta="type -a"
 alias tl="cd /"
 alias vol="cd /volumes"
 
-# Use GNU `ls` if installed (gls via Homebrew on macOS)
-if [[ "$(uname -s)" == "Linux" ]]; then
-    alias l="ls -Fh --color --group-directories-first"
-    alias la="ls -AFh --color --group-directories-first"
-    alias ll="ls -AFhlo --color --group-directories-first"
-elif [[ "$(command -v gls)" ]]; then
-    alias l="gls -Fh --color --group-directories-first"
-    alias la="gls -AFh --color --group-directories-first"
-    alias ll="gls -AFhlo --color --group-directories-first"
-else
-    alias l="ls -F"
-    alias la="ls -AF"
-    alias ll="ls -AFlo"
-fi
+alias l="ls -F"
+alias la="ls -AF"
+alias ll="ls -AFlo"
 
 
 # Longer aliases
