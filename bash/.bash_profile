@@ -1,17 +1,11 @@
-case $(uname -s) in
-Darwin) brew_prefix=/opt/homebrew              ;;
-Linux)  brew_prefix=/home/linuxbrew/.linuxbrew ;;
-esac
+source ~/dotfiles/bash/init/homebrew
+source ~/dotfiles/bash/init/modules
 
 [[ $(uname -s) == Linux ]] && ulimit -c unlimited
-
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if [[ $(uname -s) == Darwin ]]; then
     PATH=$brew_prefix/opt/coreutils/libexec/gnubin:/usr/local/texlive/2024basic/bin/universal-darwin${PATH:+:$PATH}
 fi
-
-[[ -d $brew_prefix ]] && eval "$($brew_prefix/bin/brew shellenv)"
 
 export PATH=$HOME/.local/bin${PATH:+:$PATH}
 

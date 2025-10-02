@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+case $(uname -s) in
+Darwin) brew_prefix=/opt/homebrew              ;;
+Linux)  brew_prefix=/home/linuxbrew/.linuxbrew ;;
+esac
+
+[[ -d $brew_prefix ]] && eval "$($brew_prefix/bin/brew shellenv bash)"
+

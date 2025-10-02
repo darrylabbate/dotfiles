@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+modules_init=$HOMEBREW_PREFIX/opt/lmod/init/profile
+
+if [[ -f $modules_init && -r $modules_init ]]; then
+    source $modules_init
+fi
