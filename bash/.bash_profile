@@ -1,5 +1,4 @@
-source ~/dotfiles/bash/init/homebrew
-source ~/dotfiles/bash/init/modules
+source ~/.modules/init/bash
 
 [[ $(uname -s) == Linux ]] && ulimit -c unlimited
 
@@ -21,8 +20,10 @@ do
 done
 unset file
 
+module load homebrew
+
 if [[ $(uname -s) == Darwin ]]; then
-    module use ~/dotfiles/macos/modulefiles
+    module use ~/.modules/modulefiles/macOS
     module load coreutils
     module load basictex
 fi

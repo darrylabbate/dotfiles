@@ -4,6 +4,8 @@ Enable Homebrew-installed GNU coreutils
 
 whatis("GNU coreutils")
 
+depends_on("homebrew")
+
 local brew_prefix = os.getenv("HOMEBREW_PREFIX")
 prepend_path("PATH", pathJoin(brew_prefix, "opt/coreutils/libexec/gnubin"))
 prepend_path("MANPATH", pathJoin(brew_prefix, "opt/coreutils/libexec/gnuman"))
