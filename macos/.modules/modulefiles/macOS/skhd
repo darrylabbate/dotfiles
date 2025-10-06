@@ -1,0 +1,7 @@
+#%Module
+
+module-whatis "skhd helper aliases"
+
+# Restart the skhd service quickly
+set-alias rekey {skhd --restart-service}
+

@@ -1,0 +1,7 @@
+#%Module
+
+module-whatis "BasicTeX LaTeX distribution"
+
+# Add TeX bin path via stable symlink
+append-path PATH /Library/TeX/texbin
+

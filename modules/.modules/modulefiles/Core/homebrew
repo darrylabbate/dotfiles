@@ -1,0 +1,44 @@
+#%Module
+
+module-whatis "Homebrew environment via brew shellenv (Tcl)"
+proc ModulesHelp { } {
+    puts stderr "Adds Homebrew bin/sbin and man/info paths and HOMEBREW_* vars using 'brew shellenv'."
+}
+
+switch -- [uname sysname] {
+    Darwin {
+        switch -- [uname machine] {
+            arm64 { set brew_prefix /opt/homebrew }
+            x86_64 { set brew_prefix /usr/local }
+        }
+    }
+    Linux {
+        set brew_prefix /home/linuxbrew/.linuxbrew
+    }
+}
+
+set brew [file join $brew_prefix bin/brew]
+
+set shellenv_source_script [file join $brew_prefix Library/Homebrew/cmd/shellenv.sh]
+set cache_dir [file join [getenv MODULES_ROOTDIR] cache]
+set cached_shellenv [file join $cache_dir brew-shellenv.bash]
+if {![file isdirectory $cache_dir]} {
+    file mkdir $cache_dir
+}
+if {![file exists $cached_shellenv] || [file mtime $cached_shellenv] < [file mtime $shellenv_source_script]} {
+    set f [open $cached_shellenv w]
+    puts $f [exec $brew shellenv]
+    close $f
+}
+
+# Apply Homebrew's environment using Modules 4.x 'source-sh'.
+# This mirrors: eval "$(brew shellenv)" but uses a cached script.
+# Source the cached shellenv script directly.
+source-sh bash $cached_shellenv
+
+setenv HOMEBREW_CURLRC 1
+setenv HOMEBREW_FORCE_BREWED_CURL 1
+setenv HOMEBREW_NO_AUTO_UPDATE 1
+
+# Note: We intentionally do not source bash completion here, as functions/aliases
+# are not reverted on unload. Keep those in your shell init if desired.

@@ -1,0 +1,8 @@
+#%Module
+
+module-whatis "yabai helper aliases"
+
+set-alias ffmon  {yabai -m config focus_follows_mouse autofocus}
+set-alias ffmoff {yabai -m config focus_follows_mouse off}
+set-alias reyabai {yabai --restart-service}
+

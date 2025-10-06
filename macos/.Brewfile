@@ -1,6 +1,6 @@
 tap "koekeishiya/formulae"
 tap "sass/sass"
-brew "lmod", postinstall: "source ${HOMEBREW_PREFIX}/opt/lmod/init/profile"
+brew "modules", postinstall: "source ${HOMEBREW_PREFIX}/opt/modules/init/bash"
 brew "autoconf"
 brew "automake"
 brew "bash"

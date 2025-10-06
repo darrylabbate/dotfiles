@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-PS1="\W \[$(tput -T xterm-256color bold)\]\$\[$(tput -T xterm-256color sgr0)\] "

@@ -1,0 +1,7 @@
+#%Module
+
+module-whatis "Git identity: personal"
+
+setenv GIT_AUTHOR_EMAIL    darrylabbate@gmail.com
+setenv GIT_COMMITTER_EMAIL darrylabbate@gmail.com
+

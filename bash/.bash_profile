@@ -24,6 +24,14 @@ module load homebrew
 
 if [[ $(uname -s) == Darwin ]]; then
     module use ~/.modules/modulefiles/macOS
+    module load skhd
+    module load yabai
     module load coreutils
     module load basictex
 fi
+
+module use ~/.modules/modulefiles/Bash
+module load prompt
+module load history
+
+module use ~/.modules/modulefiles/Git

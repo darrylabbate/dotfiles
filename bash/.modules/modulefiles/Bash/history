@@ -1,0 +1,10 @@
+#%Module
+
+module-whatis "Bash history behavior"
+
+# Intentionally use prepend-path to build these colon-delimited vars
+prepend-path HISTCONTROL ignoredups
+
+prepend-path HISTIGNORE {?}
+prepend-path HISTIGNORE {??}
+

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-modules_init=/opt/homebrew/opt/lmod/init/profile
+modules_init=/opt/homebrew/opt/modules/init/bash
 
 if [[ -f $modules_init && -r $modules_init ]]; then
     source $modules_init

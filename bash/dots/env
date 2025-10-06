@@ -3,12 +3,6 @@
 # Silence message about zsh on macOS
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-export HISTCONTROL=ignoredups
-
-# Ignores all one-word and two-word commands for more efficient
-# bash history searching
-export HISTIGNORE=?:??
-
 # ls colors
 export CLICOLOR=1
 export LSCOLORS=exgxbxbxCxfxfxCaCaeaea

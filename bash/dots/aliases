@@ -8,13 +8,9 @@ alias ....="cd ../../.."    # Up three levels
 # Single-letter aliases
 # ---------------------
 
-alias a="cd ~/apps"
 alias b="cd -"              # Return to previous directory
-alias c="clear"
 alias d="cd ~/dotfiles"
-alias f="open ."            # Open current directory in Finder
 alias g="git"
-alias k="pkill -i"          # Kill app by name
 alias h="cd ~"              # Home directory
 alias p="cd ~/projects"
 alias t="type"
@@ -24,12 +20,8 @@ alias v="vim"
 # Two and three letter aliases
 # ----------------------------
 
-alias cpu="top -F -R -o cpu"
 alias dl="youtube-dl"
-alias spd="speedtest-cli"
 alias ta="type -a"
-alias tl="cd /"
-alias vol="cd /volumes"
 
 alias l="ls -F"
 alias la="ls -AF"
@@ -39,21 +31,8 @@ alias ll="ls -AFlo"
 # Longer aliases
 # --------------
 
-alias cmdkill="pkill -i"
-alias empty="sudo rm -rf ~/.Trash/*"                        # Empty macOS trash
-alias ffmon="yabai -m config focus_follows_mouse autofocus" # Enable focus follow mouse
-alias ffmoff="yabai -m config focus_follows_mouse off"      # Disable focus follow mouse
-alias fkill="killall Finder"
 alias egrep="egrep --color=auto"
 alias grep="grep --color=auto"
 alias kill="kill -9"
-alias nawk="/usr/bin/awk"                                   # One True AWK
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
-alias reyabai="yabai --restart-service"                     # Restart yabai
-alias rekey="skhd --restart-service"                        # Restart skhd
-alias pgrep="pgrep -i"
-alias temp="osx-cpu-temp"
-alias tempf="osx-cpu-temp -F"
-alias tidy="find . -type f -name '*.DS_Store' -ls -delete"  # Delete all `.DS_Store` files
 alias tree="tree -C"                                        # Always use colored `tree` output
-alias update="sudo softwareupdate -aiR"                     # Install all macOS updates and restart system

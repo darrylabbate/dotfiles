@@ -1,0 +1,7 @@
+#%Module
+
+module-whatis "Bash prompt configuration"
+
+# Set a concise, bolded PS1 showing just the basename of cwd
+setenv PS1 {\W \[$(tput -T xterm-256color bold)\]\$\[$(tput -T xterm-256color sgr0)\] }
+
