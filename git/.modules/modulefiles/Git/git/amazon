@@ -1,7 +1,0 @@
-#%Module
-
-module-whatis "Git identity: amazon"
-
-setenv GIT_AUTHOR_EMAIL    drl@amazon.com
-setenv GIT_COMMITTER_EMAIL drl@amazon.com
-

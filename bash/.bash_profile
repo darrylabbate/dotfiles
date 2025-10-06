@@ -1,5 +1,8 @@
 source ~/.modules/init/bash
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export GPG_TTY=$(tty)
+
 [[ $(uname -s) == Linux ]] && ulimit -c unlimited
 
 export PATH=$HOME/.local/bin${PATH:+:$PATH}
@@ -13,7 +16,6 @@ fi
 
 for file in \
     $HOME/dotfiles/bash/dots/* \
-    $HOME/.aocrc \
     $HOME/.iterm_shell_integration.bash
 do
     [[ -r $file ]] && [[ -f $file ]] && source $file
@@ -21,17 +23,20 @@ done
 unset file
 
 module load homebrew
+module load vim
 
 if [[ $(uname -s) == Darwin ]]; then
     module use ~/.modules/modulefiles/macOS
     module load skhd
     module load yabai
     module load coreutils
-    module load basictex
 fi
 
-module use ~/.modules/modulefiles/Bash
+module use ~/.modules/modulefiles/bash
+module load builtins
+module load color
+module load nav
 module load prompt
 module load history
 
-module use ~/.modules/modulefiles/Git
+# module use ~/.modules/modulefiles/Git

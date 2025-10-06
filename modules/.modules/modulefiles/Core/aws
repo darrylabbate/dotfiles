@@ -1,0 +1,21 @@
+#%Module
+
+module-whatis AWS CLI configurations
+module-help TODO
+
+variant --default table     output   json table text yaml yaml-stream
+variant --default default   profile
+variant --default us-west-2 region
+
+setenv AWS_DEFAULT_OUTPUT [getvariant output]
+setenv AWS_PROFILE        [getvariant profile]
+setenv AWS_REGION         [getvariant region]
+
+prereq --optional homebrew
+
+if {[is-loaded homebrew] && [file exists [file join [getenv HOMEBREW_PREFIX] bin aws]]} {
+    set homebrew_completer [file join [getenv HOMEBREW_PREFIX] etc bash_completion.d aws_bash_completer]
+    if {[file exists $homebrew_completer]} {
+        source-sh bash $homebrew_completer
+    }
+}

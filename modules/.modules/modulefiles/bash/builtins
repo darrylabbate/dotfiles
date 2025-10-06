@@ -1,0 +1,4 @@
+#%Module
+
+set-alias t "type"
+set-alias ta "type -a"

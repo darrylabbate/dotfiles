@@ -1,27 +1,13 @@
 #!/usr/bin/env bash
 
-alias ..="cd .."            # Up one level
-alias ...="cd ../.."        # Up two levels
-alias ....="cd ../../.."    # Up three levels
-
-
 # Single-letter aliases
 # ---------------------
 
-alias b="cd -"              # Return to previous directory
-alias d="cd ~/dotfiles"
 alias g="git"
-alias h="cd ~"              # Home directory
-alias p="cd ~/projects"
-alias t="type"
-alias v="vim"
 
 
 # Two and three letter aliases
 # ----------------------------
-
-alias dl="youtube-dl"
-alias ta="type -a"
 
 alias l="ls -F"
 alias la="ls -AF"
@@ -31,8 +17,5 @@ alias ll="ls -AFlo"
 # Longer aliases
 # --------------
 
-alias egrep="egrep --color=auto"
-alias grep="grep --color=auto"
 alias kill="kill -9"
 alias rebash="source ~/.bash_profile"                       # Reload .bash_profile
-alias tree="tree -C"                                        # Always use colored `tree` output

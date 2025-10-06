@@ -1,7 +1,7 @@
 #%Module
 
-module-whatis "BasicTeX LaTeX distribution"
+module-whatis BasicTeX LaTeX distribution
+module-help Instalal with `brew install --cask basictex`
 
-# Add TeX bin path via stable symlink
-append-path PATH /Library/TeX/texbin
+append-path PATH [file join /Library TeX texbin]
 

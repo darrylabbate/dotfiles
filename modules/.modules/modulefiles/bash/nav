@@ -1,0 +1,10 @@
+#%Module
+
+set-alias ..   "cd .."
+set-alias ...  "cd ../.."
+set-alias .... "cd ../../.."
+
+set-alias b    "cd -"
+set-alias d    "cd ~/dotfiles"
+set-alias h    "cd ~"
+set-alias p    "cd ~/projects"

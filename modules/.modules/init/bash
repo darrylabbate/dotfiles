@@ -6,5 +6,5 @@ if [[ -f $modules_init && -r $modules_init ]]; then
     source $modules_init
 fi
 
-export MODULES_ROOTDIR=~/.modules
-module use $MODULES_ROOTDIR/modulefiles/Core
+export USER_MODULESHOME=~/.modules
+module use $USER_MODULESHOME/modulefiles/core

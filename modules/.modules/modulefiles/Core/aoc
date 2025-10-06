@@ -1,0 +1,10 @@
+#%Module
+
+module-whatis Advent of Code utilities
+module-help TODO outline manual AoC cookie retrieval process and file path
+
+set-function aocinput {
+    local YEAR=$(pwd | awk -F/ '{printf "%s\n", $(NF-1)}')
+    local DAY=$(pwd | awk -F/ '{printf "%d\n", $(NF)}')
+    curl --cookie session=$AOC_COOKIE https://adventofcode.com/20$YEAR/day/$DAY/input > input
+}

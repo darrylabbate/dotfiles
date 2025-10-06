@@ -1,0 +1,6 @@
+#%Module
+
+module-whatis Vim-related configurations
+
+set-alias v      vim
+setenv    EDITOR vim

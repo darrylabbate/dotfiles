@@ -1,0 +1,8 @@
+#%Module
+
+set-alias egrep "egrep --color=auto"
+set-alias grep "grep --color=auto"
+set-alias tree "tree -C"
+
+setenv CLICOLOR 1
+setenv LSCOLORS exgxbxbxCxfxfxCaCaeaea

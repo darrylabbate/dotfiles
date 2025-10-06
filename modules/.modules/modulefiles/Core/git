@@ -1,0 +1,14 @@
+#%Module
+
+variant --default personal profile personal work
+
+switch -- [getvariant profile] {
+    work     { set email drl@amazon.com }
+    personal  -
+    default  { set email darrylabbate@gmail.com }
+}
+
+setenv GIT_AUTHOR_EMAIL $email
+setenv GIT_COMMITTER_EMAIL $email
+
+set-alias g git
