@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-modules_init=/opt/homebrew/opt/modules/init/bash
+# TODO implement modules path discovery (non-Homebrew installations), and
+# possibly accommodate Lmod
+modules_pkg_prefix=/opt/homebrew/opt/modules
 
-if [[ -f $modules_init && -r $modules_init ]]; then
-    source $modules_init
-fi
+modules_init=$modules_pkg_prefix/init/bash
+modules_completion=$modules_pkg_prefix/init/bash_completion
 
-export USER_MODULESHOME=~/.modules
-module use $USER_MODULESHOME/modulefiles/core
+for file in $modules_init $modules_completion; do
+    if [[ -f $file && -r $file ]]; then
+        source $file
+    fi
+done
+
+module config extra_siteconfig ~/.modules/siteconfig.tcl

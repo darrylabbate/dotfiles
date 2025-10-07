@@ -19,21 +19,9 @@ switch -- [uname sysname] {
 
 set brew [file join $brew_prefix bin brew]
 
-set shellenv_source_script [file join $shellenv_source_prefix Library Homebrew cmd shellenv.sh]
-set cache_dir [file join [getenv USER_MODULESHOME] cache]
-file mkdir $cache_dir
-
-set cached_shellenv [file join $cache_dir brew-shellenv.bash]
-if {![file exists $cached_shellenv] || [file mtime $cached_shellenv] < [file mtime $shellenv_source_script]} {
-    set f [open $cached_shellenv w]
-    puts $f [exec $brew shellenv]
-    close $f
-}
-
-source-sh bash $cached_shellenv
+source-cmd [list $brew shellenv]
 source-sh bash [file join $brew_prefix completions bash brew]
 
 setenv HOMEBREW_CURLRC            1
 setenv HOMEBREW_FORCE_BREWED_CURL 1
 setenv HOMEBREW_NO_AUTO_UPDATE    1
-
