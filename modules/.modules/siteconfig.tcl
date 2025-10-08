@@ -23,3 +23,4 @@ proc source-cmd {command {source_file ""}} {
 }
 
 set modulefile_extra_cmds {cache-cmd cache-cmd source-cmd source-cmd}
+setConf implicit_default 0
