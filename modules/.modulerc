@@ -4,24 +4,25 @@
 # This file is automatically loaded by the module system
 
 # Set up user module paths
-set user_moduleshome [file join [file home] .modules]
-module use $user_moduleshome/modulefiles/core
+set modulefilesdir [file join [file home] .modules modulefiles]
+module use $modulefilesdir/core
+module use $modulefilesdir/ctl
 
-# Auto-discover module directories in ~/.modules/modulefiles/
-set modulefiles_dir [file join $user_moduleshome modulefiles]
-if {[file exists $modulefiles_dir]} {
-    foreach category_dir [glob -nocomplain -type d $modulefiles_dir/*] {
-        if {[llength [glob -nocomplain $category_dir/*]] > 0} {
-            module use $category_dir
+# # Auto-discover module directories in ~/.modules/modulefiles/
+# set modulefiles_dir [file join $user_moduleshome modulefiles]
+# if {[file exists $modulefiles_dir]} {
+#     foreach category_dir [glob -nocomplain -type d $modulefiles_dir/*] {
+#         if {[llength [glob -nocomplain $category_dir/*]] > 0} {
+#             module use $category_dir
             
-            # Check for category-specific init script
-            set category_name [file tail $category_dir]
-            set init_script [file join $user_moduleshome init.d $category_name]
-            if {[file exists $init_script]} {
-                source $init_script
-            }
-        }
-    }
-}
+#             # Check for category-specific init script
+#             set category_name [file tail $category_dir]
+#             set init_script [file join $user_moduleshome init.d $category_name]
+#             if {[file exists $init_script]} {
+#                 source $init_script
+#             }
+#         }
+#     }
+# }
 
-module load user-config
+module load env

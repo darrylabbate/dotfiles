@@ -3,7 +3,10 @@ source ~/.modules/init/bash
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export GPG_TTY=$(tty)
 
-[[ $(uname -s) == Linux ]] && ulimit -c unlimited
+alias l="ls -F"
+alias la="ls -AF"
+alias ll="ls -AFlo"
+alias rebash="source ~/.bash_profile"
 
 export PATH=$HOME/.local/bin${PATH:+:$PATH}
 
@@ -22,7 +25,8 @@ do
 done
 unset file
 
-module load homebrew
+module load brew/shellenv
+module load brew/completions
 module load vim
 
 if [[ $(uname -s) == Darwin ]]; then
@@ -32,11 +36,11 @@ if [[ $(uname -s) == Darwin ]]; then
     module load coreutils
 fi
 
-module use ~/.modules/modulefiles/bash
-module load builtins
-module load color
-module load nav
-module load prompt
-module load history
+module load shell/nav
+
+module load bash/builtins
+module load bash/color
+module load bash/prompt
+module load bash/history
 
 # module use ~/.modules/modulefiles/Git

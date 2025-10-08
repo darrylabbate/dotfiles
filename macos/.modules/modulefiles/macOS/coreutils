@@ -3,13 +3,14 @@
 module-whatis "GNU coreutils"
 
 # Ensure Homebrew environment is loaded first
-depends-on homebrew
+depends-on brew/shellenv
 
 # Use HOMEBREW_PREFIX provided by the Homebrew module
 set prefix [getenv HOMEBREW_PREFIX]
+set libexecdir [file join $prefix opt coreutils libexec]
 
-prepend-path PATH    [file join $prefix opt coreutils libexec gnubin]
-prepend-path MANPATH [file join $prefix opt coreutils libexec gnuman]
+prepend-path PATH    [file join $libexecdir gnubin]
+prepend-path MANPATH [file join $libexecdir gnuman]
 
 # Friendly ls aliases matching your Lua module
 set ls_opts "--color --group-directories-first"

@@ -2,7 +2,7 @@
 
 variant --default personal profile personal work
 
-switch -- [getvariant profile] {
+switch -- [getvariant --return-value profile] {
     work     { set email drl@amazon.com }
     personal  -
     default  { set email darrylabbate@gmail.com }

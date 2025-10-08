@@ -1,0 +1,15 @@
+#%Module
+
+module-whatis Bash history control
+
+variant --boolean --default on ignoredups
+variant --boolean --default on ignorespace
+
+foreach setting {ignoredups ignorespace} {
+    if {[getvariant --return-value $setting]} {
+        prepend-path HISTCONTROL $setting
+    }
+}
+
+prepend-path HISTIGNORE {?}
+prepend-path HISTIGNORE {??}

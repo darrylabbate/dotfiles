@@ -10,4 +10,7 @@ setenv USER_MODULES_CACHE_DIR $modules_cachedir
 
 set module_prefix [file join /opt homebrew opt modules]
 set completion_file [file join $module_prefix init bash_completion]
+
 source-sh bash $completion_file
+
+set-alias m ml

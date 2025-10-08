@@ -1,3 +1,14 @@
+proc putSepLine {} {
+    set tty_cols [expr {[catch {lindex [exec stty size] 1} cols] ? 80 : $cols}]
+    set max_rep 67
+    set rep [expr {$tty_cols > $max_rep ? $max_rep : $tty_cols}]
+    puts stderr [string repeat - $rep]
+}
+
+proc is-newer {file1 file2} {
+    return [file mtime $file1] > [file mtime $file2]
+}
+
 # Cache the output of a command to a file for later use with source-sh
 # This is useful when a module needs to post-process the script output before
 # invoking source-sh
@@ -5,7 +16,7 @@ proc cache-cmd {command {source_file ""}} {
     set cache_file [file join [getenv USER_MODULES_CACHE_DIR] "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
     
     if {![file exists $cache_file] || 
-        ($source_file ne "" && [file exists $source_file] && [file mtime $source_file] > [file mtime $cache_file])} {
+        ($source_file ne "" && [file exists $source_file] && [is-newer $source_file $cache_file])} {
         file mkdir [file dirname $cache_file]
         set fd [open $cache_file w]
         puts $fd [exec {*}$command]
@@ -22,5 +33,5 @@ proc source-cmd {command {source_file ""}} {
     source-sh [module-info shell] [cache-cmd $command $source_file]
 }
 
-set modulefile_extra_cmds {cache-cmd cache-cmd source-cmd source-cmd}
+set modulefile_extra_cmds {cache-cmd cache-cmd source-cmd source-cmd putSepLine putSepLine}
 setConf implicit_default 0

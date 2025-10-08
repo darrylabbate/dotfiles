@@ -1,0 +1,5 @@
+#%Module
+
+depends-on brew/shellenv
+
+source-sh bash [file join [getenv HOMEBREW_PREFIX] completions bash brew]

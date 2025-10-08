@@ -1,0 +1,7 @@
+#%Module
+
+module-help {Enable bash completion framework}
+
+if {[module-info shell] eq "bash"} {
+    source-sh bash [file join [getenv HOMEBREW_PREFIX] etc profile.d bash_completion.sh]
+}

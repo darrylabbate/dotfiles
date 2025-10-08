@@ -20,7 +20,6 @@ switch -- [uname sysname] {
 set brew [file join $brew_prefix bin brew]
 
 source-cmd [list $brew shellenv]
-source-sh bash [file join $brew_prefix completions bash brew]
 
 setenv HOMEBREW_CURLRC            1
 setenv HOMEBREW_FORCE_BREWED_CURL 1
