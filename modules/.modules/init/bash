@@ -1,16 +1,19 @@
 #!/usr/bin/env bash
 
-# TODO implement modules path discovery (non-Homebrew installations), and
-# possibly accommodate Lmod
+shell=$(basename $0)
+
+# TODO implement modules path discovery (non-Homebrew installations)
 modules_pkg_prefix=/opt/homebrew/opt/modules
+modulecmd=$modules_pkg_prefix/bin/modulecmd
 
-modules_init=$modules_pkg_prefix/init/bash
-modules_completion=$modules_pkg_prefix/init/bash_completion
+# Setting the siteconfig with the environment variable configures the siteconfig
+# _during_ the modules system initialization. This avoids the issue where
+# procedures and variables defined in the siteconfig aren't visible to modules
+# loaded within the user's modulerc (~/.modulerc) if the siteconfig is
+# configured using `module config extra_siteconfig`.
+export MODULES_SITECONFIG=~/.modules/siteconfig.tcl
+eval "$($modulecmd $shell autoinit)"
 
-for file in $modules_init $modules_completion; do
-    if [[ -f $file && -r $file ]]; then
-        source $file
-    fi
-done
+completion_script=$modules_pkg_prefix/init/${shell}_completion
 
-module config extra_siteconfig ~/.modules/siteconfig.tcl
+[[ -f $completion_script ]] && [[ -r $completion_script ]] && source $completion_script
