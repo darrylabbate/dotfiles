@@ -1,7 +1,10 @@
 proc putSepLine {} {
-    set tty_cols [expr {[catch {lindex [exec stty size] 1} cols] ? 80 : $cols}]
+    set cols [getConf term_width]
+    if {$cols == 0} {
+        set cols 80
+    }
     set max_rep 67
-    set rep [expr {$tty_cols > $max_rep ? $max_rep : $tty_cols}]
+    set rep [expr {$cols > $max_rep ? $max_rep : $cols}]
     puts stderr [string repeat - $rep]
 }
 
