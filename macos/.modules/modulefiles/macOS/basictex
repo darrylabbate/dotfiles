@@ -1,7 +1,0 @@
-#%Module
-
-module-whatis BasicTeX LaTeX distribution
-module-help Instalal with `brew install --cask basictex`
-
-append-path PATH [file join /Library TeX texbin]
-
