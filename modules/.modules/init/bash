@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-shell=$(basename $0)
-
 # TODO implement modules path discovery (non-Homebrew installations)
 modules_pkg_prefix=/opt/homebrew/opt/modules
 modulecmd=$modules_pkg_prefix/bin/modulecmd
@@ -12,8 +10,8 @@ modulecmd=$modules_pkg_prefix/bin/modulecmd
 # loaded within the user's modulerc (~/.modulerc) if the siteconfig is
 # configured using `module config extra_siteconfig`.
 export MODULES_SITECONFIG=~/.modules/siteconfig.tcl
-eval "$($modulecmd $shell autoinit)"
+eval "$($modulecmd bash autoinit)"
 
-completion_script=$modules_pkg_prefix/init/${shell}_completion
+completion_script=$modules_pkg_prefix/init/bash_completion
 
 [[ -f $completion_script ]] && [[ -r $completion_script ]] && source $completion_script
