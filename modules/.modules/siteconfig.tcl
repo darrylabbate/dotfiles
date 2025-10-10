@@ -1,3 +1,12 @@
+set modulesroot    [file join [file home] .modules]
+set modulefilesdir [file join $modulesroot modulefiles]
+set cachedir       [file join $modulesroot cache]
+
+set extra_vars [list               \
+    modulefilesdir $modulefilesdir \
+    cachedir       $cachedir       \
+]
+
 proc putSepLine {} {
     set cols [getConf term_width]
     if {$cols == 0} {
@@ -16,7 +25,8 @@ proc is-newer {file1 file2} {
 # This is useful when a module needs to post-process the script output before
 # invoking source-sh
 proc cache-cmd {command {source_file ""}} {
-    set cache_file [file join [getenv USER_MODULES_CACHE_DIR] "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
+    global cachedir
+    set cache_file [file join $cachedir "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
     
     if {![file exists $cache_file] || 
         ($source_file ne "" && [file exists $source_file] && [is-newer $source_file $cache_file])} {
@@ -37,4 +47,7 @@ proc source-cmd {command {source_file ""}} {
 }
 
 set modulefile_extra_cmds {cache-cmd cache-cmd source-cmd source-cmd putSepLine putSepLine}
+set modulefile_extra_vars $extra_vars
+set modulerc_extra_vars $extra_vars
+
 setConf implicit_default 0
