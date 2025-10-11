@@ -7,7 +7,6 @@ variant --default table     output   json table text yaml yaml-stream
 variant --default default   profile
 variant --default us-west-2 region
 
-putSepLine
 setenv AWS_DEFAULT_OUTPUT [getvariant output]
 setenv AWS_PROFILE        [getvariant profile]
 setenv AWS_REGION         [getvariant region]
