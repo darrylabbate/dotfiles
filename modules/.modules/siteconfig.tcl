@@ -8,13 +8,19 @@ set extra_vars [list               \
 ]
 
 proc putSepLine {} {
-    set cols [getConf term_width]
-    if {$cols == 0} {
-        set cols 80
+    if {[module-info mode display]} {
+        set cols [getConf term_width]
+        if {$cols == 0} {
+            set cols 80
+        }
+        set max_rep 67
+        set rep [expr {$cols > $max_rep ? $max_rep : $cols}]
+        puts stderr [string repeat - $rep]
     }
-    set max_rep 67
-    set rep [expr {$cols > $max_rep ? $max_rep : $cols}]
-    puts stderr [string repeat - $rep]
+}
+
+proc is-expired {cached_file} {
+    return [expr {[clock seconds] - [file mtime $cached_file]}] > 86400
 }
 
 proc is-newer {file1 file2} {
@@ -29,7 +35,8 @@ proc cache-cmd {command {source_file ""}} {
     set cache_file [file join $cachedir "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
     
     if {![file exists $cache_file] || 
-        ($source_file ne "" && [file exists $source_file] && [is-newer $source_file $cache_file])} {
+        ($source_file ne "" && [file exists $source_file] && [is-newer $source_file $cache_file]) ||
+        [is-expired $cache_file]} {
         file mkdir [file dirname $cache_file]
         set fd [open $cache_file w]
         puts $fd [exec {*}$command]
