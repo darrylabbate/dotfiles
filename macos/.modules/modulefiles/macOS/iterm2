@@ -1,0 +1,3 @@
+#%Module
+
+source-sh bash [file join [file home] .iterm2_shell_integration.bash]
