@@ -1,4 +1,14 @@
-call plug#begin('~/.vim/plugs')
+let $XDG_CONFIG_HOME = empty($XDG_CONFIG_HOME) ? expand('~/.config') : $XDG_CONFIG_HOME
+execute 'set runtimepath^=' . fnameescape($XDG_CONFIG_HOME . '/vim')
+
+let s:plug_path = $XDG_CONFIG_HOME . '/vim/autoload/plug.vim'
+if empty(glob(s:plug_path))
+    silent execute "!curl -fLo $XDG_CONFIG_HOME/vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  autocmd VimEnter * PlugInstall | source $MYVIMRC
+endif
+
+let $XDG_DATA_HOME = empty($XDG_DATA_HOME) ? expand('~/.local/share') : $XDG_DATA_HOME
+call plug#begin($XDG_DATA_HOME . '/vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'babaybus/DoxygenToolkit.vim'
 Plug 'editorconfig/editorconfig-vim'
@@ -31,6 +41,8 @@ autocmd ColorScheme * hi Normal ctermbg=NONE guibg=NONE
 autocmd ColorScheme * hi CursorLine cterm=None ctermbg=Black ctermfg=None
 autocmd ColorScheme * hi CursorLineNr ctermbg=Black ctermfg=None
 autocmd ColorScheme * hi LineNr cterm=None ctermbg=None ctermfg=DarkGray
+
+autocmd BufEnter * :syntax sync fromstart
 
 " I think nord-vim actually uses the terminal's 16 colors, which is
 " what I want it to do
