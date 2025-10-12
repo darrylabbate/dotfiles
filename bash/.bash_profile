@@ -1,3 +1,4 @@
+export INPUTRC=${XDG_CONFIG_HOME:-$HOME/.config}/readline/inputrc
 source ~/.modules/init/bash
 
 export GPG_TTY=$(tty)

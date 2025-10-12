@@ -7,7 +7,6 @@
 [commit]
 	gpgsign = true
 [core]
-	excludesfile = ~/.gitignore_global
 	ignorecase = true
 	pager = diff-so-fancy | less --tabs=2 -RFX
 [credential]
