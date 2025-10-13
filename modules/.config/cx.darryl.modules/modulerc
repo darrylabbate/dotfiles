@@ -6,17 +6,19 @@ module use $modulefilesdir/ctl
 module load env
 module load brew/shellenv
 module load brew/completions
+module load git
 module load vim
 
 module load bash/aliases
 module load bash/color
+module load bash/completions
 module load bash/env
 module load bash/prompt
 module load bash/history
 
 module load shell/aliases
 
-set rc_dir [file join [file home] .modules rc.d]
+set rc_dir [file join $configdir rc.d]
 if {[file exists $rc_dir]} {
     foreach init_script [lsort [glob -nocomplain $rc_dir/*.tcl]] {
         source $init_script

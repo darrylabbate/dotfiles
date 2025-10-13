@@ -1,10 +1,17 @@
-set modulesroot    [file join [file home] .modules]
-set modulefilesdir [file join $modulesroot modulefiles]
-set cachedir       [file join $modulesroot cache]
+set xdgnamespace cx.darryl.modules
+
+set configdir [file join [getenv XDG_CONFIG_HOME [file join [file home] .config]] $xdgnamespace]
+set datadir   [file join [getenv XDG_DATA_HOME   [file join [file home] .local share]] $xdgnamespace]
+set cachedir  [file join [getenv XDG_CACHE_HOME  [file join [file home] .cache]] $xdgnamespace]
+
+set modulefilesdir [file join $datadir modulefiles]
 
 set extra_vars [list               \
-    modulefilesdir $modulefilesdir \
+    xdgnamespace   $xdgnamespace   \
+    configdir      $configdir      \
+    datadir        $datadir        \
     cachedir       $cachedir       \
+    modulefilesdir $modulefilesdir \
 ]
 
 proc putSepLine {} {

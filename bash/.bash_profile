@@ -1,5 +1,6 @@
 export INPUTRC=${XDG_CONFIG_HOME:-$HOME/.config}/readline/inputrc
-source ~/.modules/init/bash
+export GNUPGHOME=${XDG_CONFIG_HOME:-$HOME/.config}/gnupg
+source ${XDG_DATA_HOME:-$HOME/.local/share}/cx.darryl.modules/init/bash
 
 export GPG_TTY=$(tty)
 

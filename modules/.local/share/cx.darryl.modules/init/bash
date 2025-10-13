@@ -9,7 +9,8 @@ modulecmd=$modules_pkg_prefix/bin/modulecmd
 # procedures and variables defined in the siteconfig aren't visible to modules
 # loaded within the user's modulerc (~/.modulerc) if the siteconfig is
 # configured using `module config extra_siteconfig`.
-export MODULES_SITECONFIG=~/.modules/siteconfig.tcl
+export MODULES_SITECONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/cx.darryl.modules/siteconfig.tcl
+export MODULERCFILE=${XDG_CONFIG_HOME:-$HOME/.config}/cx.darryl.modules/modulerc
 eval "$($modulecmd bash autoinit)"
 
 completion_script=$modules_pkg_prefix/init/bash_completion

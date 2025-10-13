@@ -1,0 +1,4 @@
+#%Module
+
+prepend-path PATH    [file join [file home] .local bin]
+append-path  MANPATH :
