@@ -31,7 +31,7 @@ proc is-expired {cached_file {ttl 86400}} {
 }
 
 proc is-newer {file1 file2} {
-    return [file mtime $file1] > [file mtime $file2]
+    return [expr {[file mtime $file1] > [file mtime $file2]}]
 }
 
 # Cache the output of a command to a file for later use with source-sh
