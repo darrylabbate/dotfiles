@@ -2,14 +2,8 @@
 
 module-help {User environment configuration}
 
-set moduleshome [file join [file home] .modules]
-set modules_cachedir [file join $moduleshome cache]
-
-setenv USER_MODULESHOME $moduleshome
-setenv USER_MODULES_CACHE_DIR $modules_cachedir
-
-set module_prefix [file join /opt homebrew opt modules]
-set completion_file [file join $module_prefix init bash_completion]
+set modules_prefix [file join /opt homebrew opt modules]
+set completion_file [file join $modules_prefix init bash_completion]
 
 source-sh bash $completion_file
 

@@ -1,9 +1,8 @@
 #%Module
 
-module use $modulefilesdir/core
-module use $modulefilesdir/ctl
+module use $modulefilesdir
 
-module load env
+# module load env
 module load brew/shellenv
 module load brew/completions
 module load git
