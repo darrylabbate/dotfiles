@@ -1,3 +1,7 @@
+# TODO modularize (module-fy?) Amazon Q settings
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.pre.bash"
+
 export INPUTRC=${XDG_CONFIG_HOME:-$HOME/.config}/readline/inputrc
 export GNUPGHOME=${XDG_CONFIG_HOME:-$HOME/.config}/gnupg
 source ${XDG_DATA_HOME:-$HOME/.local/share}/cx.darryl.modules/init/bash
@@ -12,3 +16,6 @@ export GPG_TTY=$(tty)
 if [[ $(uname -s) == Linux ]]; then
     export MANPATH=$HOME/.local/share/man:
 fi
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash"
