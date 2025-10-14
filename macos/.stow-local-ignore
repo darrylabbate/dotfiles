@@ -1,12 +1,6 @@
-# This file tells GNU Stow to ignore these files and folders
-# This allows us to bundle all macOS-specific configuration
-# files in one subdirectory, as opposed to having a separate folder
-# in the root dotfiles directory for the sake of Stow
-
 /duti
 /iterm
 /xbar
-.DS_Store
 defaults.sh
 kitty.conf
 README.md
