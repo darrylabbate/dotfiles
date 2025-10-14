@@ -1,17 +1,11 @@
-set xdgnamespace cx.darryl.modules
-
-set configdir [file join [getenv XDG_CONFIG_HOME [file join [file home] .config]] $xdgnamespace]
-set datadir   [file join [getenv XDG_DATA_HOME   [file join [file home] .local share]] $xdgnamespace]
-set cachedir  [file join [getenv XDG_CACHE_HOME  [file join [file home] .cache]] $xdgnamespace]
-
-set modulefilesdir [file join $datadir modulefiles]
+set config_rootdir [getenv XDG_CONFIG_HOME [file join [file home] .config]]
+set data_rootdir   [getenv XDG_DATA_HOME   [file join [file home] .local share]]
+set cache_rootdir  [getenv XDG_CACHE_HOME  [file join [file home] .cache]]
 
 set extra_vars [list               \
-    xdgnamespace   $xdgnamespace   \
-    configdir      $configdir      \
-    datadir        $datadir        \
-    cachedir       $cachedir       \
-    modulefilesdir $modulefilesdir \
+    config_rootdir $config_rootdir \
+    data_rootdir   $data_rootdir   \
+    cache_rootdir  $cache_rootdir  \
 ]
 
 proc putSepLine {} {
@@ -38,8 +32,10 @@ proc is-newer {file1 file2} {
 # This is useful when a module needs to post-process the script output before
 # invoking source-sh
 proc cache-cmd {command {source_file ""}} {
-    global cachedir
-    set cache_file [file join $cachedir "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
+    # TODO Accommodate namespaced caches
+    set namespace cx.darryl.modules
+    global cache_rootdir
+    set cache_file [file join $cache_rootdir $namespace "[string map {/ _ " " _} [join $command _]].[module-info shell]"]
     
     if {![file exists $cache_file] || 
         ($source_file ne "" && [file exists $source_file] && [is-newer $source_file $cache_file]) ||
