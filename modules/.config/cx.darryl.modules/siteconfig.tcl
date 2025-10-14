@@ -26,8 +26,8 @@ proc putSepLine {} {
     }
 }
 
-proc is-expired {cached_file} {
-    return [expr {[clock seconds] - [file mtime $cached_file]}] > 86400
+proc is-expired {cached_file {ttl 86400}} {
+    return [expr {[clock seconds] - [file mtime $cached_file] > $ttl}]
 }
 
 proc is-newer {file1 file2} {
