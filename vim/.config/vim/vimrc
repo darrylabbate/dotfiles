@@ -8,6 +8,7 @@ if empty(glob(s:plug_path))
 endif
 
 let $XDG_DATA_HOME = empty($XDG_DATA_HOME) ? expand('~/.local/share') : $XDG_DATA_HOME
+let $XDG_STATE_HOME = empty($XDG_STATE_HOME) ? expand('~/.local/state') : $XDG_STATE_HOME
 call plug#begin($XDG_DATA_HOME . '/vim/plugged')
 Plug 'arcticicestudio/nord-vim'
 Plug 'babaybus/DoxygenToolkit.vim'
@@ -24,6 +25,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 call plug#end()
 
+set viminfo+=n$XDG_STATE_HOME/vim/info
 filetype indent plugin on
 
 set noswapfile
