@@ -21,6 +21,7 @@ set brew [file join $brew_prefix bin brew]
 
 source-cmd [list $brew shellenv]
 
-setenv HOMEBREW_CURLRC            1
+setenv HOMEBREW_BUNDLE_FILE       [file join $XDG_DATA_HOME homebrew Brewfile]
+setenv HOMEBREW_CURLRC            [file join $XDG_CONFIG_HOME curlrc]
 setenv HOMEBREW_FORCE_BREWED_CURL 1
 setenv HOMEBREW_NO_AUTO_UPDATE    1
