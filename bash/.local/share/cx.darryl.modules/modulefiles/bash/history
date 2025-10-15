@@ -13,3 +13,5 @@ foreach setting {ignoredups ignorespace} {
 
 prepend-path HISTIGNORE {?}
 prepend-path HISTIGNORE {??}
+
+setenv HISTFILE [file join $XDG_STATE_HOME bash history]
