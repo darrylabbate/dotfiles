@@ -1,7 +1,7 @@
 #%Module
 
 # TODO detect or otherwise abstract namespace
-module use [file join $data_rootdir cx.darryl.modules modulefiles]
+module use [file join $XDG_DATA_HOME cx.darryl.modules modulefiles]
 
 # module load env
 module load brew/shellenv
@@ -17,9 +17,10 @@ module load bash/prompt
 module load bash/history
 
 module load shell/aliases
+module load less
 
 # TODO load from $XDG_CONFIG_HOME/*.modules/rc.d/*?
-set rc_dir [file join $config_rootdir cx.darryl.modules rc.d]
+set rc_dir [file join $XDG_CONFIG_HOME cx.darryl.modules rc.d]
 if {[file exists $rc_dir]} {
     foreach init_script [lsort [glob -nocomplain $rc_dir/*.tcl]] {
         source $init_script
