@@ -17,5 +17,10 @@ if [[ $(uname -s) == Linux ]]; then
     export MANPATH=$HOME/.local/share/man:
 fi
 
+# Source bash completions here since the script doesn't run properly within a
+# modulefile
+[[ -r $HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh ]] &&
+    . $HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh
+
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash"
