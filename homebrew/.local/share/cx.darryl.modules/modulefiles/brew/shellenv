@@ -9,17 +9,13 @@ switch -- [uname sysname] {
             arm64  { set brew_prefix [file join /opt homebrew] }
             x86_64 { set brew_prefix [file join /usr local]    }
         }
-        set shellenv_source_prefix $brew_prefix
     }
     Linux {
         set brew_prefix [file join [file home linuxbrew] .linuxbrew]
-        set shellenv_source_prefix [file join $brew_prefix Homebrew]
     }
 }
 
-set brew [file join $brew_prefix bin brew]
-
-source-cmd [list $brew shellenv]
+source-sh bash-eval [file join $brew_prefix bin brew] shellenv
 
 setenv HOMEBREW_BUNDLE_FILE       [file join $XDG_DATA_HOME homebrew Brewfile]
 setenv HOMEBREW_CURLRC            [file join $XDG_CONFIG_HOME curlrc]
