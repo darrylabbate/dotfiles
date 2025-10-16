@@ -1,0 +1,3 @@
+#%Module
+
+source-sh bash-eval [exec which gh] completion -s bash
