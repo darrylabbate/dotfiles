@@ -1,3 +1,5 @@
 #%Module
 
-source-sh bash [file join [file home] .iterm2_shell_integration.bash]
+set-function iterm2_print_user_vars {
+    iterm2_set_user_var gitCommitter $(git var GIT_COMMITTER_IDENT | sed 's/.*<\([^>]*\)>.*/\1/')
+}
