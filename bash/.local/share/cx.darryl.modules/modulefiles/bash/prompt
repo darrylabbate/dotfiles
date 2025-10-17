@@ -2,6 +2,14 @@
 
 module-whatis "Bash prompt configuration"
 
-# Set a concise, bolded PS1 showing just the basename of cwd
-setenv PS1 {\W \[$(tput -T xterm-256color bold)\]\$\[$(tput -T xterm-256color sgr0)\] }
+variant --default basename pwd basename full none
 
+switch -- [getvariant --return-value pwd] {
+    basename { set pwd {\W } }
+    full     { set pwd {\w } }
+    none     { set pwd ""   }
+}
+    
+append pwd {\[$(tput -T xterm-256color bold)\]\$\[$(tput -T xterm-256color sgr0)\] }
+
+setenv PS1 $pwd
