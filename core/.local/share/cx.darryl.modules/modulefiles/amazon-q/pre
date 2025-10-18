@@ -1,3 +1,0 @@
-#%Module
-
-source-sh bash [file join [file home] Library {Application Support} amazon-q shell bash_profile.pre.bash]

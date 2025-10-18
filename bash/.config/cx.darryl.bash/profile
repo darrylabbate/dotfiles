@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+for f in ${XDG_CONFIG_HOME:-$HOME/.config}/cx.darryl.bash/profile.d/*.bash; do
+    source $f
+done
