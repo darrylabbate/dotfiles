@@ -1,3 +1,0 @@
-#%Module
-
-setenv LESSHISTFILE [file join $XDG_STATE_HOME less history]
