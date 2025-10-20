@@ -16,3 +16,5 @@ eval "$($modulecmd bash autoinit)"
 completion_script=$modules_pkg_prefix/init/bash_completion
 
 [[ -f $completion_script ]] && [[ -r $completion_script ]] && source $completion_script
+
+module config mcookie_check eval
