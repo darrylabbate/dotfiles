@@ -1,4 +1,5 @@
 #%Module
 
-prepend-path PATH    [file join [file home] .local bin]
-append-path  MANPATH :
+prepend-path PATH            [file join [file home] .local bin]
+append-path  MANPATH         :
+prepend-path PKG_CONFIG_PATH [file join [file home] .local lib pkgconfig]
