@@ -35,6 +35,7 @@
 	co = checkout
 	cob = checkout -b
 	cp = cherry-pick
+	cur = branch --show-current
 	d = diff
 	ds = diff --cached
 	f = fetch --dry-run --version
@@ -48,6 +49,8 @@
 	rbc = rebase --continue
 	rd = !git --no-pager diff --no-ext-diff --no-prefix
 	s = status -sb
-	cur = branch --show-current
+	w = worktree
+	wa = worktree add
+	wls = worktree list
 [grep]
 	patternType = perl
