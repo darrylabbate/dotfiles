@@ -2,5 +2,7 @@
 
 module-whatis Vim-related configurations
 
-set-alias v      vim
-setenv    EDITOR vim
+set-alias v       vim
+set-alias vt     {vim -t}
+
+setenv    EDITOR  vim
