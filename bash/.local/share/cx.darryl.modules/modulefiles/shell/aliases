@@ -8,6 +8,7 @@ set-alias b    "cd -"
 set-alias d    "cd ~/dotfiles"
 set-alias h    "cd ~"
 set-alias p    "cd ~/projects"
+set-alias s    "cd ~/s"
 
 set-alias l    "ls -F"
 set-alias la   "ls -AF"
