@@ -1,0 +1,3 @@
+config:
+  build_stage:
+    - $user_cache_home/stage
