@@ -2,7 +2,12 @@
 
 module-whatis Vim-related configurations
 
-set-alias v       vim
-set-alias vt     {vim -t}
+set-alias v vim
 
-setenv    EDITOR  vim
+set-function vt {
+    local tag="$1"
+    shift
+    vim -t "$tag" -c 'normal! zz' "$@"
+}
+
+setenv EDITOR vim
