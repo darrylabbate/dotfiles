@@ -36,6 +36,7 @@ set wildmenu
 set t_Co=256
 set bg=dark
 syntax on
+set re=0
 
 " Prevent colorschemes from changing background color of screen, line
 " numbers or current line
