@@ -1,4 +1,4 @@
-tap "koekeishiya/formulae"
+tap "asmvik/formulae"
 tap "sass/sass"
 brew "modules", postinstall: "source ${HOMEBREW_PREFIX}/opt/modules/init/bash"
 brew "autoconf"
