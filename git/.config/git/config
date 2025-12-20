@@ -38,7 +38,7 @@
 	cur = branch --show-current
 	d = diff
 	ds = diff --cached
-	f = fetch --dry-run --version
+	f = fetch
 	g = grep
 	gi = grep -i
 	l = log --oneline -n 10
