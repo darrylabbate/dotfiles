@@ -1,6 +1,41 @@
-# ---------------------------------------
-# skhdrc
-# ---------------------------------------
+.define yabai_adjust_gaps    : yabai -m space --gap rel:{{1}} \
+                             ; yabai -m space --padding rel:{{1}}:{{1}}:{{1}}:{{1}}
+.define yabai_set_layout     : yabai -m space --layout {{1}}
+.define yabai_resize_dx      : yabai -m window --resize left:{{1}}:0 \
+                             ; yabai -m window --resize right:{{1}}:0
+.define yabai_resize_dy      : yabai -m window --resize top:0:{{1}} \
+                             ; yabai -m window --resize bottom:0:{{1}}
+.define yabai_rotate_windows : yabai -m space --rotate {{1}}
+.define yabai_toggle_window  : yabai -m window --toggle {{1}}
+.define yabai_warp_window    : yabai -m window --warp {{1}}
+
+alt + cmd - b : @yabai_set_layout("bsp")
+alt + cmd - n : @yabai_set_layout("float")
+
+# Detach focused window from bsp
+alt - d : @yabai_toggle_window("float")
+
+alt + cmd - h : @yabai_resize_dx("-20")
+alt + cmd - j : @yabai_resize_dy("20")
+alt + cmd - k : @yabai_resize_dy("-20")
+alt + cmd - l : @yabai_resize_dx("20")
+
+alt + cmd - p : @yabai_adjust_gaps("5")
+alt + cmd - o : @yabai_adjust_gaps("-5")
+
+alt - h : @yabai_warp_window("west")
+alt - j : @yabai_warp_window("south")
+alt - k : @yabai_warp_window("north")
+alt - l : @yabai_warp_window("east")
+
+alt + cmd - r : @yabai_rotate_windows("90")
+alt + cmd - f : @yabai_rotate_windows("180")
+
+# Equalize size of windows
+alt + cmd - e : yabai -m space --balance
+
+# Toggle split
+alt + cmd - x : @yabai_toggle_window("split")
 
 # --grid guide
 #
@@ -14,53 +49,6 @@
 # C:D defines the size of the window
 #   2:1 would resize the window to 2 times width and 1 times height
 #   of the grid defined in X:Y
-
-
-# Change tiling mode of space
-alt + cmd - b : yabai -m space --layout bsp
-alt + cmd - n : yabai -m space --layout float
-
-
-### BSP mode shortcuts ###
-
-# Detach focused window from bsp
-alt - d : yabai -m window --toggle float
-
-# Increase/decrease window size
-alt + cmd - h : yabai -m window --resize left:-20:0; \
-                yabai -m window --resize right:-20:0
-alt + cmd - j : yabai -m window --resize top:0:20; \
-                yabai -m window --resize bottom:0:20
-alt + cmd - k : yabai -m window --resize top:0:-20; \
-                yabai -m window --resize bottom:0:-20
-alt + cmd - l : yabai -m window --resize right:20:0; \
-                yabai -m window --resize left:20:0
-
-alt + cmd - p : yabai -m space --gap rel:5; \
-                yabai -m space --padding rel:5:5:5:5
-alt + cmd - o : yabai -m space --gap rel:-5; \
-                yabai -m space --padding rel:-5:-5:-5:-5
-
-# Warp focused container
-alt - h : yabai -m window --warp west
-alt - j : yabai -m window --warp south
-alt - k : yabai -m window --warp north
-alt - l : yabai -m window --warp east
-
-# Rotate window arrangement 90 degrees
-alt + cmd - r : yabai -m space --rotate 90
-
-# Rotate window arrangement 180 degrees (flip)
-alt + cmd - f : yabai -m space --rotate 180
-
-# Equalize size of windows
-alt + cmd - e : yabai -m space --balance
-
-# Toggle split
-alt + cmd - x : yabai -m window --toggle split
-
-
-### Float mode shortcuts ###
 
 # Make focused window fill screen
 alt + cmd - m : yabai -m window --grid 1:1:0:0:1:1
