@@ -14,5 +14,7 @@ set-alias l    "ls -F"
 set-alias la   "ls -AF"
 set-alias ll   "ls -AFlo"
 
-set-alias t "type"
-set-alias ta "type -a"
+set-alias t    "type"
+set-alias ta   "type -a"
+
+set-alias tree "tree -a"
