@@ -1,6 +1,7 @@
 tap "asmvik/formulae"
 tap "sass/sass"
 brew "modules", postinstall: "source ${HOMEBREW_PREFIX}/opt/modules/init/bash"
+brew "actionlint"
 brew "autoconf"
 brew "automake"
 brew "bash"
