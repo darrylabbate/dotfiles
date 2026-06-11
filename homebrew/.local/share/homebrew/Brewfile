@@ -1,4 +1,5 @@
 tap "asmvik/formulae"
+tap FelixKratz/formulae
 tap "sass/sass"
 brew "modules", postinstall: "source ${HOMEBREW_PREFIX}/opt/modules/init/bash"
 brew "actionlint"
@@ -7,6 +8,7 @@ brew "automake"
 brew "bash"
 brew "bash-completion@2"
 brew "bats-core"
+brew "borders"
 brew "cask"
 brew "cmake"
 brew "coreutils"
