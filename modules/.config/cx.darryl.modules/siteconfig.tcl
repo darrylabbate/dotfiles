@@ -22,7 +22,25 @@ proc putSepLine {} {
     }
 }
 
-set modulefile_extra_cmds {putSepLine putSepLine}
+# Compute the Homebrew prefix from the OS/arch rather than reading
+# HOMEBREW_PREFIX via getenv. getenv is unreliable during `module refresh`
+# (new panes/subshells), where it can return empty and break path-derived
+# source-sh calls. Computing locally is refresh-safe.
+proc brew-prefix {} {
+    switch -- [uname sysname] {
+        Darwin {
+            switch -- [uname machine] {
+                arm64  { return [file join /opt homebrew] }
+                x86_64 { return [file join /usr local]    }
+            }
+        }
+        Linux {
+            return [file join [file home] linuxbrew .linuxbrew]
+        }
+    }
+}
+
+set modulefile_extra_cmds {putSepLine putSepLine brew-prefix brew-prefix}
 set modulefile_extra_vars $extra_vars
 set modulerc_extra_vars $extra_vars
 

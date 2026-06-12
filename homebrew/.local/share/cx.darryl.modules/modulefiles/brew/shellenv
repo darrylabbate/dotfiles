@@ -3,19 +3,7 @@
 module-whatis Homebrew environment setup
 module-help This encapsulates `brew shellenv` as a module and sets other environment configurations
 
-switch -- [uname sysname] {
-    Darwin {
-        switch -- [uname machine] {
-            arm64  { set brew_prefix [file join /opt homebrew] }
-            x86_64 { set brew_prefix [file join /usr local]    }
-        }
-    }
-    Linux {
-        set brew_prefix [file join [file home] linuxbrew .linuxbrew]
-    }
-}
-
-source-sh bash-eval [file join $brew_prefix bin brew] shellenv
+source-sh bash-eval [file join [brew-prefix] bin brew] shellenv
 
 setenv HOMEBREW_BUNDLE_FILE       [file join $XDG_DATA_HOME homebrew Brewfile]
 setenv HOMEBREW_CURLRC            [file join $XDG_CONFIG_HOME curlrc]
