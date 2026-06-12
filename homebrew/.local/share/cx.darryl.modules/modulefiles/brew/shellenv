@@ -11,7 +11,7 @@ switch -- [uname sysname] {
         }
     }
     Linux {
-        set brew_prefix [file join [file home linuxbrew] .linuxbrew]
+        set brew_prefix [file join [file home] linuxbrew .linuxbrew]
     }
 }
 
