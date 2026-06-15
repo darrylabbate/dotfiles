@@ -49,6 +49,7 @@
 	rbc = rebase --continue
 	rd = !git --no-pager diff --no-ext-diff --no-prefix
 	s = status -sb
+	unstage = restore --staged
 	w = worktree
 	wa = worktree add
 	wls = worktree list
