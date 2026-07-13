@@ -3,7 +3,7 @@
 module-whatis "GNU coreutils"
 
 # Ensure Homebrew environment is loaded first
-depends-on brew/shellenv
+depends-on homebrew
 
 # Use HOMEBREW_PREFIX provided by the Homebrew module
 set prefix [getenv HOMEBREW_PREFIX]

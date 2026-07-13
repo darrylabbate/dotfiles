@@ -1,5 +1,0 @@
-#%Module
-
-depends-on brew/shellenv
-
-source-sh bash [file join [brew-prefix] completions bash brew]
