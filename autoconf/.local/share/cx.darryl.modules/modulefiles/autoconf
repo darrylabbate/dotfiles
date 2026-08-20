@@ -1,3 +1,0 @@
-#%Module
-
-prepend-path --delim " " CONFIG_SITE [file join $XDG_DATA_HOME autoconf config.site]

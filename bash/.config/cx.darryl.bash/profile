@@ -1,5 +1,26 @@
 #!/usr/bin/env bash
 
-for f in ${XDG_CONFIG_HOME:-$HOME/.config}/cx.darryl.bash/profile.d/*.bash; do
-    source $f
+_profile_prepend() {
+    local name=$1 value=$2 delimiter=$3 current=${!1-} item
+    local items=()
+
+    IFS=$delimiter read -r -a items <<< "$current"
+    for item in "${items[@]}"; do
+        if [[ $item == "$value" ]]; then
+            export "${name?}"
+            return
+        fi
+    done
+
+    printf -v "$name" '%s' "$value${current:+$delimiter$current}"
+    export "${name?}"
+}
+
+profile_dir=${XDG_CONFIG_HOME:-$HOME/.config}/cx.darryl.bash/profile.d
+
+for f in "$profile_dir"/*.bash; do
+    [[ -r $f ]] && source "$f"
 done
+
+unset f profile_dir
+unset -f _profile_prepend

@@ -1,4 +1,0 @@
-#%Module
-
-set-alias restow {stow --restow}
-set-alias unstow {stow --delete}
