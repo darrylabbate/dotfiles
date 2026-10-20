@@ -60,8 +60,8 @@ macos: brew stow vim
 	bash $(DOTFILES_DIR)/macos/duti/set.sh
 	$(BREW_PREFIX)/bin/stow gpg
 	$(BREW_PREFIX)/bin/stow macos
-	$(BREW_PREFIX)/bin/brew services start yabai
-	$(BREW_PREFIX)/bin/brew services start skhd
+	bash $(DOTFILES_DIR)/yabai/install-service.sh
+	bash $(DOTFILES_DIR)/skhd/install-service.sh
 	echo $(BREW_PREFIX)/bin/bash | sudo tee -a /etc/shells
 	chsh -s $(BREW_PREFIX)/bin/bash
 	ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-# Set default mode to float
-yabai -m config layout float
+# Set default mode to bsp (unmanaged apps float via rules below)
+yabai -m config layout bsp
 
 # Set default padding/gaps between windows
 for param in \
@@ -14,22 +14,24 @@ yabai -m config split_ratio                 0.5
 yabai -m config focus_follows_mouse         off
 yabai -m config mouse_follows_focus         off
 yabai -m config mouse_modifier              fn
-yabai -m config normal_window_border_color  0xffd75f5f
-yabai -m config normal_window_border_width  5
-yabai -m config active_window_border_color  0xff8AFAFB
-yabai -m config active_window_border_width  5
 
 # Explicitly define which apps can be managed
 managed=(
-    'iTerm'
+    'iTerm2'
     'Firefox'
     'Safari'
     'Google Chrome'
+    'Obsidian'
+    'Mail'
+    'Calendar'
+    'Slack'
 )
 printf -v regex "%s|" "${managed[@]}"
-regex="(${regex%|})"
+regex="^(${regex%|})$"
 
-yabai -m rule --add app!=$regex manage=off
+yabai -m rule --add app!="$regex" manage=off
 
 # Always float iTerm hotkey window
-yabai -m rule --add app='^iTerm$' title='^Hotkey Window$' manage=off
+yabai -m rule --add app='^iTerm2$' title='^Hotkey Window$' manage=off
+
+yabai -m rule --apply
